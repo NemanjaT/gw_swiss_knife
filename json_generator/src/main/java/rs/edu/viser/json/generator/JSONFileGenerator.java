@@ -149,8 +149,7 @@ public class JSONFileGenerator {
     		
     	//If it's an array of arrays. . .
     	case '[':
-    		//TODO: Not tested with 3+ layers . . .
-    		//TODO: The code is awful. . . write better!
+    		//TODO: Array inside array
 
     		classFileWriter.writeComment("TODO: GW-0002");
     		
