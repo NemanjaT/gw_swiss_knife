@@ -8,6 +8,7 @@ import rs.edu.viser.logger.LOG;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.Iterator;
 
@@ -53,6 +54,47 @@ public class JsonRetriever {
                 stringBuffer.append(chars, 0, read);
             }
             return new JSONObject(stringBuffer.toString());
+        } finally {
+            if (bufferedReader != null) {
+                try {
+                    bufferedReader.close();
+                } catch (Exception e) {
+                    log.error(e.getMessage());
+                    e.printStackTrace();
+                }
+            }
+        }
+    }
+    
+    /**
+     * Visits a provided url and returns a JSON array from it.
+     * @param url
+     * @return
+     * @throws IOException
+     * @throws JSONException
+     */
+    public JSONArray getJsonArray(String url) throws IOException, JSONException {
+    	
+    	//If it's not a http url, return null
+    	if (! url.contains("http")) {
+    		log.error("The URL must contain 'http'!");
+    		return null;
+    	}
+    	
+    	BufferedReader bufferedReader = null;
+
+        try {
+            log.info("Retrieving the object from a URL (" + url + ")");
+            URL urlLink = new URL(url);
+            bufferedReader = new BufferedReader(new InputStreamReader(urlLink.openStream()));
+            StringBuilder stringBuffer = new StringBuilder();
+            log.info("Filling up a JSONObject (" + url + ")");
+            int read;
+            char[] chars = new char[1024];
+            while((read = bufferedReader.read(chars)) != -1) {
+                stringBuffer.append(chars, 0, read);
+            }
+            return new JSONArray(stringBuffer.toString());
         } finally {
             if (bufferedReader != null) {
                 try {

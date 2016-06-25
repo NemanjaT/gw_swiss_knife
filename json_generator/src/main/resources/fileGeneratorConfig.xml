@@ -107,7 +107,7 @@
 
                 <bean class="rs.edu.viser.json.generator.config.FileGeneratorPattern">
                     <property name="name" value="tomorrow_daily_achievements" />
-                    <property name="url" value="achievements/daily" />
+                    <property name="url" value="achievements/daily/tomorrow" />
                     <property name="type" value="OBJECT" />
                 </bean>
 
