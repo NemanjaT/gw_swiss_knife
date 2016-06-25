@@ -54,6 +54,7 @@ Temporary Items
 .settings
 .classpath
 .project
+build/
 models/
 gradlew*
 *.log
