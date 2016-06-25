@@ -1,4 +1,5 @@
 rootProject.name = 'gw_swiss_knife'
 include 'json_generator'
 include 'common'
-
+include 'backend'
+include 'gw_service'

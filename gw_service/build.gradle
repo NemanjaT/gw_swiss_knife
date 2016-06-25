@@ -9,5 +9,6 @@ repositories {
 }
 
 dependencies {
-	compile project(':common')
+    compile project(':common')
+    compile project(':json_generator')
 }
