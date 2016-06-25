@@ -149,7 +149,10 @@ public class JSONFileGenerator {
     		
     	//If it's an array of arrays. . .
     	case '[':
-    		//TODO: Not tested. . .
+    		//TODO: Not tested with 3+ layers . . .
+    		//TODO: The code is awful. . . write better!
+
+    		classFileWriter.writeComment("TODO: GW-0002");
     		
     		break;
     		
@@ -170,7 +173,7 @@ public class JSONFileGenerator {
 					e.printStackTrace();
 				}
 			}
-			classFileWriter.writeAttributeArray(key, list);
+			classFileWriter.writeAttributeArray(classNamer.jsonToJava(key, false), list);
     	}
     }
 

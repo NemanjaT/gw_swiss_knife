@@ -21,6 +21,7 @@ public class Map extends JsonModelFactoryMaster {
 
 	private Integer maxLevel;
 
+	//TODO: GW-0002
 	private String name;
 
 	private Integer regionId;
@@ -29,6 +30,7 @@ public class Map extends JsonModelFactoryMaster {
 
 	private Integer id;
 
+	//TODO: GW-0002
 	private Integer minLevel;
 
 }

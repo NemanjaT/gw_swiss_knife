@@ -13,7 +13,7 @@ public class Color extends JsonModelFactoryMaster {
 
 	private Integer item;
 
-	private List<Integer> base_rgb;
+	private List<Integer> baseRgb;
 
 	private String name;
 

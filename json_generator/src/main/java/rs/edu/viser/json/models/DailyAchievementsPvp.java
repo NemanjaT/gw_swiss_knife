@@ -15,6 +15,6 @@ public class DailyAchievementsPvp extends JsonModelFactoryMaster {
 
 	private Integer id;
 
-	private List<String> required_access;
+	private List<String> requiredAccess;
 
 }

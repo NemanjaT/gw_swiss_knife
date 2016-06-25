@@ -13,7 +13,7 @@ public class Continent extends JsonModelFactoryMaster {
 
 	private List<Integer> floors;
 
-	private List<Integer> continent_dims;
+	private List<Integer> continentDims;
 
 	private Integer minZoom;
 

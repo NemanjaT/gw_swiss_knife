@@ -155,6 +155,7 @@ public class ClassFileWriter {
 	    	} else {
 	    		type += "String>";
 	    	}
+	    	//TODO: if if if if if if if if if if . . . there has to be a better way . . .
 	    	
 	    	fileWriter.write("\tprivate " + type + " " + attributeName + ";\n\n");
 	    	log.info("Created list " + type + " to class " + className + " successfully!");
@@ -165,6 +166,33 @@ public class ClassFileWriter {
     	}
     }
     
+    /**
+     * Writes custom string comment. If it's one line it's a // comment, if it's more than one line, it's
+     * a /* comment
+     */
+    void writeComment(String... string) {
+    	openFile();
+    	try {
+    		if (string.length > 0) {
+    			if (string.length == 1) {
+    				fileWriter.write("\t//" + string[0] + "\n");
+    			} else {
+    				fileWriter.write("\t/*\n");
+    				for (String str : string) {
+    					fileWriter.write(" * " + str + "\n");
+    				}
+    				fileWriter.write("\t */\n\n");
+    			}
+    		}
+			closeFile(null);
+		} catch (IOException e) {
+			closeFile(e);
+		}
+    }
+    
+    /**
+     * Write getters and setters. . .
+     */
     void writeGettersAndSetters() {
     	
     }

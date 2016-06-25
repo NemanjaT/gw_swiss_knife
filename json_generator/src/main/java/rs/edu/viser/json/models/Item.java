@@ -25,7 +25,7 @@ public class Item extends JsonModelFactoryMaster {
 
 	private List<Object> restrictions; //TODO: GW-0001 
 
-	private List<String> game_types;
+	private List<String> gameTypes;
 
 	private String type;
 

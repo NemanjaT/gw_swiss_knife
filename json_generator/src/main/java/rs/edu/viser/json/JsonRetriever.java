@@ -24,6 +24,13 @@ public class JsonRetriever {
 		this.log = new LOG(this.getClass());
 	}
 
+	/**
+	 * Visits the provided url and returns a JSON object from it
+	 * @param url
+	 * @return JSONObject
+	 * @throws JSONException
+	 * @throws IOException
+	 */
     public JSONObject getJsonObject(String url) throws JSONException, IOException {
     	
     	//If it's not a http url, returns null
