@@ -19,4 +19,45 @@ public class DailyAchievements extends JsonModelFactoryMaster {
 
 	private List<DailyAchievementsPve> dailyAchievementsPve;
 
+	//Getters and setters
+
+	public List<Object> getSpecial() {
+		return this.special;
+	}
+
+	public void setSpecial(List<Object> val) {
+		this.special = val;
+	}
+
+	public List<DailyAchievementsWvw> getDailyAchievementsWvw() {
+		return this.dailyAchievementsWvw;
+	}
+
+	public void setDailyAchievementsWvw(List<DailyAchievementsWvw> val) {
+		this.dailyAchievementsWvw = val;
+	}
+
+	public List<DailyAchievementsPvp> getDailyAchievementsPvp() {
+		return this.dailyAchievementsPvp;
+	}
+
+	public void setDailyAchievementsPvp(List<DailyAchievementsPvp> val) {
+		this.dailyAchievementsPvp = val;
+	}
+
+	public List<DailyAchievementsPve> getDailyAchievementsPve() {
+		return this.dailyAchievementsPve;
+	}
+
+	public void setDailyAchievementsPve(List<DailyAchievementsPve> val) {
+		this.dailyAchievementsPve = val;
+	}
+
+	public DailyAchievements() {
+		this.special = new ArrayList<Object>();
+		this.dailyAchievementsWvw = new ArrayList<DailyAchievementsWvw>();
+		this.dailyAchievementsPvp = new ArrayList<DailyAchievementsPvp>();
+		this.dailyAchievementsPve = new ArrayList<DailyAchievementsPve>();
+	}
+
 }

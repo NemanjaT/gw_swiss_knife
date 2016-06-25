@@ -25,4 +25,66 @@ public class ItemDetails extends JsonModelFactoryMaster {
 
 	private String type;
 
+	//Getters and setters
+
+	public ItemDetailsInfixUpgrade getItemDetailsInfixUpgrade() {
+		return this.itemDetailsInfixUpgrade;
+	}
+
+	public void setItemDetailsInfixUpgrade(ItemDetailsInfixUpgrade val) {
+		this.itemDetailsInfixUpgrade = val;
+	}
+
+	public String getWeightClass() {
+		return this.weightClass;
+	}
+
+	public void setWeightClass(String val) {
+		this.weightClass = val;
+	}
+
+	public String getSecondarySuffixItemId() {
+		return this.secondarySuffixItemId;
+	}
+
+	public void setSecondarySuffixItemId(String val) {
+		this.secondarySuffixItemId = val;
+	}
+
+	public Integer getDefense() {
+		return this.defense;
+	}
+
+	public void setDefense(Integer val) {
+		this.defense = val;
+	}
+
+	public Integer getSuffixItemId() {
+		return this.suffixItemId;
+	}
+
+	public void setSuffixItemId(Integer val) {
+		this.suffixItemId = val;
+	}
+
+	public List<Object> getInfusionSlots() {
+		return this.infusionSlots;
+	}
+
+	public void setInfusionSlots(List<Object> val) {
+		this.infusionSlots = val;
+	}
+
+	public String getType() {
+		return this.type;
+	}
+
+	public void setType(String val) {
+		this.type = val;
+	}
+
+	public ItemDetails() {
+		this.infusionSlots = new ArrayList<Object>();
+	}
+
 }

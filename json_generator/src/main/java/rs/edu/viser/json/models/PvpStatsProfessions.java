@@ -29,4 +29,81 @@ public class PvpStatsProfessions extends JsonModelFactoryMaster {
 
 	private PvpStatsProfessionsEngineer pvpStatsProfessionsEngineer;
 
+	//Getters and setters
+
+	public PvpStatsProfessionsRevenant getPvpStatsProfessionsRevenant() {
+		return this.pvpStatsProfessionsRevenant;
+	}
+
+	public void setPvpStatsProfessionsRevenant(PvpStatsProfessionsRevenant val) {
+		this.pvpStatsProfessionsRevenant = val;
+	}
+
+	public PvpStatsProfessionsThief getPvpStatsProfessionsThief() {
+		return this.pvpStatsProfessionsThief;
+	}
+
+	public void setPvpStatsProfessionsThief(PvpStatsProfessionsThief val) {
+		this.pvpStatsProfessionsThief = val;
+	}
+
+	public PvpStatsProfessionsWarrior getPvpStatsProfessionsWarrior() {
+		return this.pvpStatsProfessionsWarrior;
+	}
+
+	public void setPvpStatsProfessionsWarrior(PvpStatsProfessionsWarrior val) {
+		this.pvpStatsProfessionsWarrior = val;
+	}
+
+	public PvpStatsProfessionsNecromancer getPvpStatsProfessionsNecromancer() {
+		return this.pvpStatsProfessionsNecromancer;
+	}
+
+	public void setPvpStatsProfessionsNecromancer(PvpStatsProfessionsNecromancer val) {
+		this.pvpStatsProfessionsNecromancer = val;
+	}
+
+	public PvpStatsProfessionsRanger getPvpStatsProfessionsRanger() {
+		return this.pvpStatsProfessionsRanger;
+	}
+
+	public void setPvpStatsProfessionsRanger(PvpStatsProfessionsRanger val) {
+		this.pvpStatsProfessionsRanger = val;
+	}
+
+	public PvpStatsProfessionsMesmer getPvpStatsProfessionsMesmer() {
+		return this.pvpStatsProfessionsMesmer;
+	}
+
+	public void setPvpStatsProfessionsMesmer(PvpStatsProfessionsMesmer val) {
+		this.pvpStatsProfessionsMesmer = val;
+	}
+
+	public PvpStatsProfessionsGuardian getPvpStatsProfessionsGuardian() {
+		return this.pvpStatsProfessionsGuardian;
+	}
+
+	public void setPvpStatsProfessionsGuardian(PvpStatsProfessionsGuardian val) {
+		this.pvpStatsProfessionsGuardian = val;
+	}
+
+	public PvpStatsProfessionsElementalist getPvpStatsProfessionsElementalist() {
+		return this.pvpStatsProfessionsElementalist;
+	}
+
+	public void setPvpStatsProfessionsElementalist(PvpStatsProfessionsElementalist val) {
+		this.pvpStatsProfessionsElementalist = val;
+	}
+
+	public PvpStatsProfessionsEngineer getPvpStatsProfessionsEngineer() {
+		return this.pvpStatsProfessionsEngineer;
+	}
+
+	public void setPvpStatsProfessionsEngineer(PvpStatsProfessionsEngineer val) {
+		this.pvpStatsProfessionsEngineer = val;
+	}
+
+	public PvpStatsProfessions() {
+	}
+
 }

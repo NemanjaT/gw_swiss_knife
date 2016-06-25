@@ -15,4 +15,26 @@ public class ItemDetailsInfixUpgrade extends JsonModelFactoryMaster {
 
 	private Integer id;
 
+	//Getters and setters
+
+	public List<ItemDetailsInfixUpgradeAttributes> getItemDetailsInfixUpgradeAttributes() {
+		return this.itemDetailsInfixUpgradeAttributes;
+	}
+
+	public void setItemDetailsInfixUpgradeAttributes(List<ItemDetailsInfixUpgradeAttributes> val) {
+		this.itemDetailsInfixUpgradeAttributes = val;
+	}
+
+	public Integer getId() {
+		return this.id;
+	}
+
+	public void setId(Integer val) {
+		this.id = val;
+	}
+
+	public ItemDetailsInfixUpgrade() {
+		this.itemDetailsInfixUpgradeAttributes = new ArrayList<ItemDetailsInfixUpgradeAttributes>();
+	}
+
 }

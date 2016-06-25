@@ -22,6 +22,7 @@ public class Map extends JsonModelFactoryMaster {
 	private Integer maxLevel;
 
 	//TODO: GW-0002
+
 	private String name;
 
 	private Integer regionId;
@@ -31,6 +32,93 @@ public class Map extends JsonModelFactoryMaster {
 	private Integer id;
 
 	//TODO: GW-0002
+
 	private Integer minLevel;
+
+	//Getters and setters
+
+	public String getContinentName() {
+		return this.continentName;
+	}
+
+	public void setContinentName(String val) {
+		this.continentName = val;
+	}
+
+	public Integer getDefaultFloor() {
+		return this.defaultFloor;
+	}
+
+	public void setDefaultFloor(Integer val) {
+		this.defaultFloor = val;
+	}
+
+	public List<Integer> getFloors() {
+		return this.floors;
+	}
+
+	public void setFloors(List<Integer> val) {
+		this.floors = val;
+	}
+
+	public Integer getContinentId() {
+		return this.continentId;
+	}
+
+	public void setContinentId(Integer val) {
+		this.continentId = val;
+	}
+
+	public Integer getMaxLevel() {
+		return this.maxLevel;
+	}
+
+	public void setMaxLevel(Integer val) {
+		this.maxLevel = val;
+	}
+
+	public String getName() {
+		return this.name;
+	}
+
+	public void setName(String val) {
+		this.name = val;
+	}
+
+	public Integer getRegionId() {
+		return this.regionId;
+	}
+
+	public void setRegionId(Integer val) {
+		this.regionId = val;
+	}
+
+	public String getRegionName() {
+		return this.regionName;
+	}
+
+	public void setRegionName(String val) {
+		this.regionName = val;
+	}
+
+	public Integer getId() {
+		return this.id;
+	}
+
+	public void setId(Integer val) {
+		this.id = val;
+	}
+
+	public Integer getMinLevel() {
+		return this.minLevel;
+	}
+
+	public void setMinLevel(Integer val) {
+		this.minLevel = val;
+	}
+
+	public Map() {
+		this.floors = new ArrayList<Integer>();
+	}
 
 }

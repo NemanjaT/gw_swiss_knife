@@ -17,4 +17,33 @@ public class CharacterInventoryBagsInventory extends JsonModelFactoryMaster {
 
 	private Integer id;
 
+	//Getters and setters
+
+	public Integer getCount() {
+		return this.count;
+	}
+
+	public void setCount(Integer val) {
+		this.count = val;
+	}
+
+	public String getBinding() {
+		return this.binding;
+	}
+
+	public void setBinding(String val) {
+		this.binding = val;
+	}
+
+	public Integer getId() {
+		return this.id;
+	}
+
+	public void setId(Integer val) {
+		this.id = val;
+	}
+
+	public CharacterInventoryBagsInventory() {
+	}
+
 }

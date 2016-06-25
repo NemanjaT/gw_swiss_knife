@@ -78,6 +78,7 @@ public class JSONFileGenerator {
 
             }
 
+            this.classFileWriter.writeGettersAndSetters();
             this.classFileWriter.finishFile();
         } catch (JSONException e) {
             log.error(e.getMessage());
@@ -149,7 +150,7 @@ public class JSONFileGenerator {
     		
     	//If it's an array of arrays. . .
     	case '[':
-    		//TODO: Array inside array
+    		//TODO: Array inside array. . . do
 
     		classFileWriter.writeComment("TODO: GW-0002");
     		

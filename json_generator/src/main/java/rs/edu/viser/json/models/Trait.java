@@ -31,4 +31,91 @@ public class Trait extends JsonModelFactoryMaster {
 
 	private Integer order;
 
+	//Getters and setters
+
+	public Integer getTier() {
+		return this.tier;
+	}
+
+	public void setTier(Integer val) {
+		this.tier = val;
+	}
+
+	public List<TraitTraitedFacts> getTraitTraitedFacts() {
+		return this.traitTraitedFacts;
+	}
+
+	public void setTraitTraitedFacts(List<TraitTraitedFacts> val) {
+		this.traitTraitedFacts = val;
+	}
+
+	public String getName() {
+		return this.name;
+	}
+
+	public void setName(String val) {
+		this.name = val;
+	}
+
+	public String getIcon() {
+		return this.icon;
+	}
+
+	public void setIcon(String val) {
+		this.icon = val;
+	}
+
+	public String getDescription() {
+		return this.description;
+	}
+
+	public void setDescription(String val) {
+		this.description = val;
+	}
+
+	public Integer getSpecialization() {
+		return this.specialization;
+	}
+
+	public void setSpecialization(Integer val) {
+		this.specialization = val;
+	}
+
+	public Integer getId() {
+		return this.id;
+	}
+
+	public void setId(Integer val) {
+		this.id = val;
+	}
+
+	public String getSlot() {
+		return this.slot;
+	}
+
+	public void setSlot(String val) {
+		this.slot = val;
+	}
+
+	public List<TraitFacts> getTraitFacts() {
+		return this.traitFacts;
+	}
+
+	public void setTraitFacts(List<TraitFacts> val) {
+		this.traitFacts = val;
+	}
+
+	public Integer getOrder() {
+		return this.order;
+	}
+
+	public void setOrder(Integer val) {
+		this.order = val;
+	}
+
+	public Trait() {
+		this.traitTraitedFacts = new ArrayList<TraitTraitedFacts>();
+		this.traitFacts = new ArrayList<TraitFacts>();
+	}
+
 }

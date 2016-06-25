@@ -19,4 +19,42 @@ public class Materials extends JsonModelFactoryMaster {
 
 	private Integer order;
 
+	//Getters and setters
+
+	public String getName() {
+		return this.name;
+	}
+
+	public void setName(String val) {
+		this.name = val;
+	}
+
+	public Integer getId() {
+		return this.id;
+	}
+
+	public void setId(Integer val) {
+		this.id = val;
+	}
+
+	public List<Integer> getItems() {
+		return this.items;
+	}
+
+	public void setItems(List<Integer> val) {
+		this.items = val;
+	}
+
+	public Integer getOrder() {
+		return this.order;
+	}
+
+	public void setOrder(Integer val) {
+		this.order = val;
+	}
+
+	public Materials() {
+		this.items = new ArrayList<Integer>();
+	}
+
 }

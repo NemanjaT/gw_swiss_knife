@@ -23,4 +23,59 @@ public class PvpSeasonDivisions extends JsonModelFactoryMaster {
 
 	private String pipIcon;
 
+	//Getters and setters
+
+	public List<PvpSeasonDivisionsTiers> getPvpSeasonDivisionsTiers() {
+		return this.pvpSeasonDivisionsTiers;
+	}
+
+	public void setPvpSeasonDivisionsTiers(List<PvpSeasonDivisionsTiers> val) {
+		this.pvpSeasonDivisionsTiers = val;
+	}
+
+	public String getName() {
+		return this.name;
+	}
+
+	public void setName(String val) {
+		this.name = val;
+	}
+
+	public List<Object> getFlags() {
+		return this.flags;
+	}
+
+	public void setFlags(List<Object> val) {
+		this.flags = val;
+	}
+
+	public String getLargeIcon() {
+		return this.largeIcon;
+	}
+
+	public void setLargeIcon(String val) {
+		this.largeIcon = val;
+	}
+
+	public String getSmallIcon() {
+		return this.smallIcon;
+	}
+
+	public void setSmallIcon(String val) {
+		this.smallIcon = val;
+	}
+
+	public String getPipIcon() {
+		return this.pipIcon;
+	}
+
+	public void setPipIcon(String val) {
+		this.pipIcon = val;
+	}
+
+	public PvpSeasonDivisions() {
+		this.pvpSeasonDivisionsTiers = new ArrayList<PvpSeasonDivisionsTiers>();
+		this.flags = new ArrayList<Object>();
+	}
+
 }

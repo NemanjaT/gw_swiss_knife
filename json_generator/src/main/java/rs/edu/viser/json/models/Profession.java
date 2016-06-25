@@ -25,4 +25,67 @@ public class Profession extends JsonModelFactoryMaster {
 
 	private ProfessionWeapons professionWeapons;
 
+	//Getters and setters
+
+	public String getIconBig() {
+		return this.iconBig;
+	}
+
+	public void setIconBig(String val) {
+		this.iconBig = val;
+	}
+
+	public List<Integer> getSpecializations() {
+		return this.specializations;
+	}
+
+	public void setSpecializations(List<Integer> val) {
+		this.specializations = val;
+	}
+
+	public String getName() {
+		return this.name;
+	}
+
+	public void setName(String val) {
+		this.name = val;
+	}
+
+	public String getIcon() {
+		return this.icon;
+	}
+
+	public void setIcon(String val) {
+		this.icon = val;
+	}
+
+	public List<ProfessionTraining> getProfessionTraining() {
+		return this.professionTraining;
+	}
+
+	public void setProfessionTraining(List<ProfessionTraining> val) {
+		this.professionTraining = val;
+	}
+
+	public String getId() {
+		return this.id;
+	}
+
+	public void setId(String val) {
+		this.id = val;
+	}
+
+	public ProfessionWeapons getProfessionWeapons() {
+		return this.professionWeapons;
+	}
+
+	public void setProfessionWeapons(ProfessionWeapons val) {
+		this.professionWeapons = val;
+	}
+
+	public Profession() {
+		this.specializations = new ArrayList<Integer>();
+		this.professionTraining = new ArrayList<ProfessionTraining>();
+	}
+
 }

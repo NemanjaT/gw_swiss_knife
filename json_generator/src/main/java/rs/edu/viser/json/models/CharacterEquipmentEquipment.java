@@ -23,4 +23,59 @@ public class CharacterEquipmentEquipment extends JsonModelFactoryMaster {
 
 	private List<Integer> upgrades;
 
+	//Getters and setters
+
+	public List<Integer> getInfusions() {
+		return this.infusions;
+	}
+
+	public void setInfusions(List<Integer> val) {
+		this.infusions = val;
+	}
+
+	public CharacterEquipmentEquipmentStats getCharacterEquipmentEquipmentStats() {
+		return this.characterEquipmentEquipmentStats;
+	}
+
+	public void setCharacterEquipmentEquipmentStats(CharacterEquipmentEquipmentStats val) {
+		this.characterEquipmentEquipmentStats = val;
+	}
+
+	public Integer getSkin() {
+		return this.skin;
+	}
+
+	public void setSkin(Integer val) {
+		this.skin = val;
+	}
+
+	public Integer getId() {
+		return this.id;
+	}
+
+	public void setId(Integer val) {
+		this.id = val;
+	}
+
+	public String getSlot() {
+		return this.slot;
+	}
+
+	public void setSlot(String val) {
+		this.slot = val;
+	}
+
+	public List<Integer> getUpgrades() {
+		return this.upgrades;
+	}
+
+	public void setUpgrades(List<Integer> val) {
+		this.upgrades = val;
+	}
+
+	public CharacterEquipmentEquipment() {
+		this.infusions = new ArrayList<Integer>();
+		this.upgrades = new ArrayList<Integer>();
+	}
+
 }

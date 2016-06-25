@@ -15,4 +15,25 @@ public class CharacterEquipmentEquipmentStats extends JsonModelFactoryMaster {
 
 	private Integer id;
 
+	//Getters and setters
+
+	public CharacterEquipmentEquipmentStatsAttributes getCharacterEquipmentEquipmentStatsAttributes() {
+		return this.characterEquipmentEquipmentStatsAttributes;
+	}
+
+	public void setCharacterEquipmentEquipmentStatsAttributes(CharacterEquipmentEquipmentStatsAttributes val) {
+		this.characterEquipmentEquipmentStatsAttributes = val;
+	}
+
+	public Integer getId() {
+		return this.id;
+	}
+
+	public void setId(Integer val) {
+		this.id = val;
+	}
+
+	public CharacterEquipmentEquipmentStats() {
+	}
+
 }

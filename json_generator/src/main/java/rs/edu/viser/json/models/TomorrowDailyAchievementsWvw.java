@@ -17,4 +17,34 @@ public class TomorrowDailyAchievementsWvw extends JsonModelFactoryMaster {
 
 	private List<String> requiredAccess;
 
+	//Getters and setters
+
+	public TomorrowDailyAchievementsWvwLevel getTomorrowDailyAchievementsWvwLevel() {
+		return this.tomorrowDailyAchievementsWvwLevel;
+	}
+
+	public void setTomorrowDailyAchievementsWvwLevel(TomorrowDailyAchievementsWvwLevel val) {
+		this.tomorrowDailyAchievementsWvwLevel = val;
+	}
+
+	public Integer getId() {
+		return this.id;
+	}
+
+	public void setId(Integer val) {
+		this.id = val;
+	}
+
+	public List<String> getRequiredAccess() {
+		return this.requiredAccess;
+	}
+
+	public void setRequiredAccess(List<String> val) {
+		this.requiredAccess = val;
+	}
+
+	public TomorrowDailyAchievementsWvw() {
+		this.requiredAccess = new ArrayList<String>();
+	}
+
 }

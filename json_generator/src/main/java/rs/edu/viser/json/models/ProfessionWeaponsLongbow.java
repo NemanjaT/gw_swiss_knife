@@ -15,4 +15,26 @@ public class ProfessionWeaponsLongbow extends JsonModelFactoryMaster {
 
 	private Integer specialization;
 
+	//Getters and setters
+
+	public List<ProfessionWeaponsLongbowSkills> getProfessionWeaponsLongbowSkills() {
+		return this.professionWeaponsLongbowSkills;
+	}
+
+	public void setProfessionWeaponsLongbowSkills(List<ProfessionWeaponsLongbowSkills> val) {
+		this.professionWeaponsLongbowSkills = val;
+	}
+
+	public Integer getSpecialization() {
+		return this.specialization;
+	}
+
+	public void setSpecialization(Integer val) {
+		this.specialization = val;
+	}
+
+	public ProfessionWeaponsLongbow() {
+		this.professionWeaponsLongbowSkills = new ArrayList<ProfessionWeaponsLongbowSkills>();
+	}
+
 }

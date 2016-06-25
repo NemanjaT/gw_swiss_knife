@@ -13,4 +13,18 @@ public class CharacterCrafting extends JsonModelFactoryMaster {
 
 	private List<CharacterCraftingCrafting> characterCraftingCrafting;
 
+	//Getters and setters
+
+	public List<CharacterCraftingCrafting> getCharacterCraftingCrafting() {
+		return this.characterCraftingCrafting;
+	}
+
+	public void setCharacterCraftingCrafting(List<CharacterCraftingCrafting> val) {
+		this.characterCraftingCrafting = val;
+	}
+
+	public CharacterCrafting() {
+		this.characterCraftingCrafting = new ArrayList<CharacterCraftingCrafting>();
+	}
+
 }

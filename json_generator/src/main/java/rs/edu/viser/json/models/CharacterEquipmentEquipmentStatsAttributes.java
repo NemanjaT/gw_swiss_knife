@@ -17,4 +17,33 @@ public class CharacterEquipmentEquipmentStatsAttributes extends JsonModelFactory
 
 	private Integer Power;
 
+	//Getters and setters
+
+	public Integer getPrecision() {
+		return this.Precision;
+	}
+
+	public void setPrecision(Integer val) {
+		this.Precision = val;
+	}
+
+	public Integer getCritDamage() {
+		return this.CritDamage;
+	}
+
+	public void setCritDamage(Integer val) {
+		this.CritDamage = val;
+	}
+
+	public Integer getPower() {
+		return this.Power;
+	}
+
+	public void setPower(Integer val) {
+		this.Power = val;
+	}
+
+	public CharacterEquipmentEquipmentStatsAttributes() {
+	}
+
 }

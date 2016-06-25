@@ -15,4 +15,25 @@ public class PvpGameScores extends JsonModelFactoryMaster {
 
 	private Integer blue;
 
+	//Getters and setters
+
+	public Integer getRed() {
+		return this.red;
+	}
+
+	public void setRed(Integer val) {
+		this.red = val;
+	}
+
+	public Integer getBlue() {
+		return this.blue;
+	}
+
+	public void setBlue(Integer val) {
+		this.blue = val;
+	}
+
+	public PvpGameScores() {
+	}
+
 }

@@ -15,4 +15,25 @@ public class WvwMatchMapsBonuses extends JsonModelFactoryMaster {
 
 	private String type;
 
+	//Getters and setters
+
+	public String getOwner() {
+		return this.owner;
+	}
+
+	public void setOwner(String val) {
+		this.owner = val;
+	}
+
+	public String getType() {
+		return this.type;
+	}
+
+	public void setType(String val) {
+		this.type = val;
+	}
+
+	public WvwMatchMapsBonuses() {
+	}
+
 }

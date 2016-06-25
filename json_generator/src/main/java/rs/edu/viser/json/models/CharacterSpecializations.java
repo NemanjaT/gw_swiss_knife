@@ -13,4 +13,17 @@ public class CharacterSpecializations extends JsonModelFactoryMaster {
 
 	private CharacterSpecializationsSpecializations characterSpecializationsSpecializations;
 
+	//Getters and setters
+
+	public CharacterSpecializationsSpecializations getCharacterSpecializationsSpecializations() {
+		return this.characterSpecializationsSpecializations;
+	}
+
+	public void setCharacterSpecializationsSpecializations(CharacterSpecializationsSpecializations val) {
+		this.characterSpecializationsSpecializations = val;
+	}
+
+	public CharacterSpecializations() {
+	}
+
 }

@@ -15,4 +15,25 @@ public class File extends JsonModelFactoryMaster {
 
 	private String id;
 
+	//Getters and setters
+
+	public String getIcon() {
+		return this.icon;
+	}
+
+	public void setIcon(String val) {
+		this.icon = val;
+	}
+
+	public String getId() {
+		return this.id;
+	}
+
+	public void setId(String val) {
+		this.id = val;
+	}
+
+	public File() {
+	}
+
 }

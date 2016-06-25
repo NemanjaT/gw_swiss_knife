@@ -19,4 +19,45 @@ public class TomorrowDailyAchievements extends JsonModelFactoryMaster {
 
 	private List<TomorrowDailyAchievementsPve> tomorrowDailyAchievementsPve;
 
+	//Getters and setters
+
+	public List<Object> getSpecial() {
+		return this.special;
+	}
+
+	public void setSpecial(List<Object> val) {
+		this.special = val;
+	}
+
+	public List<TomorrowDailyAchievementsWvw> getTomorrowDailyAchievementsWvw() {
+		return this.tomorrowDailyAchievementsWvw;
+	}
+
+	public void setTomorrowDailyAchievementsWvw(List<TomorrowDailyAchievementsWvw> val) {
+		this.tomorrowDailyAchievementsWvw = val;
+	}
+
+	public List<TomorrowDailyAchievementsPvp> getTomorrowDailyAchievementsPvp() {
+		return this.tomorrowDailyAchievementsPvp;
+	}
+
+	public void setTomorrowDailyAchievementsPvp(List<TomorrowDailyAchievementsPvp> val) {
+		this.tomorrowDailyAchievementsPvp = val;
+	}
+
+	public List<TomorrowDailyAchievementsPve> getTomorrowDailyAchievementsPve() {
+		return this.tomorrowDailyAchievementsPve;
+	}
+
+	public void setTomorrowDailyAchievementsPve(List<TomorrowDailyAchievementsPve> val) {
+		this.tomorrowDailyAchievementsPve = val;
+	}
+
+	public TomorrowDailyAchievements() {
+		this.special = new ArrayList<Object>();
+		this.tomorrowDailyAchievementsWvw = new ArrayList<TomorrowDailyAchievementsWvw>();
+		this.tomorrowDailyAchievementsPvp = new ArrayList<TomorrowDailyAchievementsPvp>();
+		this.tomorrowDailyAchievementsPve = new ArrayList<TomorrowDailyAchievementsPve>();
+	}
+
 }

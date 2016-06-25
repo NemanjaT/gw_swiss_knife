@@ -15,4 +15,25 @@ public class CommerceExchangeCoins extends JsonModelFactoryMaster {
 
 	private Integer quantity;
 
+	//Getters and setters
+
+	public Integer getCoinsPerGem() {
+		return this.coinsPerGem;
+	}
+
+	public void setCoinsPerGem(Integer val) {
+		this.coinsPerGem = val;
+	}
+
+	public Integer getQuantity() {
+		return this.quantity;
+	}
+
+	public void setQuantity(Integer val) {
+		this.quantity = val;
+	}
+
+	public CommerceExchangeCoins() {
+	}
+
 }

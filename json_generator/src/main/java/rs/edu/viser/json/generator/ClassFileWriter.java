@@ -7,6 +7,7 @@ import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -15,12 +16,34 @@ import java.util.List;
  * Writes a Java class file.
  */
 public class ClassFileWriter {
+	public class Attribute {
+		private String name;
+		private String type;
+		
+		public Attribute(String name, String type) {
+			this.name = name;
+			this.type = type;
+		}
+		public String getName() {
+			return name;
+		}
+		public String getType() {
+			return type;
+		}
+		public String getNameGetter() {
+			return "get" + name.substring(0, 1).toUpperCase() + name.substring(1);
+		}
+		public String getNameSetter() {
+			return "set" + name.substring(0, 1).toUpperCase() + name.substring(1);
+		}
+	}
 
     private LOG log;
 
     private BufferedWriter fileWriter;
     private String className;
     private String fullPath;
+    private List<Attribute> attributes;
 
     private String regexInt = "^-?\\d+$";
     private String regexDouble = "^-?\\d+\\.?\\d*$";
@@ -35,6 +58,7 @@ public class ClassFileWriter {
         //Load components.
         FileGeneratorConfigReader reader = FileGeneratorConfigReader.getReader();
         this.className = className;
+        this.attributes = new ArrayList<>();
 
         try {
             //Search for file and warn the user if an existing one is going to be overridden.
@@ -85,6 +109,7 @@ public class ClassFileWriter {
             fileWriter.write("\tprivate " + className + " " + objectName + ";" + comment + "\n\n");
             log.info("Created object attribute " + objectName + " of type " + className + " for class " + this.className);
 
+            attributes.add(new Attribute(objectName, className));
             closeFile(null);
         } catch (IOException e) {
             closeFile(e);
@@ -114,6 +139,7 @@ public class ClassFileWriter {
             fileWriter.write("\tprivate " + type + " " + attributeName + ";\n\n");
             log.info("Created attribute " + attributeName + " for a class " + className + "!");
 
+            attributes.add(new Attribute(attributeName, type));
             closeFile(null);
         } catch (IOException e) {
             closeFile(e);
@@ -160,6 +186,7 @@ public class ClassFileWriter {
 	    	fileWriter.write("\tprivate " + type + " " + attributeName + ";\n\n");
 	    	log.info("Created list " + type + " to class " + className + " successfully!");
 	    	
+	    	attributes.add(new Attribute(attributeName, type));
 	    	closeFile(null);
     	} catch (IOException e) {
     		closeFile(e);
@@ -175,7 +202,7 @@ public class ClassFileWriter {
     	try {
     		if (string.length > 0) {
     			if (string.length == 1) {
-    				fileWriter.write("\t//" + string[0] + "\n");
+    				fileWriter.write("\t//" + string[0] + "\n\n");
     			} else {
     				fileWriter.write("\t/*\n");
     				for (String str : string) {
@@ -184,6 +211,7 @@ public class ClassFileWriter {
     				fileWriter.write("\t */\n\n");
     			}
     		}
+    		
 			closeFile(null);
 		} catch (IOException e) {
 			closeFile(e);
@@ -194,7 +222,29 @@ public class ClassFileWriter {
      * Write getters and setters. . .
      */
     void writeGettersAndSetters() {
+    	writeComment("Getters and setters");
     	
+    	openFile();
+    	try {
+    		log.info("Initializing getters and setters for " + className);
+    		
+    		for (Attribute attribute : attributes) {
+    			log.info("Writing getter and setter for attribute " + attribute.getName() + " (" + className +")");
+    			
+    			fileWriter.write(
+    					"\tpublic " + attribute.getType() + " " + attribute.getNameGetter() + "() {\n" +
+    					"\t\treturn this." + attribute.getName() + ";\n" +
+    					"\t}\n\n" +
+    					"\tpublic void " + attribute.getNameSetter() + "(" + attribute.getType() + " val) {\n" +
+    					"\t\tthis." + attribute.getName() + " = val;\n" +
+    					"\t}\n\n"
+    			);
+    		}
+    		
+    		closeFile(null);
+    	} catch (IOException e) {
+    		closeFile(e);
+    	}
     }
 
     /**
@@ -204,9 +254,21 @@ public class ClassFileWriter {
         //Finish and close the file
         openFile();
         try {
-            fileWriter.write(
-                    "}\n"
-            );
+        	//write a constructor to initialize all arraylist's. . .
+        	fileWriter.write("\tpublic " + className + "() {\n");
+        	
+        	log.info("Initializing constructor for " + className);
+        	for (Attribute attribute : attributes) {
+        		if (attribute.getType().contains("List<")) {
+        			fileWriter.write(
+        					"\t\tthis." + attribute.getName() + " = new " +
+        					attribute.getType().replace("List<", "ArrayList<").replace(">", ">()") + ";\n"
+        			);
+        		}
+        	}
+        	
+        	//close the constructor and the file
+            fileWriter.write("\t}\n\n}\n");
             log.info("Class file " + className + " successfully closed.");
 
             closeFile(null);

@@ -13,4 +13,18 @@ public class ProfessionWeaponsGreatsword extends JsonModelFactoryMaster {
 
 	private List<ProfessionWeaponsGreatswordSkills> professionWeaponsGreatswordSkills;
 
+	//Getters and setters
+
+	public List<ProfessionWeaponsGreatswordSkills> getProfessionWeaponsGreatswordSkills() {
+		return this.professionWeaponsGreatswordSkills;
+	}
+
+	public void setProfessionWeaponsGreatswordSkills(List<ProfessionWeaponsGreatswordSkills> val) {
+		this.professionWeaponsGreatswordSkills = val;
+	}
+
+	public ProfessionWeaponsGreatsword() {
+		this.professionWeaponsGreatswordSkills = new ArrayList<ProfessionWeaponsGreatswordSkills>();
+	}
+
 }

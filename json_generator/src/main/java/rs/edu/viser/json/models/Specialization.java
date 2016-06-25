@@ -27,4 +27,75 @@ public class Specialization extends JsonModelFactoryMaster {
 
 	private Integer id;
 
+	//Getters and setters
+
+	public String getProfession() {
+		return this.profession;
+	}
+
+	public void setProfession(String val) {
+		this.profession = val;
+	}
+
+	public Boolean getElite() {
+		return this.elite;
+	}
+
+	public void setElite(Boolean val) {
+		this.elite = val;
+	}
+
+	public String getBackground() {
+		return this.background;
+	}
+
+	public void setBackground(String val) {
+		this.background = val;
+	}
+
+	public List<Integer> getMajorTraits() {
+		return this.majorTraits;
+	}
+
+	public void setMajorTraits(List<Integer> val) {
+		this.majorTraits = val;
+	}
+
+	public String getName() {
+		return this.name;
+	}
+
+	public void setName(String val) {
+		this.name = val;
+	}
+
+	public List<Integer> getMinorTraits() {
+		return this.minorTraits;
+	}
+
+	public void setMinorTraits(List<Integer> val) {
+		this.minorTraits = val;
+	}
+
+	public String getIcon() {
+		return this.icon;
+	}
+
+	public void setIcon(String val) {
+		this.icon = val;
+	}
+
+	public Integer getId() {
+		return this.id;
+	}
+
+	public void setId(Integer val) {
+		this.id = val;
+	}
+
+	public Specialization() {
+		this.majorTraits = new ArrayList<Integer>();
+		this.minorTraits = new ArrayList<Integer>();
+	}
+
 }

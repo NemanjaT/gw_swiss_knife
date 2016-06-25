@@ -21,4 +21,49 @@ public class PvpStatsLadders extends JsonModelFactoryMaster {
 
 	private PvpStatsLaddersUnranked pvpStatsLaddersUnranked;
 
+	//Getters and setters
+
+	public PvpStatsLaddersSoloarenarated getPvpStatsLaddersSoloarenarated() {
+		return this.pvpStatsLaddersSoloarenarated;
+	}
+
+	public void setPvpStatsLaddersSoloarenarated(PvpStatsLaddersSoloarenarated val) {
+		this.pvpStatsLaddersSoloarenarated = val;
+	}
+
+	public PvpStatsLaddersTeamarenarated getPvpStatsLaddersTeamarenarated() {
+		return this.pvpStatsLaddersTeamarenarated;
+	}
+
+	public void setPvpStatsLaddersTeamarenarated(PvpStatsLaddersTeamarenarated val) {
+		this.pvpStatsLaddersTeamarenarated = val;
+	}
+
+	public PvpStatsLaddersRanked getPvpStatsLaddersRanked() {
+		return this.pvpStatsLaddersRanked;
+	}
+
+	public void setPvpStatsLaddersRanked(PvpStatsLaddersRanked val) {
+		this.pvpStatsLaddersRanked = val;
+	}
+
+	public PvpStatsLaddersNone getPvpStatsLaddersNone() {
+		return this.pvpStatsLaddersNone;
+	}
+
+	public void setPvpStatsLaddersNone(PvpStatsLaddersNone val) {
+		this.pvpStatsLaddersNone = val;
+	}
+
+	public PvpStatsLaddersUnranked getPvpStatsLaddersUnranked() {
+		return this.pvpStatsLaddersUnranked;
+	}
+
+	public void setPvpStatsLaddersUnranked(PvpStatsLaddersUnranked val) {
+		this.pvpStatsLaddersUnranked = val;
+	}
+
+	public PvpStatsLadders() {
+	}
+
 }

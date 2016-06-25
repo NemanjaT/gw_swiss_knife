@@ -15,4 +15,25 @@ public class ItemStatsAttributes extends JsonModelFactoryMaster {
 
 	private Double Vitality;
 
+	//Getters and setters
+
+	public Double getToughness() {
+		return this.Toughness;
+	}
+
+	public void setToughness(Double val) {
+		this.Toughness = val;
+	}
+
+	public Double getVitality() {
+		return this.Vitality;
+	}
+
+	public void setVitality(Double val) {
+		this.Vitality = val;
+	}
+
+	public ItemStatsAttributes() {
+	}
+
 }

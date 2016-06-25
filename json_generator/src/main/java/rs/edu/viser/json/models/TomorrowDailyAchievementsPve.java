@@ -17,4 +17,34 @@ public class TomorrowDailyAchievementsPve extends JsonModelFactoryMaster {
 
 	private List<String> requiredAccess;
 
+	//Getters and setters
+
+	public TomorrowDailyAchievementsPveLevel getTomorrowDailyAchievementsPveLevel() {
+		return this.tomorrowDailyAchievementsPveLevel;
+	}
+
+	public void setTomorrowDailyAchievementsPveLevel(TomorrowDailyAchievementsPveLevel val) {
+		this.tomorrowDailyAchievementsPveLevel = val;
+	}
+
+	public Integer getId() {
+		return this.id;
+	}
+
+	public void setId(Integer val) {
+		this.id = val;
+	}
+
+	public List<String> getRequiredAccess() {
+		return this.requiredAccess;
+	}
+
+	public void setRequiredAccess(List<String> val) {
+		this.requiredAccess = val;
+	}
+
+	public TomorrowDailyAchievementsPve() {
+		this.requiredAccess = new ArrayList<String>();
+	}
+
 }

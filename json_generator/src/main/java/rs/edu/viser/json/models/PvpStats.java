@@ -23,4 +23,57 @@ public class PvpStats extends JsonModelFactoryMaster {
 
 	private PvpStatsAggregate pvpStatsAggregate;
 
+	//Getters and setters
+
+	public Integer getPvpRank() {
+		return this.pvpRank;
+	}
+
+	public void setPvpRank(Integer val) {
+		this.pvpRank = val;
+	}
+
+	public Integer getPvpRankPoints() {
+		return this.pvpRankPoints;
+	}
+
+	public void setPvpRankPoints(Integer val) {
+		this.pvpRankPoints = val;
+	}
+
+	public PvpStatsLadders getPvpStatsLadders() {
+		return this.pvpStatsLadders;
+	}
+
+	public void setPvpStatsLadders(PvpStatsLadders val) {
+		this.pvpStatsLadders = val;
+	}
+
+	public PvpStatsProfessions getPvpStatsProfessions() {
+		return this.pvpStatsProfessions;
+	}
+
+	public void setPvpStatsProfessions(PvpStatsProfessions val) {
+		this.pvpStatsProfessions = val;
+	}
+
+	public Integer getPvpRankRollovers() {
+		return this.pvpRankRollovers;
+	}
+
+	public void setPvpRankRollovers(Integer val) {
+		this.pvpRankRollovers = val;
+	}
+
+	public PvpStatsAggregate getPvpStatsAggregate() {
+		return this.pvpStatsAggregate;
+	}
+
+	public void setPvpStatsAggregate(PvpStatsAggregate val) {
+		this.pvpStatsAggregate = val;
+	}
+
+	public PvpStats() {
+	}
+
 }

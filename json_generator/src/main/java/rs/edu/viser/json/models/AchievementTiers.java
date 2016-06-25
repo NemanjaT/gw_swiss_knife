@@ -15,4 +15,25 @@ public class AchievementTiers extends JsonModelFactoryMaster {
 
 	private Integer points;
 
+	//Getters and setters
+
+	public Integer getCount() {
+		return this.count;
+	}
+
+	public void setCount(Integer val) {
+		this.count = val;
+	}
+
+	public Integer getPoints() {
+		return this.points;
+	}
+
+	public void setPoints(Integer val) {
+		this.points = val;
+	}
+
+	public AchievementTiers() {
+	}
+
 }

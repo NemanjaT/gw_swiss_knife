@@ -15,4 +15,25 @@ public class Quaggan extends JsonModelFactoryMaster {
 
 	private String url;
 
+	//Getters and setters
+
+	public Integer getId() {
+		return this.id;
+	}
+
+	public void setId(Integer val) {
+		this.id = val;
+	}
+
+	public String getUrl() {
+		return this.url;
+	}
+
+	public void setUrl(String val) {
+		this.url = val;
+	}
+
+	public Quaggan() {
+	}
+
 }

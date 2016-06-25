@@ -35,4 +35,105 @@ public class ProfessionWeapons extends JsonModelFactoryMaster {
 
 	private ProfessionWeaponsTorch professionWeaponsTorch;
 
+	//Getters and setters
+
+	public ProfessionWeaponsHammer getProfessionWeaponsHammer() {
+		return this.professionWeaponsHammer;
+	}
+
+	public void setProfessionWeaponsHammer(ProfessionWeaponsHammer val) {
+		this.professionWeaponsHammer = val;
+	}
+
+	public ProfessionWeaponsMace getProfessionWeaponsMace() {
+		return this.professionWeaponsMace;
+	}
+
+	public void setProfessionWeaponsMace(ProfessionWeaponsMace val) {
+		this.professionWeaponsMace = val;
+	}
+
+	public ProfessionWeaponsShield getProfessionWeaponsShield() {
+		return this.professionWeaponsShield;
+	}
+
+	public void setProfessionWeaponsShield(ProfessionWeaponsShield val) {
+		this.professionWeaponsShield = val;
+	}
+
+	public ProfessionWeaponsSword getProfessionWeaponsSword() {
+		return this.professionWeaponsSword;
+	}
+
+	public void setProfessionWeaponsSword(ProfessionWeaponsSword val) {
+		this.professionWeaponsSword = val;
+	}
+
+	public ProfessionWeaponsFocus getProfessionWeaponsFocus() {
+		return this.professionWeaponsFocus;
+	}
+
+	public void setProfessionWeaponsFocus(ProfessionWeaponsFocus val) {
+		this.professionWeaponsFocus = val;
+	}
+
+	public ProfessionWeaponsStaff getProfessionWeaponsStaff() {
+		return this.professionWeaponsStaff;
+	}
+
+	public void setProfessionWeaponsStaff(ProfessionWeaponsStaff val) {
+		this.professionWeaponsStaff = val;
+	}
+
+	public ProfessionWeaponsTrident getProfessionWeaponsTrident() {
+		return this.professionWeaponsTrident;
+	}
+
+	public void setProfessionWeaponsTrident(ProfessionWeaponsTrident val) {
+		this.professionWeaponsTrident = val;
+	}
+
+	public ProfessionWeaponsGreatsword getProfessionWeaponsGreatsword() {
+		return this.professionWeaponsGreatsword;
+	}
+
+	public void setProfessionWeaponsGreatsword(ProfessionWeaponsGreatsword val) {
+		this.professionWeaponsGreatsword = val;
+	}
+
+	public ProfessionWeaponsScepter getProfessionWeaponsScepter() {
+		return this.professionWeaponsScepter;
+	}
+
+	public void setProfessionWeaponsScepter(ProfessionWeaponsScepter val) {
+		this.professionWeaponsScepter = val;
+	}
+
+	public ProfessionWeaponsSpear getProfessionWeaponsSpear() {
+		return this.professionWeaponsSpear;
+	}
+
+	public void setProfessionWeaponsSpear(ProfessionWeaponsSpear val) {
+		this.professionWeaponsSpear = val;
+	}
+
+	public ProfessionWeaponsLongbow getProfessionWeaponsLongbow() {
+		return this.professionWeaponsLongbow;
+	}
+
+	public void setProfessionWeaponsLongbow(ProfessionWeaponsLongbow val) {
+		this.professionWeaponsLongbow = val;
+	}
+
+	public ProfessionWeaponsTorch getProfessionWeaponsTorch() {
+		return this.professionWeaponsTorch;
+	}
+
+	public void setProfessionWeaponsTorch(ProfessionWeaponsTorch val) {
+		this.professionWeaponsTorch = val;
+	}
+
+	public ProfessionWeapons() {
+	}
+
 }

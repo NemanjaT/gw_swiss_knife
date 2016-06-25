@@ -15,4 +15,25 @@ public class ItemDetailsInfixUpgradeAttributes extends JsonModelFactoryMaster {
 
 	private String attribute;
 
+	//Getters and setters
+
+	public Integer getModifier() {
+		return this.modifier;
+	}
+
+	public void setModifier(Integer val) {
+		this.modifier = val;
+	}
+
+	public String getAttribute() {
+		return this.attribute;
+	}
+
+	public void setAttribute(String val) {
+		this.attribute = val;
+	}
+
+	public ItemDetailsInfixUpgradeAttributes() {
+	}
+
 }

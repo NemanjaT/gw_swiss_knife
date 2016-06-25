@@ -15,4 +15,25 @@ public class AchievementRewards extends JsonModelFactoryMaster {
 
 	private String type;
 
+	//Getters and setters
+
+	public Integer getId() {
+		return this.id;
+	}
+
+	public void setId(Integer val) {
+		this.id = val;
+	}
+
+	public String getType() {
+		return this.type;
+	}
+
+	public void setType(String val) {
+		this.type = val;
+	}
+
+	public AchievementRewards() {
+	}
+
 }

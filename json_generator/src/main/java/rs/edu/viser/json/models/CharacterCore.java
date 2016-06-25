@@ -31,4 +31,89 @@ public class CharacterCore extends JsonModelFactoryMaster {
 
 	private Integer deaths;
 
+	//Getters and setters
+
+	public String getProfession() {
+		return this.profession;
+	}
+
+	public void setProfession(String val) {
+		this.profession = val;
+	}
+
+	public String getGuild() {
+		return this.guild;
+	}
+
+	public void setGuild(String val) {
+		this.guild = val;
+	}
+
+	public String getRace() {
+		return this.race;
+	}
+
+	public void setRace(String val) {
+		this.race = val;
+	}
+
+	public String getGender() {
+		return this.gender;
+	}
+
+	public void setGender(String val) {
+		this.gender = val;
+	}
+
+	public Integer getLevel() {
+		return this.level;
+	}
+
+	public void setLevel(Integer val) {
+		this.level = val;
+	}
+
+	public String getCreated() {
+		return this.created;
+	}
+
+	public void setCreated(String val) {
+		this.created = val;
+	}
+
+	public String getName() {
+		return this.name;
+	}
+
+	public void setName(String val) {
+		this.name = val;
+	}
+
+	public Integer getTitle() {
+		return this.title;
+	}
+
+	public void setTitle(Integer val) {
+		this.title = val;
+	}
+
+	public Integer getAge() {
+		return this.age;
+	}
+
+	public void setAge(Integer val) {
+		this.age = val;
+	}
+
+	public Integer getDeaths() {
+		return this.deaths;
+	}
+
+	public void setDeaths(Integer val) {
+		this.deaths = val;
+	}
+
+	public CharacterCore() {
+	}
+
 }

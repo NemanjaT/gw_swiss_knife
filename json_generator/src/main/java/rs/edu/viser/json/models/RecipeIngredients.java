@@ -15,4 +15,25 @@ public class RecipeIngredients extends JsonModelFactoryMaster {
 
 	private Integer count;
 
+	//Getters and setters
+
+	public Integer getItemId() {
+		return this.itemId;
+	}
+
+	public void setItemId(Integer val) {
+		this.itemId = val;
+	}
+
+	public Integer getCount() {
+		return this.count;
+	}
+
+	public void setCount(Integer val) {
+		this.count = val;
+	}
+
+	public RecipeIngredients() {
+	}
+
 }

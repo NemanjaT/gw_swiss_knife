@@ -13,4 +13,17 @@ public class Build extends JsonModelFactoryMaster {
 
 	private Integer id;
 
+	//Getters and setters
+
+	public Integer getId() {
+		return this.id;
+	}
+
+	public void setId(Integer val) {
+		this.id = val;
+	}
+
+	public Build() {
+	}
+
 }

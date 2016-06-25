@@ -13,4 +13,18 @@ public class CharacterRecipes extends JsonModelFactoryMaster {
 
 	private List<Integer> recipes;
 
+	//Getters and setters
+
+	public List<Integer> getRecipes() {
+		return this.recipes;
+	}
+
+	public void setRecipes(List<Integer> val) {
+		this.recipes = val;
+	}
+
+	public CharacterRecipes() {
+		this.recipes = new ArrayList<Integer>();
+	}
+
 }

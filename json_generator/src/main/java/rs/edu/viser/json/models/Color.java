@@ -27,4 +27,75 @@ public class Color extends JsonModelFactoryMaster {
 
 	private ColorCloth colorCloth;
 
+	//Getters and setters
+
+	public Integer getItem() {
+		return this.item;
+	}
+
+	public void setItem(Integer val) {
+		this.item = val;
+	}
+
+	public List<Integer> getBaseRgb() {
+		return this.baseRgb;
+	}
+
+	public void setBaseRgb(List<Integer> val) {
+		this.baseRgb = val;
+	}
+
+	public String getName() {
+		return this.name;
+	}
+
+	public void setName(String val) {
+		this.name = val;
+	}
+
+	public ColorMetal getColorMetal() {
+		return this.colorMetal;
+	}
+
+	public void setColorMetal(ColorMetal val) {
+		this.colorMetal = val;
+	}
+
+	public Integer getId() {
+		return this.id;
+	}
+
+	public void setId(Integer val) {
+		this.id = val;
+	}
+
+	public List<String> getCategories() {
+		return this.categories;
+	}
+
+	public void setCategories(List<String> val) {
+		this.categories = val;
+	}
+
+	public ColorLeather getColorLeather() {
+		return this.colorLeather;
+	}
+
+	public void setColorLeather(ColorLeather val) {
+		this.colorLeather = val;
+	}
+
+	public ColorCloth getColorCloth() {
+		return this.colorCloth;
+	}
+
+	public void setColorCloth(ColorCloth val) {
+		this.colorCloth = val;
+	}
+
+	public Color() {
+		this.baseRgb = new ArrayList<Integer>();
+		this.categories = new ArrayList<String>();
+	}
+
 }

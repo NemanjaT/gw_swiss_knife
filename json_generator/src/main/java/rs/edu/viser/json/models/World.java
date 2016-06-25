@@ -17,4 +17,33 @@ public class World extends JsonModelFactoryMaster {
 
 	private String population;
 
+	//Getters and setters
+
+	public String getName() {
+		return this.name;
+	}
+
+	public void setName(String val) {
+		this.name = val;
+	}
+
+	public Integer getId() {
+		return this.id;
+	}
+
+	public void setId(Integer val) {
+		this.id = val;
+	}
+
+	public String getPopulation() {
+		return this.population;
+	}
+
+	public void setPopulation(String val) {
+		this.population = val;
+	}
+
+	public World() {
+	}
+
 }

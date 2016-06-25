@@ -27,4 +27,75 @@ public class Skin extends JsonModelFactoryMaster {
 
 	private String rarity;
 
+	//Getters and setters
+
+	public String getName() {
+		return this.name;
+	}
+
+	public void setName(String val) {
+		this.name = val;
+	}
+
+	public List<String> getFlags() {
+		return this.flags;
+	}
+
+	public void setFlags(List<String> val) {
+		this.flags = val;
+	}
+
+	public String getIcon() {
+		return this.icon;
+	}
+
+	public void setIcon(String val) {
+		this.icon = val;
+	}
+
+	public List<Object> getRestrictions() {
+		return this.restrictions;
+	}
+
+	public void setRestrictions(List<Object> val) {
+		this.restrictions = val;
+	}
+
+	public SkinDetails getSkinDetails() {
+		return this.skinDetails;
+	}
+
+	public void setSkinDetails(SkinDetails val) {
+		this.skinDetails = val;
+	}
+
+	public Integer getId() {
+		return this.id;
+	}
+
+	public void setId(Integer val) {
+		this.id = val;
+	}
+
+	public String getType() {
+		return this.type;
+	}
+
+	public void setType(String val) {
+		this.type = val;
+	}
+
+	public String getRarity() {
+		return this.rarity;
+	}
+
+	public void setRarity(String val) {
+		this.rarity = val;
+	}
+
+	public Skin() {
+		this.flags = new ArrayList<String>();
+		this.restrictions = new ArrayList<Object>();
+	}
+
 }

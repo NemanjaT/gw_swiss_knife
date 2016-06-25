@@ -23,4 +23,57 @@ public class WvwObjective extends JsonModelFactoryMaster {
 
 	private String type;
 
+	//Getters and setters
+
+	public String getMapType() {
+		return this.mapType;
+	}
+
+	public void setMapType(String val) {
+		this.mapType = val;
+	}
+
+	public Integer getSectorId() {
+		return this.sectorId;
+	}
+
+	public void setSectorId(Integer val) {
+		this.sectorId = val;
+	}
+
+	public Integer getMapId() {
+		return this.mapId;
+	}
+
+	public void setMapId(Integer val) {
+		this.mapId = val;
+	}
+
+	public String getName() {
+		return this.name;
+	}
+
+	public void setName(String val) {
+		this.name = val;
+	}
+
+	public String getId() {
+		return this.id;
+	}
+
+	public void setId(String val) {
+		this.id = val;
+	}
+
+	public String getType() {
+		return this.type;
+	}
+
+	public void setType(String val) {
+		this.type = val;
+	}
+
+	public WvwObjective() {
+	}
+
 }

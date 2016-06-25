@@ -17,4 +17,34 @@ public class CharacterInventoryBags extends JsonModelFactoryMaster {
 
 	private List<CharacterInventoryBagsInventory> characterInventoryBagsInventory;
 
+	//Getters and setters
+
+	public Integer getSize() {
+		return this.size;
+	}
+
+	public void setSize(Integer val) {
+		this.size = val;
+	}
+
+	public Integer getId() {
+		return this.id;
+	}
+
+	public void setId(Integer val) {
+		this.id = val;
+	}
+
+	public List<CharacterInventoryBagsInventory> getCharacterInventoryBagsInventory() {
+		return this.characterInventoryBagsInventory;
+	}
+
+	public void setCharacterInventoryBagsInventory(List<CharacterInventoryBagsInventory> val) {
+		this.characterInventoryBagsInventory = val;
+	}
+
+	public CharacterInventoryBags() {
+		this.characterInventoryBagsInventory = new ArrayList<CharacterInventoryBagsInventory>();
+	}
+
 }

@@ -17,4 +17,36 @@ public class CharacterSpecializationsSpecializations extends JsonModelFactoryMas
 
 	private List<CharacterSpecializationsSpecializationsPve> characterSpecializationsSpecializationsPve;
 
+	//Getters and setters
+
+	public List<CharacterSpecializationsSpecializationsWvw> getCharacterSpecializationsSpecializationsWvw() {
+		return this.characterSpecializationsSpecializationsWvw;
+	}
+
+	public void setCharacterSpecializationsSpecializationsWvw(List<CharacterSpecializationsSpecializationsWvw> val) {
+		this.characterSpecializationsSpecializationsWvw = val;
+	}
+
+	public List<CharacterSpecializationsSpecializationsPvp> getCharacterSpecializationsSpecializationsPvp() {
+		return this.characterSpecializationsSpecializationsPvp;
+	}
+
+	public void setCharacterSpecializationsSpecializationsPvp(List<CharacterSpecializationsSpecializationsPvp> val) {
+		this.characterSpecializationsSpecializationsPvp = val;
+	}
+
+	public List<CharacterSpecializationsSpecializationsPve> getCharacterSpecializationsSpecializationsPve() {
+		return this.characterSpecializationsSpecializationsPve;
+	}
+
+	public void setCharacterSpecializationsSpecializationsPve(List<CharacterSpecializationsSpecializationsPve> val) {
+		this.characterSpecializationsSpecializationsPve = val;
+	}
+
+	public CharacterSpecializationsSpecializations() {
+		this.characterSpecializationsSpecializationsWvw = new ArrayList<CharacterSpecializationsSpecializationsWvw>();
+		this.characterSpecializationsSpecializationsPvp = new ArrayList<CharacterSpecializationsSpecializationsPvp>();
+		this.characterSpecializationsSpecializationsPve = new ArrayList<CharacterSpecializationsSpecializationsPve>();
+	}
+
 }

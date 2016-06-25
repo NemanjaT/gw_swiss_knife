@@ -17,4 +17,33 @@ public class Title extends JsonModelFactoryMaster {
 
 	private Integer id;
 
+	//Getters and setters
+
+	public Integer getAchievement() {
+		return this.achievement;
+	}
+
+	public void setAchievement(Integer val) {
+		this.achievement = val;
+	}
+
+	public String getName() {
+		return this.name;
+	}
+
+	public void setName(String val) {
+		this.name = val;
+	}
+
+	public Integer getId() {
+		return this.id;
+	}
+
+	public void setId(Integer val) {
+		this.id = val;
+	}
+
+	public Title() {
+	}
+
 }

@@ -19,4 +19,41 @@ public class PvpAmulet extends JsonModelFactoryMaster {
 
 	private Integer id;
 
+	//Getters and setters
+
+	public String getName() {
+		return this.name;
+	}
+
+	public void setName(String val) {
+		this.name = val;
+	}
+
+	public String getIcon() {
+		return this.icon;
+	}
+
+	public void setIcon(String val) {
+		this.icon = val;
+	}
+
+	public PvpAmuletAttributes getPvpAmuletAttributes() {
+		return this.pvpAmuletAttributes;
+	}
+
+	public void setPvpAmuletAttributes(PvpAmuletAttributes val) {
+		this.pvpAmuletAttributes = val;
+	}
+
+	public Integer getId() {
+		return this.id;
+	}
+
+	public void setId(Integer val) {
+		this.id = val;
+	}
+
+	public PvpAmulet() {
+	}
+
 }

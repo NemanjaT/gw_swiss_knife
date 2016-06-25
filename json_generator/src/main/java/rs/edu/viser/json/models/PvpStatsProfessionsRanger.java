@@ -21,4 +21,49 @@ public class PvpStatsProfessionsRanger extends JsonModelFactoryMaster {
 
 	private Integer losses;
 
+	//Getters and setters
+
+	public Integer getWins() {
+		return this.wins;
+	}
+
+	public void setWins(Integer val) {
+		this.wins = val;
+	}
+
+	public Integer getForfeits() {
+		return this.forfeits;
+	}
+
+	public void setForfeits(Integer val) {
+		this.forfeits = val;
+	}
+
+	public Integer getDesertions() {
+		return this.desertions;
+	}
+
+	public void setDesertions(Integer val) {
+		this.desertions = val;
+	}
+
+	public Integer getByes() {
+		return this.byes;
+	}
+
+	public void setByes(Integer val) {
+		this.byes = val;
+	}
+
+	public Integer getLosses() {
+		return this.losses;
+	}
+
+	public void setLosses(Integer val) {
+		this.losses = val;
+	}
+
+	public PvpStatsProfessionsRanger() {
+	}
+
 }

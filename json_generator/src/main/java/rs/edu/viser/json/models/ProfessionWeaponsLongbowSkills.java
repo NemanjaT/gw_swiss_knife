@@ -15,4 +15,25 @@ public class ProfessionWeaponsLongbowSkills extends JsonModelFactoryMaster {
 
 	private String slot;
 
+	//Getters and setters
+
+	public Integer getId() {
+		return this.id;
+	}
+
+	public void setId(Integer val) {
+		this.id = val;
+	}
+
+	public String getSlot() {
+		return this.slot;
+	}
+
+	public void setSlot(String val) {
+		this.slot = val;
+	}
+
+	public ProfessionWeaponsLongbowSkills() {
+	}
+
 }

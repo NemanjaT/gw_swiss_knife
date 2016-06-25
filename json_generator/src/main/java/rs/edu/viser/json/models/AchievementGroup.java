@@ -21,4 +21,50 @@ public class AchievementGroup extends JsonModelFactoryMaster {
 
 	private Integer order;
 
+	//Getters and setters
+
+	public String getName() {
+		return this.name;
+	}
+
+	public void setName(String val) {
+		this.name = val;
+	}
+
+	public String getDescription() {
+		return this.description;
+	}
+
+	public void setDescription(String val) {
+		this.description = val;
+	}
+
+	public String getId() {
+		return this.id;
+	}
+
+	public void setId(String val) {
+		this.id = val;
+	}
+
+	public List<Integer> getCategories() {
+		return this.categories;
+	}
+
+	public void setCategories(List<Integer> val) {
+		this.categories = val;
+	}
+
+	public Integer getOrder() {
+		return this.order;
+	}
+
+	public void setOrder(Integer val) {
+		this.order = val;
+	}
+
+	public AchievementGroup() {
+		this.categories = new ArrayList<Integer>();
+	}
+
 }

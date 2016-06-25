@@ -17,4 +17,33 @@ public class PvpAmuletAttributes extends JsonModelFactoryMaster {
 
 	private Integer Power;
 
+	//Getters and setters
+
+	public Integer getToughness() {
+		return this.Toughness;
+	}
+
+	public void setToughness(Integer val) {
+		this.Toughness = val;
+	}
+
+	public Integer getPrecision() {
+		return this.Precision;
+	}
+
+	public void setPrecision(Integer val) {
+		this.Precision = val;
+	}
+
+	public Integer getPower() {
+		return this.Power;
+	}
+
+	public void setPower(Integer val) {
+		this.Power = val;
+	}
+
+	public PvpAmuletAttributes() {
+	}
+
 }

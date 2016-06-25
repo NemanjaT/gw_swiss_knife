@@ -15,4 +15,26 @@ public class CharacterSpecializationsSpecializationsWvw extends JsonModelFactory
 
 	private Integer id;
 
+	//Getters and setters
+
+	public List<Integer> getTraits() {
+		return this.traits;
+	}
+
+	public void setTraits(List<Integer> val) {
+		this.traits = val;
+	}
+
+	public Integer getId() {
+		return this.id;
+	}
+
+	public void setId(Integer val) {
+		this.id = val;
+	}
+
+	public CharacterSpecializationsSpecializationsWvw() {
+		this.traits = new ArrayList<Integer>();
+	}
+
 }

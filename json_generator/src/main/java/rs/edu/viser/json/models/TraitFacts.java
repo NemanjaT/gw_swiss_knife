@@ -23,4 +23,57 @@ public class TraitFacts extends JsonModelFactoryMaster {
 
 	private String target;
 
+	//Getters and setters
+
+	public String getIcon() {
+		return this.icon;
+	}
+
+	public void setIcon(String val) {
+		this.icon = val;
+	}
+
+	public String getText() {
+		return this.text;
+	}
+
+	public void setText(String val) {
+		this.text = val;
+	}
+
+	public String getType() {
+		return this.type;
+	}
+
+	public void setType(String val) {
+		this.type = val;
+	}
+
+	public Integer getPercent() {
+		return this.percent;
+	}
+
+	public void setPercent(Integer val) {
+		this.percent = val;
+	}
+
+	public Integer getValue() {
+		return this.value;
+	}
+
+	public void setValue(Integer val) {
+		this.value = val;
+	}
+
+	public String getTarget() {
+		return this.target;
+	}
+
+	public void setTarget(String val) {
+		this.target = val;
+	}
+
+	public TraitFacts() {
+	}
+
 }

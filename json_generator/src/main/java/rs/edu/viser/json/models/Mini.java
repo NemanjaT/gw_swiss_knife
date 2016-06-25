@@ -23,4 +23,57 @@ public class Mini extends JsonModelFactoryMaster {
 
 	private Integer order;
 
+	//Getters and setters
+
+	public String getUnlock() {
+		return this.unlock;
+	}
+
+	public void setUnlock(String val) {
+		this.unlock = val;
+	}
+
+	public Integer getItemId() {
+		return this.itemId;
+	}
+
+	public void setItemId(Integer val) {
+		this.itemId = val;
+	}
+
+	public String getName() {
+		return this.name;
+	}
+
+	public void setName(String val) {
+		this.name = val;
+	}
+
+	public String getIcon() {
+		return this.icon;
+	}
+
+	public void setIcon(String val) {
+		this.icon = val;
+	}
+
+	public Integer getId() {
+		return this.id;
+	}
+
+	public void setId(Integer val) {
+		this.id = val;
+	}
+
+	public Integer getOrder() {
+		return this.order;
+	}
+
+	public void setOrder(Integer val) {
+		this.order = val;
+	}
+
+	public Mini() {
+	}
+
 }

@@ -13,4 +13,18 @@ public class ProfessionWeaponsTorch extends JsonModelFactoryMaster {
 
 	private List<ProfessionWeaponsTorchSkills> professionWeaponsTorchSkills;
 
+	//Getters and setters
+
+	public List<ProfessionWeaponsTorchSkills> getProfessionWeaponsTorchSkills() {
+		return this.professionWeaponsTorchSkills;
+	}
+
+	public void setProfessionWeaponsTorchSkills(List<ProfessionWeaponsTorchSkills> val) {
+		this.professionWeaponsTorchSkills = val;
+	}
+
+	public ProfessionWeaponsTorch() {
+		this.professionWeaponsTorchSkills = new ArrayList<ProfessionWeaponsTorchSkills>();
+	}
+
 }

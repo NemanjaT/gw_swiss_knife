@@ -29,4 +29,82 @@ public class WvwMatch extends JsonModelFactoryMaster {
 
 	private WvwMatchDeaths wvwMatchDeaths;
 
+	//Getters and setters
+
+	public WvwMatchKills getWvwMatchKills() {
+		return this.wvwMatchKills;
+	}
+
+	public void setWvwMatchKills(WvwMatchKills val) {
+		this.wvwMatchKills = val;
+	}
+
+	public String getStartTime() {
+		return this.startTime;
+	}
+
+	public void setStartTime(String val) {
+		this.startTime = val;
+	}
+
+	public WvwMatchWorlds getWvwMatchWorlds() {
+		return this.wvwMatchWorlds;
+	}
+
+	public void setWvwMatchWorlds(WvwMatchWorlds val) {
+		this.wvwMatchWorlds = val;
+	}
+
+	public List<WvwMatchMaps> getWvwMatchMaps() {
+		return this.wvwMatchMaps;
+	}
+
+	public void setWvwMatchMaps(List<WvwMatchMaps> val) {
+		this.wvwMatchMaps = val;
+	}
+
+	public WvwMatchScores getWvwMatchScores() {
+		return this.wvwMatchScores;
+	}
+
+	public void setWvwMatchScores(WvwMatchScores val) {
+		this.wvwMatchScores = val;
+	}
+
+	public String getEndTime() {
+		return this.endTime;
+	}
+
+	public void setEndTime(String val) {
+		this.endTime = val;
+	}
+
+	public String getId() {
+		return this.id;
+	}
+
+	public void setId(String val) {
+		this.id = val;
+	}
+
+	public WvwMatchAllWorlds getWvwMatchAllWorlds() {
+		return this.wvwMatchAllWorlds;
+	}
+
+	public void setWvwMatchAllWorlds(WvwMatchAllWorlds val) {
+		this.wvwMatchAllWorlds = val;
+	}
+
+	public WvwMatchDeaths getWvwMatchDeaths() {
+		return this.wvwMatchDeaths;
+	}
+
+	public void setWvwMatchDeaths(WvwMatchDeaths val) {
+		this.wvwMatchDeaths = val;
+	}
+
+	public WvwMatch() {
+		this.wvwMatchMaps = new ArrayList<WvwMatchMaps>();
+	}
+
 }

@@ -17,4 +17,33 @@ public class CharacterCraftingCrafting extends JsonModelFactoryMaster {
 
 	private String discipline;
 
+	//Getters and setters
+
+	public Integer getRating() {
+		return this.rating;
+	}
+
+	public void setRating(Integer val) {
+		this.rating = val;
+	}
+
+	public Boolean getActive() {
+		return this.active;
+	}
+
+	public void setActive(Boolean val) {
+		this.active = val;
+	}
+
+	public String getDiscipline() {
+		return this.discipline;
+	}
+
+	public void setDiscipline(String val) {
+		this.discipline = val;
+	}
+
+	public CharacterCraftingCrafting() {
+	}
+
 }

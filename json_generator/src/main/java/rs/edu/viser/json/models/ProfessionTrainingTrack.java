@@ -17,4 +17,33 @@ public class ProfessionTrainingTrack extends JsonModelFactoryMaster {
 
 	private String type;
 
+	//Getters and setters
+
+	public Integer getCost() {
+		return this.cost;
+	}
+
+	public void setCost(Integer val) {
+		this.cost = val;
+	}
+
+	public Integer getSkillId() {
+		return this.skillId;
+	}
+
+	public void setSkillId(Integer val) {
+		this.skillId = val;
+	}
+
+	public String getType() {
+		return this.type;
+	}
+
+	public void setType(String val) {
+		this.type = val;
+	}
+
+	public ProfessionTrainingTrack() {
+	}
+
 }

@@ -23,4 +23,58 @@ public class PvpSeason extends JsonModelFactoryMaster {
 
 	private List<PvpSeasonDivisions> pvpSeasonDivisions;
 
+	//Getters and setters
+
+	public String getName() {
+		return this.name;
+	}
+
+	public void setName(String val) {
+		this.name = val;
+	}
+
+	public String getStart() {
+		return this.start;
+	}
+
+	public void setStart(String val) {
+		this.start = val;
+	}
+
+	public Boolean getActive() {
+		return this.active;
+	}
+
+	public void setActive(Boolean val) {
+		this.active = val;
+	}
+
+	public String getEnd() {
+		return this.end;
+	}
+
+	public void setEnd(String val) {
+		this.end = val;
+	}
+
+	public String getId() {
+		return this.id;
+	}
+
+	public void setId(String val) {
+		this.id = val;
+	}
+
+	public List<PvpSeasonDivisions> getPvpSeasonDivisions() {
+		return this.pvpSeasonDivisions;
+	}
+
+	public void setPvpSeasonDivisions(List<PvpSeasonDivisions> val) {
+		this.pvpSeasonDivisions = val;
+	}
+
+	public PvpSeason() {
+		this.pvpSeasonDivisions = new ArrayList<PvpSeasonDivisions>();
+	}
+
 }

@@ -31,4 +31,93 @@ public class Achievement extends JsonModelFactoryMaster {
 
 	private List<AchievementRewards> achievementRewards;
 
+	//Getters and setters
+
+	public List<Integer> getPrerequisites() {
+		return this.prerequisites;
+	}
+
+	public void setPrerequisites(List<Integer> val) {
+		this.prerequisites = val;
+	}
+
+	public String getLockedText() {
+		return this.lockedText;
+	}
+
+	public void setLockedText(String val) {
+		this.lockedText = val;
+	}
+
+	public List<AchievementTiers> getAchievementTiers() {
+		return this.achievementTiers;
+	}
+
+	public void setAchievementTiers(List<AchievementTiers> val) {
+		this.achievementTiers = val;
+	}
+
+	public String getName() {
+		return this.name;
+	}
+
+	public void setName(String val) {
+		this.name = val;
+	}
+
+	public List<String> getFlags() {
+		return this.flags;
+	}
+
+	public void setFlags(List<String> val) {
+		this.flags = val;
+	}
+
+	public String getDescription() {
+		return this.description;
+	}
+
+	public void setDescription(String val) {
+		this.description = val;
+	}
+
+	public Integer getId() {
+		return this.id;
+	}
+
+	public void setId(Integer val) {
+		this.id = val;
+	}
+
+	public String getRequirement() {
+		return this.requirement;
+	}
+
+	public void setRequirement(String val) {
+		this.requirement = val;
+	}
+
+	public String getType() {
+		return this.type;
+	}
+
+	public void setType(String val) {
+		this.type = val;
+	}
+
+	public List<AchievementRewards> getAchievementRewards() {
+		return this.achievementRewards;
+	}
+
+	public void setAchievementRewards(List<AchievementRewards> val) {
+		this.achievementRewards = val;
+	}
+
+	public Achievement() {
+		this.prerequisites = new ArrayList<Integer>();
+		this.achievementTiers = new ArrayList<AchievementTiers>();
+		this.flags = new ArrayList<String>();
+		this.achievementRewards = new ArrayList<AchievementRewards>();
+	}
+
 }

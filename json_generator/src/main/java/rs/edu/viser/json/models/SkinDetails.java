@@ -15,4 +15,25 @@ public class SkinDetails extends JsonModelFactoryMaster {
 
 	private String type;
 
+	//Getters and setters
+
+	public String getWeightClass() {
+		return this.weightClass;
+	}
+
+	public void setWeightClass(String val) {
+		this.weightClass = val;
+	}
+
+	public String getType() {
+		return this.type;
+	}
+
+	public void setType(String val) {
+		this.type = val;
+	}
+
+	public SkinDetails() {
+	}
+
 }

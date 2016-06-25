@@ -13,4 +13,18 @@ public class ProfessionWeaponsScepter extends JsonModelFactoryMaster {
 
 	private List<ProfessionWeaponsScepterSkills> professionWeaponsScepterSkills;
 
+	//Getters and setters
+
+	public List<ProfessionWeaponsScepterSkills> getProfessionWeaponsScepterSkills() {
+		return this.professionWeaponsScepterSkills;
+	}
+
+	public void setProfessionWeaponsScepterSkills(List<ProfessionWeaponsScepterSkills> val) {
+		this.professionWeaponsScepterSkills = val;
+	}
+
+	public ProfessionWeaponsScepter() {
+		this.professionWeaponsScepterSkills = new ArrayList<ProfessionWeaponsScepterSkills>();
+	}
+
 }

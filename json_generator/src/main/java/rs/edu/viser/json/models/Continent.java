@@ -23,4 +23,59 @@ public class Continent extends JsonModelFactoryMaster {
 
 	private Integer id;
 
+	//Getters and setters
+
+	public List<Integer> getFloors() {
+		return this.floors;
+	}
+
+	public void setFloors(List<Integer> val) {
+		this.floors = val;
+	}
+
+	public List<Integer> getContinentDims() {
+		return this.continentDims;
+	}
+
+	public void setContinentDims(List<Integer> val) {
+		this.continentDims = val;
+	}
+
+	public Integer getMinZoom() {
+		return this.minZoom;
+	}
+
+	public void setMinZoom(Integer val) {
+		this.minZoom = val;
+	}
+
+	public String getName() {
+		return this.name;
+	}
+
+	public void setName(String val) {
+		this.name = val;
+	}
+
+	public Integer getMaxZoom() {
+		return this.maxZoom;
+	}
+
+	public void setMaxZoom(Integer val) {
+		this.maxZoom = val;
+	}
+
+	public Integer getId() {
+		return this.id;
+	}
+
+	public void setId(Integer val) {
+		this.id = val;
+	}
+
+	public Continent() {
+		this.floors = new ArrayList<Integer>();
+		this.continentDims = new ArrayList<Integer>();
+	}
+
 }

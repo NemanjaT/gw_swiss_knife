@@ -17,4 +17,33 @@ public class ItemStats extends JsonModelFactoryMaster {
 
 	private Integer id;
 
+	//Getters and setters
+
+	public String getName() {
+		return this.name;
+	}
+
+	public void setName(String val) {
+		this.name = val;
+	}
+
+	public ItemStatsAttributes getItemStatsAttributes() {
+		return this.itemStatsAttributes;
+	}
+
+	public void setItemStatsAttributes(ItemStatsAttributes val) {
+		this.itemStatsAttributes = val;
+	}
+
+	public Integer getId() {
+		return this.id;
+	}
+
+	public void setId(Integer val) {
+		this.id = val;
+	}
+
+	public ItemStats() {
+	}
+
 }

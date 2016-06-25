@@ -33,4 +33,98 @@ public class Account extends JsonModelFactoryMaster {
 
 	private Integer dailyAp;
 
+	//Getters and setters
+
+	public Integer getWorld() {
+		return this.world;
+	}
+
+	public void setWorld(Integer val) {
+		this.world = val;
+	}
+
+	public String getAccess() {
+		return this.access;
+	}
+
+	public void setAccess(String val) {
+		this.access = val;
+	}
+
+	public Boolean getCommander() {
+		return this.commander;
+	}
+
+	public void setCommander(Boolean val) {
+		this.commander = val;
+	}
+
+	public Integer getFractalLevel() {
+		return this.fractalLevel;
+	}
+
+	public void setFractalLevel(Integer val) {
+		this.fractalLevel = val;
+	}
+
+	public List<String> getGuilds() {
+		return this.guilds;
+	}
+
+	public void setGuilds(List<String> val) {
+		this.guilds = val;
+	}
+
+	public String getCreated() {
+		return this.created;
+	}
+
+	public void setCreated(String val) {
+		this.created = val;
+	}
+
+	public Integer getMonthlyAp() {
+		return this.monthlyAp;
+	}
+
+	public void setMonthlyAp(Integer val) {
+		this.monthlyAp = val;
+	}
+
+	public String getName() {
+		return this.name;
+	}
+
+	public void setName(String val) {
+		this.name = val;
+	}
+
+	public Integer getWvwRank() {
+		return this.wvwRank;
+	}
+
+	public void setWvwRank(Integer val) {
+		this.wvwRank = val;
+	}
+
+	public String getId() {
+		return this.id;
+	}
+
+	public void setId(String val) {
+		this.id = val;
+	}
+
+	public Integer getDailyAp() {
+		return this.dailyAp;
+	}
+
+	public void setDailyAp(Integer val) {
+		this.dailyAp = val;
+	}
+
+	public Account() {
+		this.guilds = new ArrayList<String>();
+	}
+
 }

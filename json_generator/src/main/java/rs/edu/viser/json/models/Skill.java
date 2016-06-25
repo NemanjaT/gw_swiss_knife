@@ -35,4 +35,108 @@ public class Skill extends JsonModelFactoryMaster {
 
 	private List<SkillFacts> skillFacts;
 
+	//Getters and setters
+
+	public String getAttunement() {
+		return this.attunement;
+	}
+
+	public void setAttunement(String val) {
+		this.attunement = val;
+	}
+
+	public String getName() {
+		return this.name;
+	}
+
+	public void setName(String val) {
+		this.name = val;
+	}
+
+	public String getIcon() {
+		return this.icon;
+	}
+
+	public void setIcon(String val) {
+		this.icon = val;
+	}
+
+	public List<String> getProfessions() {
+		return this.professions;
+	}
+
+	public void setProfessions(List<String> val) {
+		this.professions = val;
+	}
+
+	public List<Object> getFlags() {
+		return this.flags;
+	}
+
+	public void setFlags(List<Object> val) {
+		this.flags = val;
+	}
+
+	public String getDescription() {
+		return this.description;
+	}
+
+	public void setDescription(String val) {
+		this.description = val;
+	}
+
+	public String getWeaponType() {
+		return this.weaponType;
+	}
+
+	public void setWeaponType(String val) {
+		this.weaponType = val;
+	}
+
+	public String getSlot() {
+		return this.slot;
+	}
+
+	public void setSlot(String val) {
+		this.slot = val;
+	}
+
+	public Integer getId() {
+		return this.id;
+	}
+
+	public void setId(Integer val) {
+		this.id = val;
+	}
+
+	public String getType() {
+		return this.type;
+	}
+
+	public void setType(String val) {
+		this.type = val;
+	}
+
+	public String getChatLink() {
+		return this.chatLink;
+	}
+
+	public void setChatLink(String val) {
+		this.chatLink = val;
+	}
+
+	public List<SkillFacts> getSkillFacts() {
+		return this.skillFacts;
+	}
+
+	public void setSkillFacts(List<SkillFacts> val) {
+		this.skillFacts = val;
+	}
+
+	public Skill() {
+		this.professions = new ArrayList<String>();
+		this.flags = new ArrayList<Object>();
+		this.skillFacts = new ArrayList<SkillFacts>();
+	}
+
 }

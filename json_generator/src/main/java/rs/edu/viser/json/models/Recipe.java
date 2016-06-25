@@ -31,4 +31,92 @@ public class Recipe extends JsonModelFactoryMaster {
 
 	private String chatLink;
 
+	//Getters and setters
+
+	public Integer getTimeToCraftMs() {
+		return this.timeToCraftMs;
+	}
+
+	public void setTimeToCraftMs(Integer val) {
+		this.timeToCraftMs = val;
+	}
+
+	public List<String> getDisciplines() {
+		return this.disciplines;
+	}
+
+	public void setDisciplines(List<String> val) {
+		this.disciplines = val;
+	}
+
+	public Integer getOutputItemId() {
+		return this.outputItemId;
+	}
+
+	public void setOutputItemId(Integer val) {
+		this.outputItemId = val;
+	}
+
+	public Integer getMinRating() {
+		return this.minRating;
+	}
+
+	public void setMinRating(Integer val) {
+		this.minRating = val;
+	}
+
+	public List<Object> getFlags() {
+		return this.flags;
+	}
+
+	public void setFlags(List<Object> val) {
+		this.flags = val;
+	}
+
+	public Integer getOutputItemCount() {
+		return this.outputItemCount;
+	}
+
+	public void setOutputItemCount(Integer val) {
+		this.outputItemCount = val;
+	}
+
+	public List<RecipeIngredients> getRecipeIngredients() {
+		return this.recipeIngredients;
+	}
+
+	public void setRecipeIngredients(List<RecipeIngredients> val) {
+		this.recipeIngredients = val;
+	}
+
+	public Integer getId() {
+		return this.id;
+	}
+
+	public void setId(Integer val) {
+		this.id = val;
+	}
+
+	public String getType() {
+		return this.type;
+	}
+
+	public void setType(String val) {
+		this.type = val;
+	}
+
+	public String getChatLink() {
+		return this.chatLink;
+	}
+
+	public void setChatLink(String val) {
+		this.chatLink = val;
+	}
+
+	public Recipe() {
+		this.disciplines = new ArrayList<String>();
+		this.flags = new ArrayList<Object>();
+		this.recipeIngredients = new ArrayList<RecipeIngredients>();
+	}
+
 }

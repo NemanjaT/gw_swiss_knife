@@ -39,4 +39,124 @@ public class Item extends JsonModelFactoryMaster {
 
 	private String rarity;
 
+	//Getters and setters
+
+	public Integer getVendorValue() {
+		return this.vendorValue;
+	}
+
+	public void setVendorValue(Integer val) {
+		this.vendorValue = val;
+	}
+
+	public Integer getLevel() {
+		return this.level;
+	}
+
+	public void setLevel(Integer val) {
+		this.level = val;
+	}
+
+	public Integer getDefaultSkin() {
+		return this.defaultSkin;
+	}
+
+	public void setDefaultSkin(Integer val) {
+		this.defaultSkin = val;
+	}
+
+	public List<String> getFlags() {
+		return this.flags;
+	}
+
+	public void setFlags(List<String> val) {
+		this.flags = val;
+	}
+
+	public String getIcon() {
+		return this.icon;
+	}
+
+	public void setIcon(String val) {
+		this.icon = val;
+	}
+
+	public String getDescription() {
+		return this.description;
+	}
+
+	public void setDescription(String val) {
+		this.description = val;
+	}
+
+	public List<Object> getRestrictions() {
+		return this.restrictions;
+	}
+
+	public void setRestrictions(List<Object> val) {
+		this.restrictions = val;
+	}
+
+	public List<String> getGameTypes() {
+		return this.gameTypes;
+	}
+
+	public void setGameTypes(List<String> val) {
+		this.gameTypes = val;
+	}
+
+	public String getType() {
+		return this.type;
+	}
+
+	public void setType(String val) {
+		this.type = val;
+	}
+
+	public String getChatLink() {
+		return this.chatLink;
+	}
+
+	public void setChatLink(String val) {
+		this.chatLink = val;
+	}
+
+	public String getName() {
+		return this.name;
+	}
+
+	public void setName(String val) {
+		this.name = val;
+	}
+
+	public ItemDetails getItemDetails() {
+		return this.itemDetails;
+	}
+
+	public void setItemDetails(ItemDetails val) {
+		this.itemDetails = val;
+	}
+
+	public Integer getId() {
+		return this.id;
+	}
+
+	public void setId(Integer val) {
+		this.id = val;
+	}
+
+	public String getRarity() {
+		return this.rarity;
+	}
+
+	public void setRarity(String val) {
+		this.rarity = val;
+	}
+
+	public Item() {
+		this.flags = new ArrayList<String>();
+		this.restrictions = new ArrayList<Object>();
+		this.gameTypes = new ArrayList<String>();
+	}
+
 }

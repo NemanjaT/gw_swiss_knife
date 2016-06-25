@@ -13,4 +13,17 @@ public class PvpSeasonDivisionsTiers extends JsonModelFactoryMaster {
 
 	private Integer points;
 
+	//Getters and setters
+
+	public Integer getPoints() {
+		return this.points;
+	}
+
+	public void setPoints(Integer val) {
+		this.points = val;
+	}
+
+	public PvpSeasonDivisionsTiers() {
+	}
+
 }

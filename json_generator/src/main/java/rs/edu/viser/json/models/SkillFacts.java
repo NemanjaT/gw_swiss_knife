@@ -21,4 +21,49 @@ public class SkillFacts extends JsonModelFactoryMaster {
 
 	private Integer value;
 
+	//Getters and setters
+
+	public String getIcon() {
+		return this.icon;
+	}
+
+	public void setIcon(String val) {
+		this.icon = val;
+	}
+
+	public String getText() {
+		return this.text;
+	}
+
+	public void setText(String val) {
+		this.text = val;
+	}
+
+	public String getType() {
+		return this.type;
+	}
+
+	public void setType(String val) {
+		this.type = val;
+	}
+
+	public Integer getHitCount() {
+		return this.hitCount;
+	}
+
+	public void setHitCount(Integer val) {
+		this.hitCount = val;
+	}
+
+	public Integer getValue() {
+		return this.value;
+	}
+
+	public void setValue(Integer val) {
+		this.value = val;
+	}
+
+	public SkillFacts() {
+	}
+
 }

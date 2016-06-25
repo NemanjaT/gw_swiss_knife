@@ -17,4 +17,35 @@ public class CommerceListing extends JsonModelFactoryMaster {
 
 	private Integer id;
 
+	//Getters and setters
+
+	public List<CommerceListingBuys> getCommerceListingBuys() {
+		return this.commerceListingBuys;
+	}
+
+	public void setCommerceListingBuys(List<CommerceListingBuys> val) {
+		this.commerceListingBuys = val;
+	}
+
+	public List<CommerceListingSells> getCommerceListingSells() {
+		return this.commerceListingSells;
+	}
+
+	public void setCommerceListingSells(List<CommerceListingSells> val) {
+		this.commerceListingSells = val;
+	}
+
+	public Integer getId() {
+		return this.id;
+	}
+
+	public void setId(Integer val) {
+		this.id = val;
+	}
+
+	public CommerceListing() {
+		this.commerceListingBuys = new ArrayList<CommerceListingBuys>();
+		this.commerceListingSells = new ArrayList<CommerceListingSells>();
+	}
+
 }

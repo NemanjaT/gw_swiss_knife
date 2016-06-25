@@ -15,4 +15,26 @@ public class EmblemForeground extends JsonModelFactoryMaster {
 
 	private Integer id;
 
+	//Getters and setters
+
+	public List<String> getLayers() {
+		return this.layers;
+	}
+
+	public void setLayers(List<String> val) {
+		this.layers = val;
+	}
+
+	public Integer getId() {
+		return this.id;
+	}
+
+	public void setId(Integer val) {
+		this.id = val;
+	}
+
+	public EmblemForeground() {
+		this.layers = new ArrayList<String>();
+	}
+
 }

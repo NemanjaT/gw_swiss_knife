@@ -15,4 +15,25 @@ public class CommercePriceSells extends JsonModelFactoryMaster {
 
 	private Integer unitPrice;
 
+	//Getters and setters
+
+	public Integer getQuantity() {
+		return this.quantity;
+	}
+
+	public void setQuantity(Integer val) {
+		this.quantity = val;
+	}
+
+	public Integer getUnitPrice() {
+		return this.unitPrice;
+	}
+
+	public void setUnitPrice(Integer val) {
+		this.unitPrice = val;
+	}
+
+	public CommercePriceSells() {
+	}
+
 }

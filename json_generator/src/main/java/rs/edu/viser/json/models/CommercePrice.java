@@ -19,4 +19,41 @@ public class CommercePrice extends JsonModelFactoryMaster {
 
 	private Boolean whitelisted;
 
+	//Getters and setters
+
+	public CommercePriceBuys getCommercePriceBuys() {
+		return this.commercePriceBuys;
+	}
+
+	public void setCommercePriceBuys(CommercePriceBuys val) {
+		this.commercePriceBuys = val;
+	}
+
+	public CommercePriceSells getCommercePriceSells() {
+		return this.commercePriceSells;
+	}
+
+	public void setCommercePriceSells(CommercePriceSells val) {
+		this.commercePriceSells = val;
+	}
+
+	public Integer getId() {
+		return this.id;
+	}
+
+	public void setId(Integer val) {
+		this.id = val;
+	}
+
+	public Boolean getWhitelisted() {
+		return this.whitelisted;
+	}
+
+	public void setWhitelisted(Boolean val) {
+		this.whitelisted = val;
+	}
+
+	public CommercePrice() {
+	}
+
 }

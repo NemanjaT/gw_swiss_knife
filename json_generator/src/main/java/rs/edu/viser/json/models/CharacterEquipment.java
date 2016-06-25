@@ -13,4 +13,18 @@ public class CharacterEquipment extends JsonModelFactoryMaster {
 
 	private List<CharacterEquipmentEquipment> characterEquipmentEquipment;
 
+	//Getters and setters
+
+	public List<CharacterEquipmentEquipment> getCharacterEquipmentEquipment() {
+		return this.characterEquipmentEquipment;
+	}
+
+	public void setCharacterEquipmentEquipment(List<CharacterEquipmentEquipment> val) {
+		this.characterEquipmentEquipment = val;
+	}
+
+	public CharacterEquipment() {
+		this.characterEquipmentEquipment = new ArrayList<CharacterEquipmentEquipment>();
+	}
+
 }

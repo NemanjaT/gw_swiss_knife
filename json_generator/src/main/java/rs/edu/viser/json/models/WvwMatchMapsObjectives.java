@@ -23,4 +23,57 @@ public class WvwMatchMapsObjectives extends JsonModelFactoryMaster {
 
 	private String claimedBy;
 
+	//Getters and setters
+
+	public String getOwner() {
+		return this.owner;
+	}
+
+	public void setOwner(String val) {
+		this.owner = val;
+	}
+
+	public String getClaimedAt() {
+		return this.claimedAt;
+	}
+
+	public void setClaimedAt(String val) {
+		this.claimedAt = val;
+	}
+
+	public String getLastFlipped() {
+		return this.lastFlipped;
+	}
+
+	public void setLastFlipped(String val) {
+		this.lastFlipped = val;
+	}
+
+	public String getId() {
+		return this.id;
+	}
+
+	public void setId(String val) {
+		this.id = val;
+	}
+
+	public String getType() {
+		return this.type;
+	}
+
+	public void setType(String val) {
+		this.type = val;
+	}
+
+	public String getClaimedBy() {
+		return this.claimedBy;
+	}
+
+	public void setClaimedBy(String val) {
+		this.claimedBy = val;
+	}
+
+	public WvwMatchMapsObjectives() {
+	}
+
 }

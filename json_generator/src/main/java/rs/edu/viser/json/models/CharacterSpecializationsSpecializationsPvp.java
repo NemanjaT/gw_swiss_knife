@@ -15,4 +15,26 @@ public class CharacterSpecializationsSpecializationsPvp extends JsonModelFactory
 
 	private Integer id;
 
+	//Getters and setters
+
+	public List<Integer> getTraits() {
+		return this.traits;
+	}
+
+	public void setTraits(List<Integer> val) {
+		this.traits = val;
+	}
+
+	public Integer getId() {
+		return this.id;
+	}
+
+	public void setId(Integer val) {
+		this.id = val;
+	}
+
+	public CharacterSpecializationsSpecializationsPvp() {
+		this.traits = new ArrayList<Integer>();
+	}
+
 }

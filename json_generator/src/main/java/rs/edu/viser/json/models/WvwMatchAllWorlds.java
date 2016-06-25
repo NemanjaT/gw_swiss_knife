@@ -17,4 +17,36 @@ public class WvwMatchAllWorlds extends JsonModelFactoryMaster {
 
 	private List<Integer> blue;
 
+	//Getters and setters
+
+	public List<Integer> getRed() {
+		return this.red;
+	}
+
+	public void setRed(List<Integer> val) {
+		this.red = val;
+	}
+
+	public List<Integer> getGreen() {
+		return this.green;
+	}
+
+	public void setGreen(List<Integer> val) {
+		this.green = val;
+	}
+
+	public List<Integer> getBlue() {
+		return this.blue;
+	}
+
+	public void setBlue(List<Integer> val) {
+		this.blue = val;
+	}
+
+	public WvwMatchAllWorlds() {
+		this.red = new ArrayList<Integer>();
+		this.green = new ArrayList<Integer>();
+		this.blue = new ArrayList<Integer>();
+	}
+
 }

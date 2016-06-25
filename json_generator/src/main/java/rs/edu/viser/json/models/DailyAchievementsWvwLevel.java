@@ -15,4 +15,25 @@ public class DailyAchievementsWvwLevel extends JsonModelFactoryMaster {
 
 	private Integer max;
 
+	//Getters and setters
+
+	public Integer getMin() {
+		return this.min;
+	}
+
+	public void setMin(Integer val) {
+		this.min = val;
+	}
+
+	public Integer getMax() {
+		return this.max;
+	}
+
+	public void setMax(Integer val) {
+		this.max = val;
+	}
+
+	public DailyAchievementsWvwLevel() {
+	}
+
 }

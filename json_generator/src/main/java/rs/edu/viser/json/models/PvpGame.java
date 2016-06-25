@@ -31,4 +31,89 @@ public class PvpGame extends JsonModelFactoryMaster {
 
 	private String team;
 
+	//Getters and setters
+
+	public String getResult() {
+		return this.result;
+	}
+
+	public void setResult(String val) {
+		this.result = val;
+	}
+
+	public String getProfession() {
+		return this.profession;
+	}
+
+	public void setProfession(String val) {
+		this.profession = val;
+	}
+
+	public Integer getMapId() {
+		return this.mapId;
+	}
+
+	public void setMapId(Integer val) {
+		this.mapId = val;
+	}
+
+	public PvpGameScores getPvpGameScores() {
+		return this.pvpGameScores;
+	}
+
+	public void setPvpGameScores(PvpGameScores val) {
+		this.pvpGameScores = val;
+	}
+
+	public String getRatingType() {
+		return this.ratingType;
+	}
+
+	public void setRatingType(String val) {
+		this.ratingType = val;
+	}
+
+	public String getEnded() {
+		return this.ended;
+	}
+
+	public void setEnded(String val) {
+		this.ended = val;
+	}
+
+	public String getSeason() {
+		return this.season;
+	}
+
+	public void setSeason(String val) {
+		this.season = val;
+	}
+
+	public String getStarted() {
+		return this.started;
+	}
+
+	public void setStarted(String val) {
+		this.started = val;
+	}
+
+	public String getId() {
+		return this.id;
+	}
+
+	public void setId(String val) {
+		this.id = val;
+	}
+
+	public String getTeam() {
+		return this.team;
+	}
+
+	public void setTeam(String val) {
+		this.team = val;
+	}
+
+	public PvpGame() {
+	}
+
 }

@@ -17,4 +17,34 @@ public class TokenInfo extends JsonModelFactoryMaster {
 
 	private String id;
 
+	//Getters and setters
+
+	public List<String> getPermissions() {
+		return this.permissions;
+	}
+
+	public void setPermissions(List<String> val) {
+		this.permissions = val;
+	}
+
+	public String getName() {
+		return this.name;
+	}
+
+	public void setName(String val) {
+		this.name = val;
+	}
+
+	public String getId() {
+		return this.id;
+	}
+
+	public void setId(String val) {
+		this.id = val;
+	}
+
+	public TokenInfo() {
+		this.permissions = new ArrayList<String>();
+	}
+
 }
