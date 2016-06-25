@@ -17,7 +17,11 @@ public class Specialization extends JsonModelFactoryMaster {
 
 	private String background;
 
+	private List<Integer> major_traits;
+
 	private String name;
+
+	private List<Integer> minor_traits;
 
 	private String icon;
 

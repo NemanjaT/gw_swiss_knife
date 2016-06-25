@@ -11,6 +11,10 @@ import rs.edu.viser.json.JsonModelFactoryMaster;
  */
 public class CommerceListing extends JsonModelFactoryMaster {
 
+	private List<CommerceListingBuys> commerceListingBuys;
+
+	private List<CommerceListingSells> commerceListingSells;
+
 	private Integer id;
 
 }

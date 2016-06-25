@@ -11,6 +11,8 @@ import rs.edu.viser.json.JsonModelFactoryMaster;
  */
 public class AchievementCategory extends JsonModelFactoryMaster {
 
+	private List<Integer> achievements;
+
 	private String name;
 
 	private String icon;

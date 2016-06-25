@@ -13,6 +13,8 @@ public class Trait extends JsonModelFactoryMaster {
 
 	private Integer tier;
 
+	private List<TraitTraitedFacts> traitTraitedFacts;
+
 	private String name;
 
 	private String icon;
@@ -24,6 +26,8 @@ public class Trait extends JsonModelFactoryMaster {
 	private Integer id;
 
 	private String slot;
+
+	private List<TraitFacts> traitFacts;
 
 	private Integer order;
 

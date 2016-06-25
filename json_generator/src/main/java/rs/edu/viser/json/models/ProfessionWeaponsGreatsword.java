@@ -11,4 +11,6 @@ import rs.edu.viser.json.JsonModelFactoryMaster;
  */
 public class ProfessionWeaponsGreatsword extends JsonModelFactoryMaster {
 
+	private List<ProfessionWeaponsGreatswordSkills> professionWeaponsGreatswordSkills;
+
 }

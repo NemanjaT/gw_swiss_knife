@@ -11,4 +11,10 @@ import rs.edu.viser.json.JsonModelFactoryMaster;
  */
 public class WvwMatchAllWorlds extends JsonModelFactoryMaster {
 
+	private List<Integer> red;
+
+	private List<Integer> green;
+
+	private List<Integer> blue;
+
 }

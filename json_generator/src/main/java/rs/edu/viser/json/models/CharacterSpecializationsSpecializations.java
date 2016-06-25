@@ -11,4 +11,10 @@ import rs.edu.viser.json.JsonModelFactoryMaster;
  */
 public class CharacterSpecializationsSpecializations extends JsonModelFactoryMaster {
 
+	private List<CharacterSpecializationsSpecializationsWvw> characterSpecializationsSpecializationsWvw;
+
+	private List<CharacterSpecializationsSpecializationsPvp> characterSpecializationsSpecializationsPvp;
+
+	private List<CharacterSpecializationsSpecializationsPve> characterSpecializationsSpecializationsPve;
+
 }

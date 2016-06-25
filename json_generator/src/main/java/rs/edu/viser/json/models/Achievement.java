@@ -11,9 +11,15 @@ import rs.edu.viser.json.JsonModelFactoryMaster;
  */
 public class Achievement extends JsonModelFactoryMaster {
 
+	private List<Integer> prerequisites;
+
 	private String lockedText;
 
+	private List<AchievementTiers> achievementTiers;
+
 	private String name;
+
+	private List<String> flags;
 
 	private String description;
 
@@ -22,5 +28,7 @@ public class Achievement extends JsonModelFactoryMaster {
 	private String requirement;
 
 	private String type;
+
+	private List<AchievementRewards> achievementRewards;
 
 }

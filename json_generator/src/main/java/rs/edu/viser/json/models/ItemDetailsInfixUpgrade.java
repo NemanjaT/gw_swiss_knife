@@ -11,6 +11,8 @@ import rs.edu.viser.json.JsonModelFactoryMaster;
  */
 public class ItemDetailsInfixUpgrade extends JsonModelFactoryMaster {
 
+	private List<ItemDetailsInfixUpgradeAttributes> itemDetailsInfixUpgradeAttributes;
+
 	private Integer id;
 
 }

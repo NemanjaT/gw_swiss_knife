@@ -13,9 +13,13 @@ public class Profession extends JsonModelFactoryMaster {
 
 	private String iconBig;
 
+	private List<Integer> specializations;
+
 	private String name;
 
 	private String icon;
+
+	private List<ProfessionTraining> professionTraining;
 
 	private String id;
 

@@ -17,6 +17,8 @@ public class AchievementGroup extends JsonModelFactoryMaster {
 
 	private String id;
 
+	private List<Integer> categories;
+
 	private Integer order;
 
 }

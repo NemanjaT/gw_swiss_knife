@@ -13,7 +13,11 @@ public class Skin extends JsonModelFactoryMaster {
 
 	private String name;
 
+	private List<String> flags;
+
 	private String icon;
+
+	private List<Object> restrictions; //TODO: GW-0001 
 
 	private SkinDetails skinDetails;
 

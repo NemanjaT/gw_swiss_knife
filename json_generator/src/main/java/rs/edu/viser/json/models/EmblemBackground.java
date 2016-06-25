@@ -11,6 +11,8 @@ import rs.edu.viser.json.JsonModelFactoryMaster;
  */
 public class EmblemBackground extends JsonModelFactoryMaster {
 
+	private List<String> layers;
+
 	private Integer id;
 
 }

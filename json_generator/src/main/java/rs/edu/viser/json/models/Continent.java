@@ -11,6 +11,10 @@ import rs.edu.viser.json.JsonModelFactoryMaster;
  */
 public class Continent extends JsonModelFactoryMaster {
 
+	private List<Integer> floors;
+
+	private List<Integer> continent_dims;
+
 	private Integer minZoom;
 
 	private String name;

@@ -13,11 +13,17 @@ public class Recipe extends JsonModelFactoryMaster {
 
 	private Integer timeToCraftMs;
 
+	private List<String> disciplines;
+
 	private Integer outputItemId;
 
 	private Integer minRating;
 
+	private List<Object> flags; //TODO: GW-0001 
+
 	private Integer outputItemCount;
+
+	private List<RecipeIngredients> recipeIngredients;
 
 	private Integer id;
 

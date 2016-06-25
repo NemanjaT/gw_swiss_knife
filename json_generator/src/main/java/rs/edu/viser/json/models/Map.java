@@ -15,6 +15,8 @@ public class Map extends JsonModelFactoryMaster {
 
 	private Integer defaultFloor;
 
+	private List<Integer> floors;
+
 	private Integer continentId;
 
 	private Integer maxLevel;

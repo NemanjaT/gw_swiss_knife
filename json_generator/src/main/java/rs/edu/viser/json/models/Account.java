@@ -19,6 +19,8 @@ public class Account extends JsonModelFactoryMaster {
 
 	private Integer fractalLevel;
 
+	private List<String> guilds;
+
 	private String created;
 
 	private Integer monthlyAp;

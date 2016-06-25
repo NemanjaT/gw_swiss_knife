@@ -7,6 +7,7 @@ import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.List;
 
 /**
  * Created by neman on 21-Jun-16.
@@ -71,10 +72,17 @@ public class ClassFileWriter {
         }
     }
 
-    void writeObject(String className, String objectName) {
+    void writeCustomObject(String className, String objectName, String... comments) {
         openFile();
+        String comment = "";
+        if (comments.length > 0) {
+        	comment += " //";
+        	for (String comm : comments) {
+        		comment += comm + " ";
+        	}
+        }
         try {
-            fileWriter.write("\tprivate " + className + " " + objectName + ";\n\n");
+            fileWriter.write("\tprivate " + className + " " + objectName + ";" + comment + "\n\n");
             log.info("Created object attribute " + objectName + " of type " + className + " for class " + this.className);
 
             closeFile(null);
@@ -111,6 +119,55 @@ public class ClassFileWriter {
             closeFile(e);
         }
     }
+    
+    /**
+     * Reads through all of the values, finds of of the following type - String, Integer, Double, Boolean
+     * and writes it down on the file.
+     * @param attributeName
+     * @param attributeValues
+     */
+    void writeAttributeArray(String attributeName, List<String> attributeValues) {
+    	openFile();
+    	try {
+	    	boolean isInt, isDouble, isBool;
+	    	isInt = isDouble = isBool = true;
+	    	
+	    	String type = "List<";
+	    	
+	    	for (String attValue : attributeValues) {
+	    		if (! attValue.matches(regexInt)) {
+	    			isInt = false;
+	    		}
+	    		if (! attValue.matches(regexDouble)) {
+	    			isDouble = false;
+	    		}
+	    		if (! attValue.equals("false") && ! attValue.equals("true")) {
+	    			isBool = false;
+	    		}
+	    	}
+	    	
+	    	if (isInt) {
+	    		type += "Integer>";
+	    	} else if (isDouble) {
+	    		type += "Double>";
+	    	} else if (isBool) {
+	    		type += "Boolean>";
+	    	} else {
+	    		type += "String>";
+	    	}
+	    	
+	    	fileWriter.write("\tprivate " + type + " " + attributeName + ";\n\n");
+	    	log.info("Created list " + type + " to class " + className + " successfully!");
+	    	
+	    	closeFile(null);
+    	} catch (IOException e) {
+    		closeFile(e);
+    	}
+    }
+    
+    void writeGettersAndSetters() {
+    	
+    }
 
     /**
      * Finishes the file and closes the file writer.
@@ -129,7 +186,7 @@ public class ClassFileWriter {
             closeFile(e);
         }
     }
-
+    
     private void closeFile(Exception e) {
         if (e != null) {
             log.error(e.getMessage());

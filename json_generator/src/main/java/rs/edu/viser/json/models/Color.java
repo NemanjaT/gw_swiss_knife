@@ -13,11 +13,15 @@ public class Color extends JsonModelFactoryMaster {
 
 	private Integer item;
 
+	private List<Integer> base_rgb;
+
 	private String name;
 
 	private ColorMetal colorMetal;
 
 	private Integer id;
+
+	private List<String> categories;
 
 	private ColorLeather colorLeather;
 

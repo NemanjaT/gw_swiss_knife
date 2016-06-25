@@ -15,6 +15,8 @@ public class Materials extends JsonModelFactoryMaster {
 
 	private Integer id;
 
+	private List<Integer> items;
+
 	private Integer order;
 
 }

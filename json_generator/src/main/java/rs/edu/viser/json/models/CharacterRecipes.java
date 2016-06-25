@@ -11,4 +11,6 @@ import rs.edu.viser.json.JsonModelFactoryMaster;
  */
 public class CharacterRecipes extends JsonModelFactoryMaster {
 
+	private List<Integer> recipes;
+
 }

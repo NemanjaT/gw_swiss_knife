@@ -1,5 +1,6 @@
 package rs.edu.viser.json;
 
+import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 import rs.edu.viser.logger.LOG;
@@ -8,6 +9,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.URL;
+import java.util.Iterator;
 
 /**
  * Created by neman on 22-Jun-16.
@@ -15,10 +17,16 @@ import java.net.URL;
  * Used to retrieve JSON from a URL/URI
  */
 public class JsonRetriever {
+	
+	private LOG log;
+	
+	public JsonRetriever() {
+		this.log = new LOG(this.getClass());
+	}
 
     public JSONObject getJsonObject(String url) throws JSONException, IOException {
-        LOG log = new LOG(this.getClass());
-
+    	
+    	//If it's not a http url, returns null
         if (!url.contains("http")) {
             log.error("The URL must contain 'http'!");
             return null;
@@ -49,5 +57,40 @@ public class JsonRetriever {
             }
         }
     }
+
+    /**
+     * Takes an array of JSON objects and returns a full object (an object that contains all of the
+     * attributes that are found in all of the objects in the array).
+     * @param array
+     * @return JSONObject
+     */
+	public JSONObject interpretateArray(JSONArray array) {
+		JSONObject object = new JSONObject();
+		
+		//Iterate through all of the objects. . .
+		for (int i = 0; i < array.length(); i++) {
+			try {
+				JSONObject inner = array.getJSONObject(i);
+				
+				/*
+				 * Iterate through all of the values and add the attribute to 'object'
+				 * if it isn't added already. . .
+				 */
+				Iterator<?> iterator = inner.keys();
+				while (iterator.hasNext()) {
+					String key = (String) iterator.next();
+					
+					if (! object.has(key)) {
+						object.put(key, inner.get(key));
+					}
+				}
+			} catch (JSONException e) {
+				log.error("Some value inside the array is not an object!");
+				e.printStackTrace();
+			}
+		}
+		
+		return object;
+	}
 
 }

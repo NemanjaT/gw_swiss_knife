@@ -17,9 +17,15 @@ public class Item extends JsonModelFactoryMaster {
 
 	private Integer defaultSkin;
 
+	private List<String> flags;
+
 	private String icon;
 
 	private String description;
+
+	private List<Object> restrictions; //TODO: GW-0001 
+
+	private List<String> game_types;
 
 	private String type;
 

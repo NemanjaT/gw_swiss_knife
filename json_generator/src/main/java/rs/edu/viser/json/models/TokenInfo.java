@@ -11,6 +11,8 @@ import rs.edu.viser.json.JsonModelFactoryMaster;
  */
 public class TokenInfo extends JsonModelFactoryMaster {
 
+	private List<String> permissions;
+
 	private String name;
 
 	private String id;

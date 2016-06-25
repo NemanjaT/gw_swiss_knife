@@ -9,7 +9,9 @@ import rs.edu.viser.json.generator.config.FileGeneratorPattern;
 import rs.edu.viser.logger.LOG;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Iterator;
+import java.util.List;
 
 /**
  * Initializer JSON object to Java class file generation.
@@ -96,16 +98,17 @@ public class JSONFileGenerator {
             String innerJsonName = this.jsonName + "_" + key;
 
             if (! innerJsonName.equals(this.jsonName + "_")) {
-                new Thread(() -> {
-                    new JSONFileGenerator(innerObject, innerJsonName);
-                }).start();
-                Thread.yield();
+            	new Thread(() -> {
+        			new JSONFileGenerator(innerObject, innerJsonName);
+        		}).start();
+        		
+        		String innerJavaName = classNamer.jsonToJava(innerJsonName, true);
+                String innerJavaAttribute = classNamer.jsonToJava(innerJsonName, false);
+
+                classFileWriter.writeCustomObject(innerJavaName, innerJavaAttribute);
+            } else {
+            	log.error("Object has no name!");
             }
-
-            String innerJavaName = classNamer.jsonToJava(innerJsonName, true);
-            String innerJavaAttribute = classNamer.jsonToJava(innerJsonName, false);
-
-            classFileWriter.writeObject(innerJavaName, innerJavaAttribute);
         } catch (JSONException e) {
             log.error(e.getMessage());
             e.printStackTrace();
@@ -118,7 +121,57 @@ public class JSONFileGenerator {
      * @param key
      */
     private void generateArray(JSONArray array, String key) {
+    	//Gathering info. . .
+    	String innerJsonName = this.jsonName + "_" + key;
     	
+    	//Check the type of an array. . .
+    	char firstChar = array.toString().charAt(1);
+    	
+    	switch (firstChar) {
+    	//If it's an array of objects. . .
+    	case '{':
+    		JSONObject fullObject = new JsonRetriever().interpretateArray(array);
+    		
+    		if (! innerJsonName.equals(this.jsonName + "_")) {
+    			new Thread(() -> {
+    				new JSONFileGenerator(fullObject, innerJsonName);
+    			}).start();
+    			
+    			String innerJavaName = classNamer.jsonToJava(innerJsonName, true);
+    	        String innerJavaAttribute = classNamer.jsonToJava(innerJsonName, false);
+
+    	        classFileWriter.writeCustomObject("List<" + innerJavaName + ">", innerJavaAttribute);
+    		} else {
+    			log.error("Object has no name!");
+    		}
+    		
+    		break;
+    		
+    	//If it's an array of arrays. . .
+    	case '[':
+    		//TODO: Not tested. . .
+    		
+    		break;
+    		
+    	//If it's a null array. . .
+    	case ']':
+    		classFileWriter.writeCustomObject("List<Object>", classNamer.jsonToJava(key, false), "TODO: GW-0001");
+    		
+    		break;
+    		
+    	//If it's an array of values. . .
+		default:
+			List<String> list = new ArrayList<>();
+			for (int i = 0; i < array.length(); i++) {
+				try {
+					list.add(array.getString(i));
+				} catch (JSONException e) {
+					log.error("Not all objects in the array are attributes!");
+					e.printStackTrace();
+				}
+			}
+			classFileWriter.writeAttributeArray(key, list);
+    	}
     }
 
     /**

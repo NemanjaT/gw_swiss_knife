@@ -19,4 +19,6 @@ public class Legend extends JsonModelFactoryMaster {
 
 	private String id;
 
+	private List<Integer> utilities;
+
 }

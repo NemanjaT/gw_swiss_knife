@@ -11,4 +11,12 @@ import rs.edu.viser.json.JsonModelFactoryMaster;
  */
 public class TomorrowDailyAchievements extends JsonModelFactoryMaster {
 
+	private List<Object> special; //TODO: GW-0001 
+
+	private List<TomorrowDailyAchievementsWvw> tomorrowDailyAchievementsWvw;
+
+	private List<TomorrowDailyAchievementsPvp> tomorrowDailyAchievementsPvp;
+
+	private List<TomorrowDailyAchievementsPve> tomorrowDailyAchievementsPve;
+
 }

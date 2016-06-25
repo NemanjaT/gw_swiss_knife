@@ -17,6 +17,10 @@ public class Skill extends JsonModelFactoryMaster {
 
 	private String icon;
 
+	private List<String> professions;
+
+	private List<Object> flags; //TODO: GW-0001 
+
 	private String description;
 
 	private String weaponType;
@@ -28,5 +32,7 @@ public class Skill extends JsonModelFactoryMaster {
 	private String type;
 
 	private String chatLink;
+
+	private List<SkillFacts> skillFacts;
 
 }

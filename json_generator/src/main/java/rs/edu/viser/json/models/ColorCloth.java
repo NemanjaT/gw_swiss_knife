@@ -21,4 +21,6 @@ public class ColorCloth extends JsonModelFactoryMaster {
 
 	private Integer hue;
 
+	private List<Integer> rgb;
+
 }

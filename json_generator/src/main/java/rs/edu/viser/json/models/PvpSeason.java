@@ -21,4 +21,6 @@ public class PvpSeason extends JsonModelFactoryMaster {
 
 	private String id;
 
+	private List<PvpSeasonDivisions> pvpSeasonDivisions;
+
 }

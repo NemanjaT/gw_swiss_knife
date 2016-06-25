@@ -21,6 +21,8 @@ public class ItemDetails extends JsonModelFactoryMaster {
 
 	private Integer suffixItemId;
 
+	private List<Object> infusionSlots; //TODO: GW-0001 
+
 	private String type;
 
 }

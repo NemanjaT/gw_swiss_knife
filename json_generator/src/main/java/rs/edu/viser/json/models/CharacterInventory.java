@@ -11,4 +11,6 @@ import rs.edu.viser.json.JsonModelFactoryMaster;
  */
 public class CharacterInventory extends JsonModelFactoryMaster {
 
+	private List<CharacterInventoryBags> characterInventoryBags;
+
 }

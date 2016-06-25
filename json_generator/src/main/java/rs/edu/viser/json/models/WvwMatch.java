@@ -17,6 +17,8 @@ public class WvwMatch extends JsonModelFactoryMaster {
 
 	private WvwMatchWorlds wvwMatchWorlds;
 
+	private List<WvwMatchMaps> wvwMatchMaps;
+
 	private WvwMatchScores wvwMatchScores;
 
 	private String endTime;
