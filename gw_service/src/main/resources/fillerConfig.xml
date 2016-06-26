@@ -13,61 +13,61 @@
                 <!-- ACCOUNT JSON PATHS -->
 
                 <bean class="rs.edu.viser.filler.config.FillerPattern">
-                    <property name="className" value="account" />
+                    <property name="className" value="Account" />
                     <property name="pattern" value="account?access_token=*" />
                     <property name="type" value="OBJECT" />
                 </bean>
 
                 <bean class="rs.edu.viser.filler.config.FillerPattern">
-                    <property name="className" value="account_achievements" />
+                    <property name="className" value="accountAchievements" />
                     <property name="pattern" value="account/achievements?access_token=*" />
                     <property name="type" value="ARRAY" />
                 </bean>
 
                 <bean class="rs.edu.viser.filler.config.FillerPattern">
-                    <property name="className" value="account_bank" />
+                    <property name="className" value="accountBank" />
                     <property name="pattern" value="account/bank?access_token=*" />
                     <property name="type" value="ARRAY" />
                 </bean>
 
                 <bean class="rs.edu.viser.filler.config.FillerPattern">
-                    <property name="className" value="account_dyes" />
+                    <property name="className" value="accountDyes" />
                     <property name="pattern" value="account/dyes?access_token=*" />
                     <property name="type" value="ARRAY" />
                 </bean>
 
                 <bean class="rs.edu.viser.filler.config.FillerPattern">
-                    <property name="className" value="account_inventory" />
+                    <property name="className" value="accountInventory" />
                     <property name="pattern" value="account/inventory?access_token=*" />
                     <property name="type" value="ARRAY" />
                 </bean>
 
                 <bean class="rs.edu.viser.filler.config.FillerPattern">
-                    <property name="className" value="account_materials" />
+                    <property name="className" value="accountMaterials" />
                     <property name="pattern" value="account/materials?access_token=*" />
                     <property name="type" value="ARRAY" />
                 </bean>
 
                 <bean class="rs.edu.viser.filler.config.FillerPattern">
-                    <property name="className" value="account_minis" />
+                    <property name="className" value="accountMinis" />
                     <property name="pattern" value="account/minis?access_token=*" />
                     <property name="type" value="ARRAY" />
                 </bean>
 
                 <bean class="rs.edu.viser.filler.config.FillerPattern">
-                    <property name="className" value="account_skins" />
+                    <property name="className" value="accountSkins" />
                     <property name="pattern" value="account/skins?access_token=*" />
                     <property name="type" value="ARRAY" />
                 </bean>
 
                 <bean class="rs.edu.viser.filler.config.FillerPattern">
-                    <property name="className" value="account_titles" />
+                    <property name="className" value="accountTitles" />
                     <property name="pattern" value="account/titles?access_token=*" />
                     <property name="type" value="ARRAY" />
                 </bean>
 
                 <bean class="rs.edu.viser.filler.config.FillerPattern">
-                    <property name="className" value="account_wallet" />
+                    <property name="className" value="accountWallet" />
                     <property name="pattern" value="account/wallet?access_token=*" />
                     <property name="type" value="ARRAY" />
                 </bean>
@@ -81,43 +81,43 @@
                 </bean>
 
                 <bean class="rs.edu.viser.filler.config.FillerPattern">
-                    <property name="className" value="achievement" />
+                    <property name="className" value="Achievement" />
                     <property name="pattern" value="achievements/*" />
                     <property name="type" value="OBJECT" />
                 </bean>
 
                 <bean class="rs.edu.viser.filler.config.FillerPattern">
-                    <property name="className" value="achievement_categories" />
+                    <property name="className" value="achievementCategories" />
                     <property name="pattern" value="achievements/categories" />
                     <property name="type" value="ARRAY" />
                 </bean>
 
                 <bean class="rs.edu.viser.filler.config.FillerPattern">
-                    <property name="className" value="achievement_category" />
+                    <property name="className" value="AchievementCategory" />
                     <property name="pattern" value="achievements/categories/*" />
                     <property name="type" value="OBJECT" />
                 </bean>
 
                 <bean class="rs.edu.viser.filler.config.FillerPattern">
-                    <property name="className" value="daily_achievements" />
+                    <property name="className" value="DailyAchievements" />
                     <property name="pattern" value="achievements/daily" />
                     <property name="type" value="OBJECT" />
                 </bean>
 
                 <bean class="rs.edu.viser.filler.config.FillerPattern">
-                    <property name="className" value="tomorrow_daily_achievements" />
+                    <property name="className" value="TomorrowDailyAchievements" />
                     <property name="pattern" value="achievements/daily/tomorrow" />
                     <property name="type" value="OBJECT" />
                 </bean>
 
                 <bean class="rs.edu.viser.filler.config.FillerPattern">
-                    <property name="className" value="achievement_groups" />
+                    <property name="className" value="achievementGroups" />
                     <property name="pattern" value="achievements/groups" />
                     <property name="type" value="ARRAY" />
                 </bean>
 
                 <bean class="rs.edu.viser.filler.config.FillerPattern">
-                    <property name="className" value="achievement_group" />
+                    <property name="className" value="AchievementGroup" />
                     <property name="pattern" value="achievements/groups/*" />
                     <property name="type" value="OBJECT" />
                 </bean>
@@ -125,7 +125,7 @@
                 <!-- BUILD JSON PATHS -->
 
                 <bean class="rs.edu.viser.filler.config.FillerPattern">
-                    <property name="className" value="build" />
+                    <property name="className" value="Build" />
                     <property name="pattern" value="build" />
                     <property name="type" value="OBJECT" />
                 </bean>
@@ -139,37 +139,37 @@
                 </bean>
 
                 <bean class="rs.edu.viser.filler.config.FillerPattern">
-                    <property name="className" value="character_core" />
+                    <property name="className" value="CharacterCore" />
                     <property name="pattern" value="characters/*/core?access_token=*" />
                     <property name="type" value="OBJECT" />
                 </bean>
 
                 <bean class="rs.edu.viser.filler.config.FillerPattern">
-                    <property name="className" value="character_crafting" />
+                    <property name="className" value="CharacterCrafting" />
                     <property name="pattern" value="characters/*/crafting?access_token=*" />
                     <property name="type" value="OBJECT" />
                 </bean>
 
                 <bean class="rs.edu.viser.filler.config.FillerPattern">
-                    <property name="className" value="character_equipment" />
+                    <property name="className" value="CharacterEquipment" />
                     <property name="pattern" value="characters/*/equipment?access_token=*" />
                     <property name="type" value="OBJECT" />
                 </bean>
 
                 <bean class="rs.edu.viser.filler.config.FillerPattern">
-                    <property name="className" value="character_inventory" />
+                    <property name="className" value="CharacterInventory" />
                     <property name="pattern" value="characters/*/inventory?access_token=*" />
                     <property name="type" value="OBJECT" />
                 </bean>
 
                 <bean class="rs.edu.viser.filler.config.FillerPattern">
-                    <property name="className" value="character_recipes" />
+                    <property name="className" value="CharacterRecipes" />
                     <property name="pattern" value="characters/*/recipes?access_token=*" />
                     <property name="type" value="OBJECT" />
                 </bean>
 
                 <bean class="rs.edu.viser.filler.config.FillerPattern">
-                    <property name="className" value="character_specializations" />
+                    <property name="className" value="CharacterSpecializations" />
                     <property name="pattern" value="characters/*/specializations?access_token=*" />
                     <property name="type" value="OBJECT" />
                 </bean>
@@ -177,61 +177,61 @@
                 <!-- COMMERCE JSON PATHS -->
 
                 <bean class="rs.edu.viser.filler.config.FillerPattern">
-                    <property name="className" value="commerce_exchange_coins" />
+                    <property name="className" value="CommerceExchangeCoins" />
                     <property name="pattern" value="commerce/exchange/coins?quantity=*" />
                     <property name="type" value="OBJECT" />
                 </bean>
 
                 <bean class="rs.edu.viser.filler.config.FillerPattern">
-                    <property name="className" value="commerce_exchange_gems" />
+                    <property name="className" value="CommerceExchangeGems" />
                     <property name="pattern" value="commerce/exchange/gems?quantity=*" />
                     <property name="type" value="OBJECT" />
                 </bean>
 
                 <bean class="rs.edu.viser.filler.config.FillerPattern">
-                    <property name="className" value="commerce_listings" />
+                    <property name="className" value="commerceListings" />
                     <property name="pattern" value="commerce/listings" />
                     <property name="type" value="ARRAY" />
                 </bean>
 
                 <bean class="rs.edu.viser.filler.config.FillerPattern">
-                    <property name="className" value="commerce_listing" />
+                    <property name="className" value="CommerceListing" />
                     <property name="pattern" value="commerce/listings/*" />
                     <property name="type" value="OBJECT" />
                 </bean>
 
                 <bean class="rs.edu.viser.filler.config.FillerPattern">
-                    <property name="className" value="commerce_prices" />
+                    <property name="className" value="commercePrices" />
                     <property name="pattern" value="commerce/prices" />
                     <property name="type" value="ARRAY" />
                 </bean>
 
                 <bean class="rs.edu.viser.filler.config.FillerPattern">
-                    <property name="className" value="commerce_price" />
+                    <property name="className" value="CommercePrice" />
                     <property name="pattern" value="commerce/prices/*" />
                     <property name="type" value="OBJECT" />
                 </bean>
 
                 <bean class="rs.edu.viser.filler.config.FillerPattern">
-                    <property name="className" value="commerce_current_buy_transactions" />
+                    <property name="className" value="commerceCurrentBuyTransactions" />
                     <property name="pattern" value="commerce/transactions/current/buys?access_token=*" />
                     <property name="type" value="ARRAY" />
                 </bean>
 
                 <bean class="rs.edu.viser.filler.config.FillerPattern">
-                    <property name="className" value="commerce_current_sell_transactions" />
+                    <property name="className" value="commerceCurrentSellTransactions" />
                     <property name="pattern" value="commerce/transactions/current/sells?access_token=*" />
                     <property name="type" value="ARRAY" />
                 </bean>
 
                 <bean class="rs.edu.viser.filler.config.FillerPattern">
-                    <property name="className" value="commerce_past_buy_transactions" />
+                    <property name="className" value="commercePastBuyTransactions" />
                     <property name="pattern" value="commerce/transactions/history/buys?access_token=*" />
                     <property name="type" value="ARRAY" />
                 </bean>
 
                 <bean class="rs.edu.viser.filler.config.FillerPattern">
-                    <property name="className" value="commerce_past_sell_transactions" />
+                    <property name="className" value="commercePastSellTransactions" />
                     <property name="pattern" value="commerce/transactions/history/sells?access_token=*" />
                     <property name="type" value="ARRAY" />
                 </bean>
@@ -239,49 +239,49 @@
                 <!-- PVP JSON PATHS -->
 
                 <bean class="rs.edu.viser.filler.config.FillerPattern">
-                    <property name="className" value="pvp_stats" />
+                    <property name="className" value="PvpStats" />
                     <property name="pattern" value="pvp/stats?access_token=*" />
                     <property name="type" value="OBJECT" />
                 </bean>
 
                 <bean class="rs.edu.viser.filler.config.FillerPattern">
-                    <property name="className" value="pvp_games" />
+                    <property name="className" value="pvpGames" />
                     <property name="pattern" value="pvp/games?access_token=*" />
                     <property name="type" value="ARRAY" />
                 </bean>
 
                 <bean class="rs.edu.viser.filler.config.FillerPattern">
-                    <property name="className" value="pvp_game" />
+                    <property name="className" value="PvpGame" />
                     <property name="pattern" value="pvp/games/*?access_token=*" />
                     <property name="type" value="OBJECT" />
                 </bean>
 
                 <bean class="rs.edu.viser.filler.config.FillerPattern">
-                    <property name="className" value="pvp_amulets" />
+                    <property name="className" value="pvpAmulets" />
                     <property name="pattern" value="pvp/amulets" />
                     <property name="type" value="ARRAY" />
                 </bean>
 
                 <bean class="rs.edu.viser.filler.config.FillerPattern">
-                    <property name="className" value="pvp_amulet" />
+                    <property name="className" value="PvpAmulet" />
                     <property name="pattern" value="pvp/amulets/*" />
                     <property name="type" value="OBJECT" />
                 </bean>
 
                 <bean class="rs.edu.viser.filler.config.FillerPattern">
-                    <property name="className" value="pvp_seasons" />
+                    <property name="className" value="pvpSeasons" />
                     <property name="pattern" value="pvp/seasons" />
                     <property name="type" value="ARRAY" />
                 </bean>
 
                 <bean class="rs.edu.viser.filler.config.FillerPattern">
-                    <property name="className" value="pvp_season" />
+                    <property name="className" value="PvpSeason" />
                     <property name="pattern" value="pvp/seasons/*" />
                     <property name="type" value="OBJECT" />
                 </bean>
 
                 <bean class="rs.edu.viser.filler.config.FillerPattern">
-                    <property name="className" value="pvp_standings" />
+                    <property name="className" value="pvpStandings" />
                     <property name="pattern" value="standings?access_token=*" />
                     <property name="type" value="ARRAY" />
                 </bean>
@@ -289,25 +289,25 @@
                 <!-- WVW JSON PATHS -->
 
                 <bean class="rs.edu.viser.filler.config.FillerPattern">
-                    <property name="className" value="wvw_matches" />
+                    <property name="className" value="wvwMatches" />
                     <property name="pattern" value="wvw/matches" />
                     <property name="type" value="ARRAY" />
                 </bean>
 
                 <bean class="rs.edu.viser.filler.config.FillerPattern">
-                    <property name="className" value="wvw_match" />
+                    <property name="className" value="WvwMatch" />
                     <property name="pattern" value="wvw/matches/*" />
                     <property name="type" value="OBJECT" />
                 </bean>
 
                 <bean class="rs.edu.viser.filler.config.FillerPattern">
-                    <property name="className" value="wvw_objectives" />
+                    <property name="className" value="wvwObjectives" />
                     <property name="pattern" value="wvw/objectives" />
                     <property name="type" value="ARRAY" />
                 </bean>
 
                 <bean class="rs.edu.viser.filler.config.FillerPattern">
-                    <property name="className" value="wvw_objective" />
+                    <property name="className" value="WvwObjective" />
                     <property name="pattern" value="wvw/objectives/*" />
                     <property name="type" value="OBJECT" />
                 </bean>
@@ -321,7 +321,7 @@
                 </bean>
 
                 <bean class="rs.edu.viser.filler.config.FillerPattern">
-                    <property name="className" value="color" />
+                    <property name="className" value="Color" />
                     <property name="pattern" value="colors/*" />
                     <property name="type" value="OBJECT" />
                 </bean>
@@ -333,7 +333,7 @@
                 </bean>
 
                 <bean class="rs.edu.viser.filler.config.FillerPattern">
-                    <property name="className" value="continent" />
+                    <property name="className" value="Continent" />
                     <property name="pattern" value="continents/*" />
                     <property name="type" value="OBJECT" />
                 </bean>
@@ -345,31 +345,31 @@
                 </bean>
 
                 <bean class="rs.edu.viser.filler.config.FillerPattern">
-                    <property name="className" value="currency" />
+                    <property name="className" value="Currency" />
                     <property name="pattern" value="currencies/*" />
                     <property name="type" value="OBJECT" />
                 </bean>
 
                 <bean class="rs.edu.viser.filler.config.FillerPattern">
-                    <property name="className" value="emblem_foregrounds" />
+                    <property name="className" value="emblemForegrounds" />
                     <property name="pattern" value="emblem/foregrounds" />
                     <property name="type" value="ARRAY" />
                 </bean>
 
                 <bean class="rs.edu.viser.filler.config.FillerPattern">
-                    <property name="className" value="emblem_foreground" />
+                    <property name="className" value="EmblemForeground" />
                     <property name="pattern" value="emblem/foregrounds/*" />
                     <property name="type" value="OBJECT" />
                 </bean>
 
                 <bean class="rs.edu.viser.filler.config.FillerPattern">
-                    <property name="className" value="emblem_backgrounds" />
+                    <property name="className" value="emblemBackgrounds" />
                     <property name="pattern" value="emblem/backgrounds" />
                     <property name="type" value="ARRAY" />
                 </bean>
 
                 <bean class="rs.edu.viser.filler.config.FillerPattern">
-                    <property name="className" value="emblem_background" />
+                    <property name="className" value="EmblemBackground" />
                     <property name="pattern" value="emblem/backgrounds/*" />
                     <property name="type" value="OBJECT" />
                 </bean>
@@ -381,7 +381,7 @@
                 </bean>
 
                 <bean class="rs.edu.viser.filler.config.FillerPattern">
-                    <property name="className" value="file" />
+                    <property name="className" value="File" />
                     <property name="pattern" value="files/*" />
                     <property name="type" value="OBJECT" />
                 </bean>
@@ -393,19 +393,19 @@
                 </bean>
 
                 <bean class="rs.edu.viser.filler.config.FillerPattern">
-                    <property name="className" value="item" />
+                    <property name="className" value="Item" />
                     <property name="pattern" value="items/*" />
                     <property name="type" value="OBJECT" />
                 </bean>
 
                 <bean class="rs.edu.viser.filler.config.FillerPattern">
-                    <property name="className" value="all_item_stats" />
+                    <property name="className" value="allItemStats" />
                     <property name="pattern" value="itemstats" />
                     <property name="type" value="ARRAY" />
                 </bean>
 
                 <bean class="rs.edu.viser.filler.config.FillerPattern">
-                    <property name="className" value="item_stats" />
+                    <property name="className" value="ItemStats" />
                     <property name="pattern" value="itemstats/*" />
                     <property name="type" value="OBJECT" />
                 </bean>
@@ -417,7 +417,7 @@
                 </bean>
 
                 <bean class="rs.edu.viser.filler.config.FillerPattern">
-                    <property name="className" value="legend" />
+                    <property name="className" value="Legend" />
                     <property name="pattern" value="legends/*" />
                     <property name="type" value="OBJECT" />
                 </bean>
@@ -429,19 +429,19 @@
                 </bean>
 
                 <bean class="rs.edu.viser.filler.config.FillerPattern">
-                    <property name="className" value="map" />
+                    <property name="className" value="Map" />
                     <property name="pattern" value="maps/*" />
                     <property name="type" value="OBJECT" />
                 </bean>
 
                 <bean class="rs.edu.viser.filler.config.FillerPattern">
-                    <property name="className" value="all_materials" />
+                    <property name="className" value="allMaterials" />
                     <property name="pattern" value="materials" />
                     <property name="type" value="ARRAY" />
                 </bean>
 
                 <bean class="rs.edu.viser.filler.config.FillerPattern">
-                    <property name="className" value="materials" />
+                    <property name="className" value="Materials" />
                     <property name="pattern" value="materials/*" />
                     <property name="type" value="OBJECT" />
                 </bean>
@@ -453,7 +453,7 @@
                 </bean>
 
                 <bean class="rs.edu.viser.filler.config.FillerPattern">
-                    <property name="className" value="mini" />
+                    <property name="className" value="Mini" />
                     <property name="pattern" value="minis/*" />
                     <property name="type" value="OBJECT" />
                 </bean>
@@ -465,7 +465,7 @@
                 </bean>
 
                 <bean class="rs.edu.viser.filler.config.FillerPattern">
-                    <property name="className" value="pet" />
+                    <property name="className" value="Pet" />
                     <property name="pattern" value="pets/*" />
                     <property name="type" value="OBJECT" />
                 </bean>
@@ -477,7 +477,7 @@
                 </bean>
 
                 <bean class="rs.edu.viser.filler.config.FillerPattern">
-                    <property name="className" value="profession" />
+                    <property name="className" value="Profession" />
                     <property name="pattern" value="professions/*" />
                     <property name="type" value="OBJECT" />
                 </bean>
@@ -489,7 +489,7 @@
                 </bean>
 
                 <bean class="rs.edu.viser.filler.config.FillerPattern">
-                    <property name="className" value="quaggan" />
+                    <property name="className" value="Quaggan" />
                     <property name="pattern" value="quaggans/*" />
                     <property name="type" value="OBJECT" />
                 </bean>
@@ -501,7 +501,7 @@
                 </bean>
 
                 <bean class="rs.edu.viser.filler.config.FillerPattern">
-                    <property name="className" value="recipe" />
+                    <property name="className" value="Recipe" />
                     <property name="pattern" value="recipes/*" />
                     <property name="type" value="OBJECT" />
                 </bean>
@@ -513,7 +513,7 @@
                 </bean>
 
                 <bean class="rs.edu.viser.filler.config.FillerPattern">
-                    <property name="className" value="skill" />
+                    <property name="className" value="Skill" />
                     <property name="pattern" value="skills/*" />
                     <property name="type" value="OBJECT" />
                 </bean>
@@ -525,7 +525,7 @@
                 </bean>
 
                 <bean class="rs.edu.viser.filler.config.FillerPattern">
-                    <property name="className" value="skin" />
+                    <property name="className" value="Skin" />
                     <property name="pattern" value="skins/*" />
                     <property name="type" value="OBJECT" />
                 </bean>
@@ -537,7 +537,7 @@
                 </bean>
 
                 <bean class="rs.edu.viser.filler.config.FillerPattern">
-                    <property name="className" value="specialization" />
+                    <property name="className" value="Specialization" />
                     <property name="pattern" value="specializations/*" />
                     <property name="type" value="OBJECT" />
                 </bean>
@@ -549,13 +549,13 @@
                 </bean>
 
                 <bean class="rs.edu.viser.filler.config.FillerPattern">
-                    <property name="className" value="title" />
+                    <property name="className" value="Title" />
                     <property name="pattern" value="titles/*" />
                     <property name="type" value="OBJECT" />
                 </bean>
 
                 <bean class="rs.edu.viser.filler.config.FillerPattern">
-                    <property name="className" value="token_info" />
+                    <property name="className" value="TokenInfo" />
                     <property name="pattern" value="tokeninfo?access_token=*" />
                     <property name="type" value="OBJECT" />
                 </bean>
@@ -567,7 +567,7 @@
                 </bean>
 
                 <bean class="rs.edu.viser.filler.config.FillerPattern">
-                    <property name="className" value="trait" />
+                    <property name="className" value="Trait" />
                     <property name="pattern" value="traits/*" />
                     <property name="type" value="OBJECT" />
                 </bean>
@@ -579,7 +579,7 @@
                 </bean>
 
                 <bean class="rs.edu.viser.filler.config.FillerPattern">
-                    <property name="className" value="world" />
+                    <property name="className" value="World" />
                     <property name="pattern" value="worlds/*" />
                     <property name="type" value="OBJECT" />
                 </bean>

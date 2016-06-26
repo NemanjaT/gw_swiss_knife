@@ -41,6 +41,7 @@ public class FileGeneratorConfigReader {
         this.packageFile = fileGenConf.getPackageFile();
         this.patterns = fileGenConf.getFileGeneratorPatternList();
         
+        //Closing the context
         ((ConfigurableApplicationContext) context).close();
     }
 
