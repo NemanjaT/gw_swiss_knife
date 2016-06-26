@@ -57,3 +57,5 @@ Temporary Items
 build/
 gradlew*
 *.log
+gradle/
+out/
