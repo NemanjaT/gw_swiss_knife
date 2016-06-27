@@ -284,7 +284,7 @@
 
                 <bean class="rs.edu.viser.json.generator.config.FileGeneratorPattern">
                     <property name="name" value="pvp_standings" />
-                    <property name="url" value="standings?access_token=79D451B9-26E6-6943-BDA6-AC9D05EE563DA640C336-0F50-4875-8350-23E6C642A0F1" />
+                    <property name="url" value="pvp/standings?access_token=79D451B9-26E6-6943-BDA6-AC9D05EE563DA640C336-0F50-4875-8350-23E6C642A0F1" />
                     <property name="type" value="ARRAY" />
                 </bean>
 
