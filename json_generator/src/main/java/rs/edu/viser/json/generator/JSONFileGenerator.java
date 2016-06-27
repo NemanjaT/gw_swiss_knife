@@ -231,7 +231,7 @@ public class JSONFileGenerator {
 		    		case ']':
 		    			fileWriter.writeCustomObject("List<Object>", 
 		    					namer.jsonToJava(pattern.getName(), false), "TODO: GW-0003");
-		    			
+		    			//TODO: Array inside array. . . do
 	    				break;
 	    			//If it's an array of arrays. . .
 	    			case '[':
