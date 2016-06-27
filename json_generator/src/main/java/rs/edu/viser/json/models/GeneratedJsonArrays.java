@@ -55,6 +55,56 @@ public class GeneratedJsonArrays extends JsonModelFactoryMaster {
 
 	private List<String> pvpSeasons;
 
+	private List<PvpStandings> pvpStandings;
+
+	private List<String> wvwMatches;
+
+	private List<String> wvwObjectives;
+
+	private List<Integer> colors;
+
+	private List<Integer> continents;
+
+	private List<Integer> currencies;
+
+	private List<Integer> emblemForegrounds;
+
+	private List<Integer> emblemBackgrounds;
+
+	private List<String> files;
+
+	private List<Integer> items;
+
+	private List<Integer> allItemStats;
+
+	private List<String> legends;
+
+	private List<Integer> maps;
+
+	private List<Integer> allMaterials;
+
+	private List<Integer> minis;
+
+	private List<Integer> pets;
+
+	private List<String> professions;
+
+	private List<String> quaggans;
+
+	private List<Integer> recipes;
+
+	private List<Integer> skills;
+
+	private List<Integer> skins;
+
+	private List<Integer> specializations;
+
+	private List<Integer> titles;
+
+	private List<Integer> traits;
+
+	private List<Integer> worlds;
+
 	//Getters and setters
 
 	public List<AccountAchievements> getAccountAchievements() {
@@ -233,6 +283,206 @@ public class GeneratedJsonArrays extends JsonModelFactoryMaster {
 		this.pvpSeasons = val;
 	}
 
+	public List<PvpStandings> getPvpStandings() {
+		return this.pvpStandings;
+	}
+
+	public void setPvpStandings(List<PvpStandings> val) {
+		this.pvpStandings = val;
+	}
+
+	public List<String> getWvwMatches() {
+		return this.wvwMatches;
+	}
+
+	public void setWvwMatches(List<String> val) {
+		this.wvwMatches = val;
+	}
+
+	public List<String> getWvwObjectives() {
+		return this.wvwObjectives;
+	}
+
+	public void setWvwObjectives(List<String> val) {
+		this.wvwObjectives = val;
+	}
+
+	public List<Integer> getColors() {
+		return this.colors;
+	}
+
+	public void setColors(List<Integer> val) {
+		this.colors = val;
+	}
+
+	public List<Integer> getContinents() {
+		return this.continents;
+	}
+
+	public void setContinents(List<Integer> val) {
+		this.continents = val;
+	}
+
+	public List<Integer> getCurrencies() {
+		return this.currencies;
+	}
+
+	public void setCurrencies(List<Integer> val) {
+		this.currencies = val;
+	}
+
+	public List<Integer> getEmblemForegrounds() {
+		return this.emblemForegrounds;
+	}
+
+	public void setEmblemForegrounds(List<Integer> val) {
+		this.emblemForegrounds = val;
+	}
+
+	public List<Integer> getEmblemBackgrounds() {
+		return this.emblemBackgrounds;
+	}
+
+	public void setEmblemBackgrounds(List<Integer> val) {
+		this.emblemBackgrounds = val;
+	}
+
+	public List<String> getFiles() {
+		return this.files;
+	}
+
+	public void setFiles(List<String> val) {
+		this.files = val;
+	}
+
+	public List<Integer> getItems() {
+		return this.items;
+	}
+
+	public void setItems(List<Integer> val) {
+		this.items = val;
+	}
+
+	public List<Integer> getAllItemStats() {
+		return this.allItemStats;
+	}
+
+	public void setAllItemStats(List<Integer> val) {
+		this.allItemStats = val;
+	}
+
+	public List<String> getLegends() {
+		return this.legends;
+	}
+
+	public void setLegends(List<String> val) {
+		this.legends = val;
+	}
+
+	public List<Integer> getMaps() {
+		return this.maps;
+	}
+
+	public void setMaps(List<Integer> val) {
+		this.maps = val;
+	}
+
+	public List<Integer> getAllMaterials() {
+		return this.allMaterials;
+	}
+
+	public void setAllMaterials(List<Integer> val) {
+		this.allMaterials = val;
+	}
+
+	public List<Integer> getMinis() {
+		return this.minis;
+	}
+
+	public void setMinis(List<Integer> val) {
+		this.minis = val;
+	}
+
+	public List<Integer> getPets() {
+		return this.pets;
+	}
+
+	public void setPets(List<Integer> val) {
+		this.pets = val;
+	}
+
+	public List<String> getProfessions() {
+		return this.professions;
+	}
+
+	public void setProfessions(List<String> val) {
+		this.professions = val;
+	}
+
+	public List<String> getQuaggans() {
+		return this.quaggans;
+	}
+
+	public void setQuaggans(List<String> val) {
+		this.quaggans = val;
+	}
+
+	public List<Integer> getRecipes() {
+		return this.recipes;
+	}
+
+	public void setRecipes(List<Integer> val) {
+		this.recipes = val;
+	}
+
+	public List<Integer> getSkills() {
+		return this.skills;
+	}
+
+	public void setSkills(List<Integer> val) {
+		this.skills = val;
+	}
+
+	public List<Integer> getSkins() {
+		return this.skins;
+	}
+
+	public void setSkins(List<Integer> val) {
+		this.skins = val;
+	}
+
+	public List<Integer> getSpecializations() {
+		return this.specializations;
+	}
+
+	public void setSpecializations(List<Integer> val) {
+		this.specializations = val;
+	}
+
+	public List<Integer> getTitles() {
+		return this.titles;
+	}
+
+	public void setTitles(List<Integer> val) {
+		this.titles = val;
+	}
+
+	public List<Integer> getTraits() {
+		return this.traits;
+	}
+
+	public void setTraits(List<Integer> val) {
+		this.traits = val;
+	}
+
+	public List<Integer> getWorlds() {
+		return this.worlds;
+	}
+
+	public void setWorlds(List<Integer> val) {
+		this.worlds = val;
+	}
+
 	public GeneratedJsonArrays() {
 		this.accountAchievements = new ArrayList<AccountAchievements>();
 		this.accountBank = new ArrayList<String>();
@@ -256,6 +506,31 @@ public class GeneratedJsonArrays extends JsonModelFactoryMaster {
 		this.pvpGames = new ArrayList<String>();
 		this.pvpAmulets = new ArrayList<Integer>();
 		this.pvpSeasons = new ArrayList<String>();
+		this.pvpStandings = new ArrayList<PvpStandings>();
+		this.wvwMatches = new ArrayList<String>();
+		this.wvwObjectives = new ArrayList<String>();
+		this.colors = new ArrayList<Integer>();
+		this.continents = new ArrayList<Integer>();
+		this.currencies = new ArrayList<Integer>();
+		this.emblemForegrounds = new ArrayList<Integer>();
+		this.emblemBackgrounds = new ArrayList<Integer>();
+		this.files = new ArrayList<String>();
+		this.items = new ArrayList<Integer>();
+		this.allItemStats = new ArrayList<Integer>();
+		this.legends = new ArrayList<String>();
+		this.maps = new ArrayList<Integer>();
+		this.allMaterials = new ArrayList<Integer>();
+		this.minis = new ArrayList<Integer>();
+		this.pets = new ArrayList<Integer>();
+		this.professions = new ArrayList<String>();
+		this.quaggans = new ArrayList<String>();
+		this.recipes = new ArrayList<Integer>();
+		this.skills = new ArrayList<Integer>();
+		this.skins = new ArrayList<Integer>();
+		this.specializations = new ArrayList<Integer>();
+		this.titles = new ArrayList<Integer>();
+		this.traits = new ArrayList<Integer>();
+		this.worlds = new ArrayList<Integer>();
 	}
 
 }
