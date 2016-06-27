@@ -193,6 +193,90 @@ public class JSONFileGenerator {
             e.printStackTrace();
         }
     }
+    
+    /**
+     * Generates an array class.
+     */
+    public static void generateArrayClass() {
+    	FileGeneratorConfigReader reader = FileGeneratorConfigReader.getReader();
+    	JsonRetriever retriever = new JsonRetriever();
+    	ClassNamer namer = new ClassNamer();
+    	LOG log = new LOG(JSONFileGenerator.class);
+    	
+    	log.info("Initializing generation of the array class.");
+    	ClassFileWriter fileWriter = new ClassFileWriter(reader.getArrayClassName(), 
+    			"Array class containing all arrays from the config file.");
+    	try {
+    		//For every array in the pattern add it to the generated class (as a list).
+	    	for (FileGeneratorPattern pattern : reader.getPatterns()) {
+	    		if (pattern.getType() == FileGeneratorPattern.Type.ARRAY) {
+	    			log.info("Generating information for the " + pattern.getName() + " array. . . - " 
+	    					+ reader.getWebsite() + pattern.getUrl());
+	    			
+	    			JSONArray array = retriever.getJsonArray(reader.getWebsite() + pattern.getUrl());
+	    			
+	    			//Check if it's an array of values, objects, arrays or null.
+	    			char firstCharOfArray = array.toString().charAt(1);
+	    			switch (firstCharOfArray) {
+	    			//If it's an array of objects. . .
+	    			case '{':
+	    				//Take the object, generate the java file for it and write it down. . .
+	    				JSONObject object = retriever.interpretateArray(array);
+	    				new JSONFileGenerator(object, pattern.getName());
+	    				fileWriter.writeCustomObject("List<" + namer.jsonToJava(pattern.getName(), true) + ">", 
+	    						namer.jsonToJava(pattern.getName(), false));
+	    				
+	    				break;
+	    			//If it's a null array. . .
+		    		case ']':
+		    			fileWriter.writeCustomObject("List<Object>", 
+		    					namer.jsonToJava(pattern.getName(), false), "TODO: GW-0003");
+		    			
+	    				break;
+	    			//If it's an array of arrays. . .
+	    			case '[':
+	    				fileWriter.writeComment("TODO: GW-0004");
+	    				break;
+	    			//If it's an array of values. . .
+	    			default:
+	    				boolean isInt, isBool, isDouble;
+	    				isInt = isDouble = isBool = true;
+	    				String type = "List<";
+	    				//Loop through a maximum of 100 elements (to reduce work time)
+	    				for (int i = 0; i < (array.length() > 100 ? 100 : array.length()); i++) {
+	    					if (! array.get(i).toString().matches(fileWriter.getRegex(true))) {
+	    						isInt = false;
+	    					}
+	    					if (! array.get(i).toString().matches(fileWriter.getRegex(false))) {
+	    						isDouble = false;
+	    					}
+	    					if (! array.get(i).toString().equals("true") 
+	    							&& ! array.get(i).toString().equals("false")) {
+	    						isBool = false;
+	    					}
+	    				}
+	    				if (isInt) {
+	    					type += "Integer";
+	    				} else if (isDouble) {
+	    					type += "Double";
+	    				} else if (isBool) {
+	    					type += "Boolean";
+	    				} else {
+	    					type += "String";
+	    				}
+	    				//TODO: if if if if if if if if if if . . . there has to be a better way . . .
+	    				fileWriter.writeCustomObject(type + ">", namer.jsonToJava(pattern.getName(), false));
+	    			}
+	    		}
+	    	}
+    	} catch (JSONException | IOException e) {
+    		log.error(e.getMessage());
+    		e.printStackTrace();
+    	}
+    	
+    	fileWriter.writeGettersAndSetters();
+    	fileWriter.finishFile();
+    }
 
     /**
      * Main class for Java class generation.
@@ -204,6 +288,7 @@ public class JSONFileGenerator {
 
         FileGeneratorConfigReader reader = FileGeneratorConfigReader.getReader();
 
+        //Generate model classes
         for (FileGeneratorPattern pattern : reader.getPatterns()) {
             if (pattern.getType() == FileGeneratorPattern.Type.OBJECT) {
 
@@ -214,6 +299,9 @@ public class JSONFileGenerator {
 
             }
         }
+        
+        //Generate array class
+        JSONFileGenerator.generateArrayClass();
     }
 
 }

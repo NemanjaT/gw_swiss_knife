@@ -14,6 +14,7 @@ public class FileGeneratorConfig implements ApplicationContextAware, BeanNameAwa
 
     private String packageFile;
     private String website;
+    private String arrayClassName;
     private FileGeneratorPattern[] fileGeneratorPatternList;
 
     public String getPackageFile() {
@@ -30,6 +31,14 @@ public class FileGeneratorConfig implements ApplicationContextAware, BeanNameAwa
 
     public void setWebsite(String website) {
         this.website = website;
+    }
+    
+    public String getArrayClassName() {
+    	return arrayClassName;
+    }
+    
+    public void setArrayClassName(String arrayClassName) {
+    	this.arrayClassName = arrayClassName;
     }
 
     public FileGeneratorPattern[] getFileGeneratorPatternList() {

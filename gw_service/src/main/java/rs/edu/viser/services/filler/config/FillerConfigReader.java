@@ -14,13 +14,25 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
  */
 public class FillerConfigReader {
 	
+	private static FillerConfigReader instance;
+	
 	private String website;
 	private FillerPattern[] fillerPatterns;
 	
 	/**
-	 * Sets the data from the xml configuration file.
+	 * Sets the data from the xml configuration file (from an existing file or returns a new one).
 	 */
-	public FillerConfigReader() {
+	public static FillerConfigReader getFillerConfigReader() {
+		if (instance == null) {
+			instance = new FillerConfigReader();
+		}
+		return instance;
+	}
+	
+	/**
+	 * constructor . . .
+	 */
+	private FillerConfigReader() {
 		//Open file context and read data
 		ApplicationContext context = new ClassPathXmlApplicationContext("fillerConfig.xml");
 		FillerConfig filler = (FillerConfig) context.getBean("fillerConfig");

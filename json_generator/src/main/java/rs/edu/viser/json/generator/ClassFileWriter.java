@@ -302,5 +302,18 @@ public class ClassFileWriter {
             e.printStackTrace();
         }
     }
+    
+    /**
+     * Returns a regex for int if true, or double if false. . .<br/>
+     * Helper for package only. . .
+     * @param integer boolean if it's integer or double
+     * @return regex (int/double)
+     */
+    String getRegex(boolean integer) {
+    	if (integer) {
+    		return regexInt;
+    	} 
+    	return regexDouble;
+    }
 
 }

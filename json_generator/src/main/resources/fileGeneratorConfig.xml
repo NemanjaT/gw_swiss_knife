@@ -7,6 +7,7 @@
     <bean id="fileGeneratorConfig" class="rs.edu.viser.json.generator.config.FileGeneratorConfig">
         <property name="packageFile" value="rs.edu.viser.json.models" />
         <property name="website" value="https://api.guildwars2.com/v2/" />
+        <property name="arrayClassName" value="GeneratedJsonArrays" />
 
         <property name="fileGeneratorPatternList">
             <list>

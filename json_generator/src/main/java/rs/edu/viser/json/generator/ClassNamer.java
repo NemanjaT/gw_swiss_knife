@@ -15,13 +15,13 @@ public class ClassNamer {
     public String jsonToJava(String json, boolean capitalFirstLetter) {
         StringBuilder stringBuilder = new StringBuilder(json);
         if (capitalFirstLetter) {
-            stringBuilder.setCharAt(0, (char) ((int) stringBuilder.charAt(0) - 32));
+            stringBuilder.setCharAt(0, (char) (stringBuilder.charAt(0) - 32));
         }
         int index;
         while ((index = stringBuilder.toString().indexOf('_')) > -1) {
             stringBuilder.deleteCharAt(index);
-            if (index < stringBuilder.toString().length() && (int)stringBuilder.charAt(index) > 96) {
-                stringBuilder.setCharAt(index, (char) ((int) stringBuilder.charAt(index) - 32));
+            if (index < stringBuilder.toString().length() && stringBuilder.charAt(index) > 96) {
+                stringBuilder.setCharAt(index, (char) (stringBuilder.charAt(index) - 32));
             }
         }
         return stringBuilder.toString();
@@ -36,13 +36,13 @@ public class ClassNamer {
         StringBuilder stringBuilder = new StringBuilder(java);
         boolean keepGoing = true;
         int index = 0;
-        if ((int) stringBuilder.charAt(0) > 64 && (int) stringBuilder.charAt(0) < 91) {
-            stringBuilder.setCharAt(index, (char) ((int) stringBuilder.charAt(index) + 32));
+        if (stringBuilder.charAt(0) > 64 && stringBuilder.charAt(0) < 91) {
+            stringBuilder.setCharAt(index, (char) (stringBuilder.charAt(index) + 32));
         }
         while (keepGoing) {
-            int charAscii = (int) stringBuilder.charAt(index);
+            int charAscii = stringBuilder.charAt(index);
             if (charAscii > 64 && charAscii < 91) {
-                stringBuilder.setCharAt(index, (char) ((int) stringBuilder.charAt(index) + 32));
+                stringBuilder.setCharAt(index, (char) (stringBuilder.charAt(index) + 32));
                 String tempString = stringBuilder.toString();
                 tempString = tempString.substring(0, index) + "_" + tempString.substring(index, tempString.length());
                 stringBuilder = new StringBuilder(tempString);

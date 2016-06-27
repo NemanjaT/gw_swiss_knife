@@ -18,6 +18,7 @@ public class FileGeneratorConfigReader {
 
     private String website;
     private String packageFile;
+    private String arrayClassName;
     private FileGeneratorPattern[] patterns;
 
     /**
@@ -39,6 +40,7 @@ public class FileGeneratorConfigReader {
         //Setting the data
         this.website = fileGenConf.getWebsite();
         this.packageFile = fileGenConf.getPackageFile();
+        this.arrayClassName = fileGenConf.getArrayClassName();
         this.patterns = fileGenConf.getFileGeneratorPatternList();
         
         //Closing the context
@@ -67,6 +69,14 @@ public class FileGeneratorConfigReader {
      */
     public FileGeneratorPattern[] getPatterns() {
         return patterns;
+    }
+    
+    /**
+     * Returns the name of the array class.
+     * @return name of the array class
+     */
+    public String getArrayClassName() {
+    	return arrayClassName;
     }
 
     /**
