@@ -8,7 +8,7 @@ import org.springframework.context.ApplicationContextAware;
 public class FillerConfig implements ApplicationContextAware, BeanNameAware {
 
 	private String website;
-	private FillerPattern[] fillerPatterns;
+	private FillerGroupConfig[] fillerGroups;
 
 	public String getWebsite() {
 		return website;
@@ -18,12 +18,12 @@ public class FillerConfig implements ApplicationContextAware, BeanNameAware {
 		this.website = website;
 	}
 
-	public FillerPattern[] getFillerPatterns() {
-		return fillerPatterns;
+	public FillerGroupConfig[] getFillerGroups() {
+		return fillerGroups;
 	}
 
-	public void setFillerPatterns(FillerPattern[] fillerPatterns) {
-		this.fillerPatterns = fillerPatterns;
+	public void setFillerGroups(FillerGroupConfig[] fillerGroups) {
+		this.fillerGroups = fillerGroups;
 	}
 
 	public void setBeanName(String name) {
