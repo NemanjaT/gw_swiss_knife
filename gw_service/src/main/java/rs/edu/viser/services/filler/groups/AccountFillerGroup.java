@@ -20,6 +20,7 @@ import rs.edu.viser.services.filler.config.FillerArrayPatternConfig;
 import rs.edu.viser.services.filler.config.FillerConfigReader;
 import rs.edu.viser.services.filler.config.FillerGroupConfig;
 import rs.edu.viser.services.filler.config.FillerObjectPatternConfig;
+import rs.edu.viser.services.filler.config.FillerPatternConfig;
 
 /**
  * Account filler group
@@ -45,9 +46,27 @@ public class AccountFillerGroup extends FillerGroup {
 		this.helper = new FillerHelper();
 		FillerConfigReader reader = FillerConfigReader.getFillerConfigReader();
 		FillerGroupConfig[] groups = reader.getFillerGroups(FillerGroupTypes.ACCOUNT, schedulerType);
-		System.out.println(groups.length);
+		
+		for (FillerGroupConfig group : groups) {
+			System.out.println("grupa" + group);
+			//TODO: think of a good logic....
+			//BRAIN ACTIVATE!!!
+			
+			
+			
+			
+			
+			
+			// ... nothing ...
+			
+			
+			
+			
+			
+			
+		}
 	}
-	
+
 	public Account getAccount() {
 		return account;
 	}

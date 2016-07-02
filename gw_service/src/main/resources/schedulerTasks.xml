@@ -26,20 +26,8 @@
                                 <property name="propertyName" value="accountAchievements" />
                             </bean>
                             <bean class="rs.edu.viser.services.filler.config.FillerArrayPatternConfig">
-                                <property name="urlPattern" value="/bank?access_token=*" />
-                                <property name="propertyName" value="accountBank" />
-                            </bean>
-                            <bean class="rs.edu.viser.services.filler.config.FillerArrayPatternConfig">
                                 <property name="urlPattern" value="/dyes?access_token=*" />
                                 <property name="propertyName" value="accountDyes" />
-                            </bean>
-                            <bean class="rs.edu.viser.services.filler.config.FillerArrayPatternConfig">
-                                <property name="urlPattern" value="/inventory?access_token=*" />
-                                <property name="propertyName" value="accountInventory" />
-                            </bean>
-                            <bean class="rs.edu.viser.services.filler.config.FillerArrayPatternConfig">
-                                <property name="urlPattern" value="/materials?access_token=*" />
-                                <property name="propertyName" value="accountMaterials" />
                             </bean>
                             <bean class="rs.edu.viser.services.filler.config.FillerArrayPatternConfig">
                                 <property name="urlPattern" value="/minis?access_token=*" />
@@ -52,6 +40,28 @@
                             <bean class="rs.edu.viser.services.filler.config.FillerArrayPatternConfig">
                                 <property name="urlPattern" value="/titles?access_token=*" />
                                 <property name="propertyName" value="accountTitles" />
+                            </bean>
+                        </list>
+                    </property>
+                </bean>
+                
+                <bean class="rs.edu.viser.services.filler.config.FillerGroupConfig">
+                    <property name="fillerGroupType" value="ACCOUNT" />
+                    <property name="schedulerType" value="DAILY" />
+                    <property name="urlSufix" value ="account" />
+                    <property name="fillerPatterns">
+                        <list>
+                            <bean class="rs.edu.viser.services.filler.config.FillerArrayPatternConfig">
+                                <property name="urlPattern" value="/bank?access_token=*" />
+                                <property name="propertyName" value="accountBank" />
+                            </bean>
+                            <bean class="rs.edu.viser.services.filler.config.FillerArrayPatternConfig">
+                                <property name="urlPattern" value="/inventory?access_token=*" />
+                                <property name="propertyName" value="accountInventory" />
+                            </bean>
+                            <bean class="rs.edu.viser.services.filler.config.FillerArrayPatternConfig">
+                                <property name="urlPattern" value="/materials?access_token=*" />
+                                <property name="propertyName" value="accountMaterials" />
                             </bean>
                             <bean class="rs.edu.viser.services.filler.config.FillerArrayPatternConfig">
                                 <property name="urlPattern" value="/wallet?access_token=*" />
