@@ -20,7 +20,7 @@ import rs.edu.viser.services.filler.groups.SystemFillerGroup;
 import rs.edu.viser.services.filler.groups.WorldFillerGroup;
 import rs.edu.viser.services.filler.groups.WvwFillerGroup;
 import rs.edu.viser.services.filler.groups.FillerGroup.FillerGroupTypes;
-import rs.edu.viser.services.scheduler.SchedulerTypes;
+import rs.edu.viser.services.filler.groups.FillerGroup.SchedulerTypes;
 
 /**
  * Reads through the configuration reader and sets the values of 
@@ -54,11 +54,16 @@ public class FillerFactory {
 	 * @return this
 	 */
 	public FillerFactory fillerGroups(FillerGroupTypes type) {
-		//TODO: fix, currently excludes instead of the opposite
 		log.info("Filtering group types (" + type.toString() + ") ...");
-		List<FillerGroupConfig> newList = new LinkedList<>(Arrays.asList(this.fillerGroups));
-		newList.removeAll(Arrays.asList(reader.getFillerGroups(type)));
-		this.fillerGroups = newList.toArray(new FillerGroupConfig[newList.size()]);
+		//If it's set to all types, don't filter anything...
+		if (type == FillerGroupTypes.ALL) {
+			return this;
+		}
+		List<FillerGroupConfig> toRemove = new LinkedList<>(Arrays.asList(this.fillerGroups));
+		toRemove.removeAll(Arrays.asList(reader.getFillerGroups(type)));
+		List<FillerGroupConfig> subList = new LinkedList<>(Arrays.asList(this.fillerGroups));
+		subList.removeAll(toRemove);
+		this.fillerGroups = subList.toArray(new FillerGroupConfig[subList.size()]);
 		return this;
 	}
 	
@@ -68,11 +73,18 @@ public class FillerFactory {
 	 * @return this
 	 */
 	public FillerFactory scheduler(SchedulerTypes type) {
-		//TODO: fix, currently excludes instead of the opposite
 		log.info("Filtering scheduler types (" + type.toString() + ") ...");
-		List<FillerGroupConfig> newList = new LinkedList<>(Arrays.asList(this.fillerGroups));
-		newList.removeAll(Arrays.asList(reader.getFillerGroups(type)));
-		this.fillerGroups = newList.toArray(new FillerGroupConfig[newList.size()]);
+		//If it's set to all types, don't filter anything...
+		if (type == SchedulerTypes.ALL) {
+			return this;
+		}
+		//Taking a list of which elements should be removed...
+		List<FillerGroupConfig> toRemove = new LinkedList<>(Arrays.asList(this.fillerGroups));
+		toRemove.removeAll(Arrays.asList(reader.getFillerGroups(type)));
+		//Excluding those elements...
+		List<FillerGroupConfig> subList = new LinkedList<>(Arrays.asList(this.fillerGroups));
+		subList.removeAll(toRemove);
+		this.fillerGroups = subList.toArray(new FillerGroupConfig[subList.size()]);
 		return this;
 	}
 	

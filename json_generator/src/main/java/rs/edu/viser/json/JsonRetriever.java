@@ -105,6 +105,38 @@ public class JsonRetriever {
             }
         }
     }
+    
+    /**
+     * Takes the unknown number of parameters and forms a full URL. Takes a JSONObject from the URL provided.
+     * @param url
+     * @param params Length must be equal or greater than URL needs.
+     * @return JSONObject
+     * @throws IOException 
+     * @throws JSONException 
+     */
+    public JSONObject getParametarizedJsonObject(String url, String... params) throws JSONException, IOException {
+    	int index, counter = 0;
+    	while ((index = url.indexOf("*")) > -1) {
+    		url = url.substring(0, index) + params[counter++] + url.substring(index + 1, url.length());
+    	}
+    	return getJsonObject(url);
+    }
+    
+    /**
+     * Takes the unknown number of parameters  and forms a full URL. Takes a JSONArray from the URL provided.
+     * @param url
+     * @param params Length must be equal or greater than URL needs.
+     * @return JSONArray
+     * @throws IOException
+     * @throws JSONException
+     */
+    public JSONArray getParametarizedJsonArray(String url, String... params) throws IOException, JSONException {
+    	int index, counter = 0;
+    	while((index = url.indexOf("*")) > -1) {
+    		url = url.substring(0, index) + params[counter++] + url.substring(index, url.length());
+    	}
+    	return getJsonArray(url);
+    }
 
     /**
      * Takes an array of JSON objects and returns a full object (an object that contains all of the

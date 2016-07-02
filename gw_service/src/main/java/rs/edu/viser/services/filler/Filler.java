@@ -5,6 +5,7 @@ import rs.edu.viser.services.filler.config.FillerConfigReader;
 import rs.edu.viser.services.filler.config.FillerObjectPatternConfig;
 import rs.edu.viser.services.filler.groups.FillerGroup;
 import rs.edu.viser.services.filler.groups.FillerGroup.FillerGroupTypes;
+import rs.edu.viser.services.filler.groups.FillerGroup.SchedulerTypes;
 
 public class Filler {
 	
@@ -34,8 +35,10 @@ public class Filler {
 //		
 //		System.out.println("-----");
 		
-		FillerFactory ff = new FillerFactory().fillerGroups(FillerGroupTypes.ACCOUNT);
+		FillerFactory ff = new FillerFactory().scheduler(SchedulerTypes.ALL).fillerGroups(FillerGroupTypes.ALL);
 		for (FillerGroup fg : ff.getFillerGroup()) {
+			fg.setAccessToken("79D451B9-26E6-6943-BDA6-AC9D05EE563DA640C336-0F50-4875-8350-23E6C642A0F1");
+			fg.getModels(SchedulerTypes.ALL);
 			System.out.println(fg);
 		}
 	}

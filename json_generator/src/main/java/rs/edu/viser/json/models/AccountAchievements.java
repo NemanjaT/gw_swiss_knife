@@ -15,7 +15,7 @@ public class AccountAchievements extends JsonModelFactoryMaster {
 
 	private Integer max;
 
-	private List<Object> bits; //TODO: GW-0001 
+	private List<String> bits;
 
 	private Integer id;
 
@@ -43,11 +43,11 @@ public class AccountAchievements extends JsonModelFactoryMaster {
 		this.max = val;
 	}
 
-	public List<Object> getBits() {
+	public List<String> getBits() {
 		return this.bits;
 	}
 
-	public void setBits(List<Object> val) {
+	public void setBits(List<String> val) {
 		this.bits = val;
 	}
 
@@ -84,7 +84,7 @@ public class AccountAchievements extends JsonModelFactoryMaster {
 	}
 
 	public AccountAchievements() {
-		this.bits = new ArrayList<Object>();
+		this.bits = new ArrayList<String>();
 	}
 
 }
