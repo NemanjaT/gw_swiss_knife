@@ -5,9 +5,12 @@ import org.springframework.beans.factory.BeanNameAware;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextAware;
 
+import rs.edu.viser.services.filler.groups.FillerGroup.SchedulerTypes;
+
 public abstract class FillerPatternConfig implements ApplicationContextAware, BeanNameAware {
 	
 	private String urlPattern;
+	private SchedulerTypes schedulerType;
 	
 	public String getUrlPattern() {
 		return this.urlPattern;
@@ -15,6 +18,14 @@ public abstract class FillerPatternConfig implements ApplicationContextAware, Be
 	
 	public void setUrlPattern(String urlPattern) {
 		this.urlPattern = urlPattern;
+	}
+
+	public SchedulerTypes getSchedulerType() {
+		return schedulerType;
+	}
+
+	public void setSchedulerType(String schedulerType) {
+		this.schedulerType = SchedulerTypes.valueOf(schedulerType);
 	}
 
 	@Override

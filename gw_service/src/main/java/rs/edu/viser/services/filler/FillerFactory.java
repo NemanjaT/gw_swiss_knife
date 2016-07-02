@@ -20,7 +20,6 @@ import rs.edu.viser.services.filler.groups.SystemFillerGroup;
 import rs.edu.viser.services.filler.groups.WorldFillerGroup;
 import rs.edu.viser.services.filler.groups.WvwFillerGroup;
 import rs.edu.viser.services.filler.groups.FillerGroup.FillerGroupTypes;
-import rs.edu.viser.services.filler.groups.FillerGroup.SchedulerTypes;
 
 /**
  * Reads through the configuration reader and sets the values of 
@@ -61,27 +60,6 @@ public class FillerFactory {
 		}
 		List<FillerGroupConfig> toRemove = new LinkedList<>(Arrays.asList(this.fillerGroups));
 		toRemove.removeAll(Arrays.asList(reader.getFillerGroups(type)));
-		List<FillerGroupConfig> subList = new LinkedList<>(Arrays.asList(this.fillerGroups));
-		subList.removeAll(toRemove);
-		this.fillerGroups = subList.toArray(new FillerGroupConfig[subList.size()]);
-		return this;
-	}
-	
-	/**
-	 * Replaces the type to just the types that have a scheduler specified.
-	 * @param type type of scheduler
-	 * @return this
-	 */
-	public FillerFactory scheduler(SchedulerTypes type) {
-		log.info("Filtering scheduler types (" + type.toString() + ") ...");
-		//If it's set to all types, don't filter anything...
-		if (type == SchedulerTypes.ALL) {
-			return this;
-		}
-		//Taking a list of which elements should be removed...
-		List<FillerGroupConfig> toRemove = new LinkedList<>(Arrays.asList(this.fillerGroups));
-		toRemove.removeAll(Arrays.asList(reader.getFillerGroups(type)));
-		//Excluding those elements...
 		List<FillerGroupConfig> subList = new LinkedList<>(Arrays.asList(this.fillerGroups));
 		subList.removeAll(toRemove);
 		this.fillerGroups = subList.toArray(new FillerGroupConfig[subList.size()]);

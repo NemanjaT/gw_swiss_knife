@@ -133,7 +133,11 @@ public class JsonRetriever {
     public JSONArray getParametarizedJsonArray(String url, String... params) throws IOException, JSONException {
     	int index, counter = 0;
     	while((index = url.indexOf("*")) > -1) {
-    		url = url.substring(0, index) + params[counter++] + url.substring(index, url.length());
+    		try {
+    			url = url.substring(0, index) + params[counter++] + url.substring(index + 1, url.length());
+    		} catch (ArrayIndexOutOfBoundsException e) {
+    			url = url.substring(0, index) + params[counter - 1];
+    		}
     	}
     	return getJsonArray(url);
     }

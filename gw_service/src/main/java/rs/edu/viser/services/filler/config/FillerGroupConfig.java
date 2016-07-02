@@ -11,7 +11,6 @@ import rs.edu.viser.services.filler.groups.FillerGroup.SchedulerTypes;
 public class FillerGroupConfig implements ApplicationContextAware, BeanNameAware {
 	
 	private FillerGroupTypes fillerGroupType;
-	private SchedulerTypes schedulerType;
 	private String urlSufix;
 	private FillerPatternConfig[] fillerPatterns;
 
@@ -21,14 +20,6 @@ public class FillerGroupConfig implements ApplicationContextAware, BeanNameAware
 
 	public void setFillerGroupType(FillerGroupTypes fillerGroupType) {
 		this.fillerGroupType = fillerGroupType;
-	}
-
-	public SchedulerTypes getSchedulerType() {
-		return schedulerType;
-	}
-
-	public void setSchedulerType(SchedulerTypes schedulerType) {
-		this.schedulerType = schedulerType;
 	}
 
 	public String getUrlSufix() {
