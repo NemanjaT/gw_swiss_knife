@@ -104,7 +104,7 @@ public class JSONFileGenerator {
         		}).start();
         		
         		String innerJavaName = classNamer.jsonToJava(innerJsonName, true);
-                String innerJavaAttribute = classNamer.jsonToJava(innerJsonName, false);
+                String innerJavaAttribute = classNamer.jsonToJava(key, false);
 
                 classFileWriter.writeCustomObject(innerJavaName, innerJavaAttribute);
             } else {
@@ -139,7 +139,7 @@ public class JSONFileGenerator {
     			}).start();
     			
     			String innerJavaName = classNamer.jsonToJava(innerJsonName, true);
-    	        String innerJavaAttribute = classNamer.jsonToJava(innerJsonName, false);
+    	        String innerJavaAttribute = classNamer.jsonToJava(key, false);
 
     	        classFileWriter.writeCustomObject("List<" + innerJavaName + ">", innerJavaAttribute);
     		} else {
@@ -244,27 +244,13 @@ public class JSONFileGenerator {
 	    				String type = "List<";
 	    				//Loop through a maximum of 100 elements (to reduce work time)
 	    				for (int i = 0; i < (array.length() > 100 ? 100 : array.length()); i++) {
-	    					if (! array.get(i).toString().matches(fileWriter.getRegex(true))) {
-	    						isInt = false;
-	    					}
-	    					if (! array.get(i).toString().matches(fileWriter.getRegex(false))) {
-	    						isDouble = false;
-	    					}
+	    					if (! array.get(i).toString().matches(fileWriter.getRegex(true))) isInt = false;
+	    					if (! array.get(i).toString().matches(fileWriter.getRegex(false))) isDouble = false;
 	    					if (! array.get(i).toString().equals("true") 
-	    							&& ! array.get(i).toString().equals("false")) {
-	    						isBool = false;
-	    					}
+	    							&& ! array.get(i).toString().equals("false")) isBool = false;
 	    				}
-	    				if (isInt) {
-	    					type += "Integer";
-	    				} else if (isDouble) {
-	    					type += "Double";
-	    				} else if (isBool) {
-	    					type += "Boolean";
-	    				} else {
-	    					type += "String";
-	    				}
-	    				//TODO: if if if if if if if if if if . . . there has to be a better way . . .
+	    				type += isInt ? "Integer" : isDouble ? "Double" : isBool ? "Boolean" : "String";
+	    				
 	    				fileWriter.writeCustomObject(type + ">", namer.jsonToJava(pattern.getName(), false));
 	    			}
 	    		}

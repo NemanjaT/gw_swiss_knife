@@ -11,28 +11,28 @@ import rs.edu.viser.json.JsonModelFactoryMaster;
  */
 public class CommerceListing extends JsonModelFactoryMaster {
 
-	private List<CommerceListingBuys> commerceListingBuys;
+	private List<CommerceListingBuys> buys;
 
-	private List<CommerceListingSells> commerceListingSells;
+	private List<CommerceListingSells> sells;
 
 	private Integer id;
 
 	//Getters and setters
 
-	public List<CommerceListingBuys> getCommerceListingBuys() {
-		return this.commerceListingBuys;
+	public List<CommerceListingBuys> getBuys() {
+		return this.buys;
 	}
 
-	public void setCommerceListingBuys(List<CommerceListingBuys> val) {
-		this.commerceListingBuys = val;
+	public void setBuys(List<CommerceListingBuys> val) {
+		this.buys = val;
 	}
 
-	public List<CommerceListingSells> getCommerceListingSells() {
-		return this.commerceListingSells;
+	public List<CommerceListingSells> getSells() {
+		return this.sells;
 	}
 
-	public void setCommerceListingSells(List<CommerceListingSells> val) {
-		this.commerceListingSells = val;
+	public void setSells(List<CommerceListingSells> val) {
+		this.sells = val;
 	}
 
 	public Integer getId() {
@@ -44,8 +44,8 @@ public class CommerceListing extends JsonModelFactoryMaster {
 	}
 
 	public CommerceListing() {
-		this.commerceListingBuys = new ArrayList<CommerceListingBuys>();
-		this.commerceListingSells = new ArrayList<CommerceListingSells>();
+		this.buys = new ArrayList<CommerceListingBuys>();
+		this.sells = new ArrayList<CommerceListingSells>();
 	}
 
 }

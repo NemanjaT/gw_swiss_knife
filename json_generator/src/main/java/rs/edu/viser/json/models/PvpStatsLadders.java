@@ -11,56 +11,56 @@ import rs.edu.viser.json.JsonModelFactoryMaster;
  */
 public class PvpStatsLadders extends JsonModelFactoryMaster {
 
-	private PvpStatsLaddersSoloarenarated pvpStatsLaddersSoloarenarated;
+	private PvpStatsLaddersSoloarenarated soloarenarated;
 
-	private PvpStatsLaddersTeamarenarated pvpStatsLaddersTeamarenarated;
+	private PvpStatsLaddersTeamarenarated teamarenarated;
 
-	private PvpStatsLaddersRanked pvpStatsLaddersRanked;
+	private PvpStatsLaddersRanked ranked;
 
-	private PvpStatsLaddersNone pvpStatsLaddersNone;
+	private PvpStatsLaddersNone none;
 
-	private PvpStatsLaddersUnranked pvpStatsLaddersUnranked;
+	private PvpStatsLaddersUnranked unranked;
 
 	//Getters and setters
 
-	public PvpStatsLaddersSoloarenarated getPvpStatsLaddersSoloarenarated() {
-		return this.pvpStatsLaddersSoloarenarated;
+	public PvpStatsLaddersSoloarenarated getSoloarenarated() {
+		return this.soloarenarated;
 	}
 
-	public void setPvpStatsLaddersSoloarenarated(PvpStatsLaddersSoloarenarated val) {
-		this.pvpStatsLaddersSoloarenarated = val;
+	public void setSoloarenarated(PvpStatsLaddersSoloarenarated val) {
+		this.soloarenarated = val;
 	}
 
-	public PvpStatsLaddersTeamarenarated getPvpStatsLaddersTeamarenarated() {
-		return this.pvpStatsLaddersTeamarenarated;
+	public PvpStatsLaddersTeamarenarated getTeamarenarated() {
+		return this.teamarenarated;
 	}
 
-	public void setPvpStatsLaddersTeamarenarated(PvpStatsLaddersTeamarenarated val) {
-		this.pvpStatsLaddersTeamarenarated = val;
+	public void setTeamarenarated(PvpStatsLaddersTeamarenarated val) {
+		this.teamarenarated = val;
 	}
 
-	public PvpStatsLaddersRanked getPvpStatsLaddersRanked() {
-		return this.pvpStatsLaddersRanked;
+	public PvpStatsLaddersRanked getRanked() {
+		return this.ranked;
 	}
 
-	public void setPvpStatsLaddersRanked(PvpStatsLaddersRanked val) {
-		this.pvpStatsLaddersRanked = val;
+	public void setRanked(PvpStatsLaddersRanked val) {
+		this.ranked = val;
 	}
 
-	public PvpStatsLaddersNone getPvpStatsLaddersNone() {
-		return this.pvpStatsLaddersNone;
+	public PvpStatsLaddersNone getNone() {
+		return this.none;
 	}
 
-	public void setPvpStatsLaddersNone(PvpStatsLaddersNone val) {
-		this.pvpStatsLaddersNone = val;
+	public void setNone(PvpStatsLaddersNone val) {
+		this.none = val;
 	}
 
-	public PvpStatsLaddersUnranked getPvpStatsLaddersUnranked() {
-		return this.pvpStatsLaddersUnranked;
+	public PvpStatsLaddersUnranked getUnranked() {
+		return this.unranked;
 	}
 
-	public void setPvpStatsLaddersUnranked(PvpStatsLaddersUnranked val) {
-		this.pvpStatsLaddersUnranked = val;
+	public void setUnranked(PvpStatsLaddersUnranked val) {
+		this.unranked = val;
 	}
 
 	public PvpStatsLadders() {

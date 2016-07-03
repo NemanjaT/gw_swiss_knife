@@ -15,7 +15,7 @@ public class PvpAmulet extends JsonModelFactoryMaster {
 
 	private String icon;
 
-	private PvpAmuletAttributes pvpAmuletAttributes;
+	private PvpAmuletAttributes attributes;
 
 	private Integer id;
 
@@ -37,12 +37,12 @@ public class PvpAmulet extends JsonModelFactoryMaster {
 		this.icon = val;
 	}
 
-	public PvpAmuletAttributes getPvpAmuletAttributes() {
-		return this.pvpAmuletAttributes;
+	public PvpAmuletAttributes getAttributes() {
+		return this.attributes;
 	}
 
-	public void setPvpAmuletAttributes(PvpAmuletAttributes val) {
-		this.pvpAmuletAttributes = val;
+	public void setAttributes(PvpAmuletAttributes val) {
+		this.attributes = val;
 	}
 
 	public Integer getId() {

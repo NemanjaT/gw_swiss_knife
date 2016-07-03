@@ -1,22 +1,28 @@
 package rs.edu.viser.services.filler;
 
-import rs.edu.viser.logger.LOG;
-import rs.edu.viser.services.filler.groups.FillerGroup;
-import rs.edu.viser.services.filler.groups.FillerGroup.FillerGroupTypes;
-import rs.edu.viser.services.filler.groups.FillerGroup.SchedulerTypes;
+import java.io.IOException;
+import java.net.URL;
+
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.PropertyNamingStrategy;
+
+import rs.edu.viser.json.models.WvwMatch;
 
 public class Filler {
 	
 	public static void main(String[] args) {
+		final long startTime = System.nanoTime();
+		ObjectMapper mapper = new ObjectMapper();
+		mapper.setPropertyNamingStrategy(PropertyNamingStrategy.CAMEL_CASE_TO_LOWER_CASE_WITH_UNDERSCORES);
 		
-		FillerFactory ff = new FillerFactory().fillerGroups(FillerGroupTypes.ACCOUNT);
-		for (FillerGroup fg : ff.getFillerGroup()) {
-			//placeholder access token: 79D451B9-26E6-6943-BDA6-AC9D05EE563DA640C336-0F50-4875-8350-23E6C642A0F1
-			fg.setAccessToken("79D451B9-26E6-6943-BDA6-AC9D05EE563DA640C336-0F50-4875-8350-23E6C642A0F1");
-			new LOG(Filler.class).info(fg.toString());
-			fg.getModels(SchedulerTypes.DAILY);
+		try {
+			WvwMatch match = mapper.readValue(new URL("https://api.guildwars2.com/v2/wvw/matches/2-6"), WvwMatch.class);
+			System.out.println(match);
+		} catch (IOException e) {
+			e.printStackTrace();
 		}
-		
+		final long duration = System.nanoTime() - startTime;
+		System.out.println(duration / 1000000000.);
 	}
 
 }

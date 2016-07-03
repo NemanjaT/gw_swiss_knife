@@ -11,126 +11,126 @@ import rs.edu.viser.json.JsonModelFactoryMaster;
  */
 public class ProfessionWeapons extends JsonModelFactoryMaster {
 
-	private ProfessionWeaponsHammer professionWeaponsHammer;
+	private ProfessionWeaponsHammer Hammer;
 
-	private ProfessionWeaponsMace professionWeaponsMace;
+	private ProfessionWeaponsMace Mace;
 
-	private ProfessionWeaponsShield professionWeaponsShield;
+	private ProfessionWeaponsShield Shield;
 
-	private ProfessionWeaponsSword professionWeaponsSword;
+	private ProfessionWeaponsSword Sword;
 
-	private ProfessionWeaponsFocus professionWeaponsFocus;
+	private ProfessionWeaponsFocus Focus;
 
-	private ProfessionWeaponsStaff professionWeaponsStaff;
+	private ProfessionWeaponsStaff Staff;
 
-	private ProfessionWeaponsTrident professionWeaponsTrident;
+	private ProfessionWeaponsTrident Trident;
 
-	private ProfessionWeaponsGreatsword professionWeaponsGreatsword;
+	private ProfessionWeaponsGreatsword Greatsword;
 
-	private ProfessionWeaponsScepter professionWeaponsScepter;
+	private ProfessionWeaponsScepter Scepter;
 
-	private ProfessionWeaponsSpear professionWeaponsSpear;
+	private ProfessionWeaponsSpear Spear;
 
-	private ProfessionWeaponsLongbow professionWeaponsLongbow;
+	private ProfessionWeaponsLongbow Longbow;
 
-	private ProfessionWeaponsTorch professionWeaponsTorch;
+	private ProfessionWeaponsTorch Torch;
 
 	//Getters and setters
 
-	public ProfessionWeaponsHammer getProfessionWeaponsHammer() {
-		return this.professionWeaponsHammer;
+	public ProfessionWeaponsHammer getHammer() {
+		return this.Hammer;
 	}
 
-	public void setProfessionWeaponsHammer(ProfessionWeaponsHammer val) {
-		this.professionWeaponsHammer = val;
+	public void setHammer(ProfessionWeaponsHammer val) {
+		this.Hammer = val;
 	}
 
-	public ProfessionWeaponsMace getProfessionWeaponsMace() {
-		return this.professionWeaponsMace;
+	public ProfessionWeaponsMace getMace() {
+		return this.Mace;
 	}
 
-	public void setProfessionWeaponsMace(ProfessionWeaponsMace val) {
-		this.professionWeaponsMace = val;
+	public void setMace(ProfessionWeaponsMace val) {
+		this.Mace = val;
 	}
 
-	public ProfessionWeaponsShield getProfessionWeaponsShield() {
-		return this.professionWeaponsShield;
+	public ProfessionWeaponsShield getShield() {
+		return this.Shield;
 	}
 
-	public void setProfessionWeaponsShield(ProfessionWeaponsShield val) {
-		this.professionWeaponsShield = val;
+	public void setShield(ProfessionWeaponsShield val) {
+		this.Shield = val;
 	}
 
-	public ProfessionWeaponsSword getProfessionWeaponsSword() {
-		return this.professionWeaponsSword;
+	public ProfessionWeaponsSword getSword() {
+		return this.Sword;
 	}
 
-	public void setProfessionWeaponsSword(ProfessionWeaponsSword val) {
-		this.professionWeaponsSword = val;
+	public void setSword(ProfessionWeaponsSword val) {
+		this.Sword = val;
 	}
 
-	public ProfessionWeaponsFocus getProfessionWeaponsFocus() {
-		return this.professionWeaponsFocus;
+	public ProfessionWeaponsFocus getFocus() {
+		return this.Focus;
 	}
 
-	public void setProfessionWeaponsFocus(ProfessionWeaponsFocus val) {
-		this.professionWeaponsFocus = val;
+	public void setFocus(ProfessionWeaponsFocus val) {
+		this.Focus = val;
 	}
 
-	public ProfessionWeaponsStaff getProfessionWeaponsStaff() {
-		return this.professionWeaponsStaff;
+	public ProfessionWeaponsStaff getStaff() {
+		return this.Staff;
 	}
 
-	public void setProfessionWeaponsStaff(ProfessionWeaponsStaff val) {
-		this.professionWeaponsStaff = val;
+	public void setStaff(ProfessionWeaponsStaff val) {
+		this.Staff = val;
 	}
 
-	public ProfessionWeaponsTrident getProfessionWeaponsTrident() {
-		return this.professionWeaponsTrident;
+	public ProfessionWeaponsTrident getTrident() {
+		return this.Trident;
 	}
 
-	public void setProfessionWeaponsTrident(ProfessionWeaponsTrident val) {
-		this.professionWeaponsTrident = val;
+	public void setTrident(ProfessionWeaponsTrident val) {
+		this.Trident = val;
 	}
 
-	public ProfessionWeaponsGreatsword getProfessionWeaponsGreatsword() {
-		return this.professionWeaponsGreatsword;
+	public ProfessionWeaponsGreatsword getGreatsword() {
+		return this.Greatsword;
 	}
 
-	public void setProfessionWeaponsGreatsword(ProfessionWeaponsGreatsword val) {
-		this.professionWeaponsGreatsword = val;
+	public void setGreatsword(ProfessionWeaponsGreatsword val) {
+		this.Greatsword = val;
 	}
 
-	public ProfessionWeaponsScepter getProfessionWeaponsScepter() {
-		return this.professionWeaponsScepter;
+	public ProfessionWeaponsScepter getScepter() {
+		return this.Scepter;
 	}
 
-	public void setProfessionWeaponsScepter(ProfessionWeaponsScepter val) {
-		this.professionWeaponsScepter = val;
+	public void setScepter(ProfessionWeaponsScepter val) {
+		this.Scepter = val;
 	}
 
-	public ProfessionWeaponsSpear getProfessionWeaponsSpear() {
-		return this.professionWeaponsSpear;
+	public ProfessionWeaponsSpear getSpear() {
+		return this.Spear;
 	}
 
-	public void setProfessionWeaponsSpear(ProfessionWeaponsSpear val) {
-		this.professionWeaponsSpear = val;
+	public void setSpear(ProfessionWeaponsSpear val) {
+		this.Spear = val;
 	}
 
-	public ProfessionWeaponsLongbow getProfessionWeaponsLongbow() {
-		return this.professionWeaponsLongbow;
+	public ProfessionWeaponsLongbow getLongbow() {
+		return this.Longbow;
 	}
 
-	public void setProfessionWeaponsLongbow(ProfessionWeaponsLongbow val) {
-		this.professionWeaponsLongbow = val;
+	public void setLongbow(ProfessionWeaponsLongbow val) {
+		this.Longbow = val;
 	}
 
-	public ProfessionWeaponsTorch getProfessionWeaponsTorch() {
-		return this.professionWeaponsTorch;
+	public ProfessionWeaponsTorch getTorch() {
+		return this.Torch;
 	}
 
-	public void setProfessionWeaponsTorch(ProfessionWeaponsTorch val) {
-		this.professionWeaponsTorch = val;
+	public void setTorch(ProfessionWeaponsTorch val) {
+		this.Torch = val;
 	}
 
 	public ProfessionWeapons() {

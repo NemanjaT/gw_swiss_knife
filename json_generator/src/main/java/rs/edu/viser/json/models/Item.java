@@ -33,7 +33,7 @@ public class Item extends JsonModelFactoryMaster {
 
 	private String name;
 
-	private ItemDetails itemDetails;
+	private ItemDetails details;
 
 	private Integer id;
 
@@ -129,12 +129,12 @@ public class Item extends JsonModelFactoryMaster {
 		this.name = val;
 	}
 
-	public ItemDetails getItemDetails() {
-		return this.itemDetails;
+	public ItemDetails getDetails() {
+		return this.details;
 	}
 
-	public void setItemDetails(ItemDetails val) {
-		this.itemDetails = val;
+	public void setDetails(ItemDetails val) {
+		this.details = val;
 	}
 
 	public Integer getId() {

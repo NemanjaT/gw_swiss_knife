@@ -11,20 +11,20 @@ import rs.edu.viser.json.JsonModelFactoryMaster;
  */
 public class CharacterCrafting extends JsonModelFactoryMaster {
 
-	private List<CharacterCraftingCrafting> characterCraftingCrafting;
+	private List<CharacterCraftingCrafting> crafting;
 
 	//Getters and setters
 
-	public List<CharacterCraftingCrafting> getCharacterCraftingCrafting() {
-		return this.characterCraftingCrafting;
+	public List<CharacterCraftingCrafting> getCrafting() {
+		return this.crafting;
 	}
 
-	public void setCharacterCraftingCrafting(List<CharacterCraftingCrafting> val) {
-		this.characterCraftingCrafting = val;
+	public void setCrafting(List<CharacterCraftingCrafting> val) {
+		this.crafting = val;
 	}
 
 	public CharacterCrafting() {
-		this.characterCraftingCrafting = new ArrayList<CharacterCraftingCrafting>();
+		this.crafting = new ArrayList<CharacterCraftingCrafting>();
 	}
 
 }

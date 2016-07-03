@@ -11,7 +11,7 @@ import rs.edu.viser.json.JsonModelFactoryMaster;
  */
 public class PvpSeasonDivisions extends JsonModelFactoryMaster {
 
-	private List<PvpSeasonDivisionsTiers> pvpSeasonDivisionsTiers;
+	private List<PvpSeasonDivisionsTiers> tiers;
 
 	private String name;
 
@@ -25,12 +25,12 @@ public class PvpSeasonDivisions extends JsonModelFactoryMaster {
 
 	//Getters and setters
 
-	public List<PvpSeasonDivisionsTiers> getPvpSeasonDivisionsTiers() {
-		return this.pvpSeasonDivisionsTiers;
+	public List<PvpSeasonDivisionsTiers> getTiers() {
+		return this.tiers;
 	}
 
-	public void setPvpSeasonDivisionsTiers(List<PvpSeasonDivisionsTiers> val) {
-		this.pvpSeasonDivisionsTiers = val;
+	public void setTiers(List<PvpSeasonDivisionsTiers> val) {
+		this.tiers = val;
 	}
 
 	public String getName() {
@@ -74,7 +74,7 @@ public class PvpSeasonDivisions extends JsonModelFactoryMaster {
 	}
 
 	public PvpSeasonDivisions() {
-		this.pvpSeasonDivisionsTiers = new ArrayList<PvpSeasonDivisionsTiers>();
+		this.tiers = new ArrayList<PvpSeasonDivisionsTiers>();
 		this.flags = new ArrayList<Object>();
 	}
 

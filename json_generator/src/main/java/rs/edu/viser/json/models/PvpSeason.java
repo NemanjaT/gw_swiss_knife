@@ -21,7 +21,7 @@ public class PvpSeason extends JsonModelFactoryMaster {
 
 	private String id;
 
-	private List<PvpSeasonDivisions> pvpSeasonDivisions;
+	private List<PvpSeasonDivisions> divisions;
 
 	//Getters and setters
 
@@ -65,16 +65,16 @@ public class PvpSeason extends JsonModelFactoryMaster {
 		this.id = val;
 	}
 
-	public List<PvpSeasonDivisions> getPvpSeasonDivisions() {
-		return this.pvpSeasonDivisions;
+	public List<PvpSeasonDivisions> getDivisions() {
+		return this.divisions;
 	}
 
-	public void setPvpSeasonDivisions(List<PvpSeasonDivisions> val) {
-		this.pvpSeasonDivisions = val;
+	public void setDivisions(List<PvpSeasonDivisions> val) {
+		this.divisions = val;
 	}
 
 	public PvpSeason() {
-		this.pvpSeasonDivisions = new ArrayList<PvpSeasonDivisions>();
+		this.divisions = new ArrayList<PvpSeasonDivisions>();
 	}
 
 }

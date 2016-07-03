@@ -11,7 +11,7 @@ import rs.edu.viser.json.JsonModelFactoryMaster;
  */
 public class ItemDetails extends JsonModelFactoryMaster {
 
-	private ItemDetailsInfixUpgrade itemDetailsInfixUpgrade;
+	private ItemDetailsInfixUpgrade infixUpgrade;
 
 	private String weightClass;
 
@@ -27,12 +27,12 @@ public class ItemDetails extends JsonModelFactoryMaster {
 
 	//Getters and setters
 
-	public ItemDetailsInfixUpgrade getItemDetailsInfixUpgrade() {
-		return this.itemDetailsInfixUpgrade;
+	public ItemDetailsInfixUpgrade getInfixUpgrade() {
+		return this.infixUpgrade;
 	}
 
-	public void setItemDetailsInfixUpgrade(ItemDetailsInfixUpgrade val) {
-		this.itemDetailsInfixUpgrade = val;
+	public void setInfixUpgrade(ItemDetailsInfixUpgrade val) {
+		this.infixUpgrade = val;
 	}
 
 	public String getWeightClass() {

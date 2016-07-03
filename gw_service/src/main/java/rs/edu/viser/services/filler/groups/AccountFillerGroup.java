@@ -43,7 +43,7 @@ public class AccountFillerGroup extends FillerGroup {
 		FillerGroupConfig[] groups = reader.getFillerGroups(FillerGroupTypes.ACCOUNT);
 		LOG log = new LOG(this.getClass());
 		
-		log.info(accessToken);
+		log.info("Initializing Account Filler Group filler class");
 		
 		for (FillerPatternConfig fpc : groups[0].getFillerPatterns()) {
 			if (fpc.getSchedulerType() == schedulerType || schedulerType == SchedulerTypes.ALL) {
@@ -77,7 +77,6 @@ public class AccountFillerGroup extends FillerGroup {
 				}
 			}
 		}
-		System.out.println(this);
 	}
 
 	private void processAccount(FillerObjectPatternConfig object, String urlSufix) {

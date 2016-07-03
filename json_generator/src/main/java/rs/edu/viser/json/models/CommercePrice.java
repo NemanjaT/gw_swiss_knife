@@ -11,9 +11,9 @@ import rs.edu.viser.json.JsonModelFactoryMaster;
  */
 public class CommercePrice extends JsonModelFactoryMaster {
 
-	private CommercePriceBuys commercePriceBuys;
+	private CommercePriceBuys buys;
 
-	private CommercePriceSells commercePriceSells;
+	private CommercePriceSells sells;
 
 	private Integer id;
 
@@ -21,20 +21,20 @@ public class CommercePrice extends JsonModelFactoryMaster {
 
 	//Getters and setters
 
-	public CommercePriceBuys getCommercePriceBuys() {
-		return this.commercePriceBuys;
+	public CommercePriceBuys getBuys() {
+		return this.buys;
 	}
 
-	public void setCommercePriceBuys(CommercePriceBuys val) {
-		this.commercePriceBuys = val;
+	public void setBuys(CommercePriceBuys val) {
+		this.buys = val;
 	}
 
-	public CommercePriceSells getCommercePriceSells() {
-		return this.commercePriceSells;
+	public CommercePriceSells getSells() {
+		return this.sells;
 	}
 
-	public void setCommercePriceSells(CommercePriceSells val) {
-		this.commercePriceSells = val;
+	public void setSells(CommercePriceSells val) {
+		this.sells = val;
 	}
 
 	public Integer getId() {

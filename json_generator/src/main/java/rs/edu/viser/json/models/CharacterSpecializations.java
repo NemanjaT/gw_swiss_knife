@@ -11,16 +11,16 @@ import rs.edu.viser.json.JsonModelFactoryMaster;
  */
 public class CharacterSpecializations extends JsonModelFactoryMaster {
 
-	private CharacterSpecializationsSpecializations characterSpecializationsSpecializations;
+	private CharacterSpecializationsSpecializations specializations;
 
 	//Getters and setters
 
-	public CharacterSpecializationsSpecializations getCharacterSpecializationsSpecializations() {
-		return this.characterSpecializationsSpecializations;
+	public CharacterSpecializationsSpecializations getSpecializations() {
+		return this.specializations;
 	}
 
-	public void setCharacterSpecializationsSpecializations(CharacterSpecializationsSpecializations val) {
-		this.characterSpecializationsSpecializations = val;
+	public void setSpecializations(CharacterSpecializationsSpecializations val) {
+		this.specializations = val;
 	}
 
 	public CharacterSpecializations() {

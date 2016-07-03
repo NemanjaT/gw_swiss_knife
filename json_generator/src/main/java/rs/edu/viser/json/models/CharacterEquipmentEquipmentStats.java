@@ -11,18 +11,18 @@ import rs.edu.viser.json.JsonModelFactoryMaster;
  */
 public class CharacterEquipmentEquipmentStats extends JsonModelFactoryMaster {
 
-	private CharacterEquipmentEquipmentStatsAttributes characterEquipmentEquipmentStatsAttributes;
+	private CharacterEquipmentEquipmentStatsAttributes attributes;
 
 	private Integer id;
 
 	//Getters and setters
 
-	public CharacterEquipmentEquipmentStatsAttributes getCharacterEquipmentEquipmentStatsAttributes() {
-		return this.characterEquipmentEquipmentStatsAttributes;
+	public CharacterEquipmentEquipmentStatsAttributes getAttributes() {
+		return this.attributes;
 	}
 
-	public void setCharacterEquipmentEquipmentStatsAttributes(CharacterEquipmentEquipmentStatsAttributes val) {
-		this.characterEquipmentEquipmentStatsAttributes = val;
+	public void setAttributes(CharacterEquipmentEquipmentStatsAttributes val) {
+		this.attributes = val;
 	}
 
 	public Integer getId() {

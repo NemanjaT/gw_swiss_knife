@@ -13,7 +13,7 @@ public class Trait extends JsonModelFactoryMaster {
 
 	private Integer tier;
 
-	private List<TraitTraitedFacts> traitTraitedFacts;
+	private List<TraitTraitedFacts> traitedFacts;
 
 	private String name;
 
@@ -27,7 +27,7 @@ public class Trait extends JsonModelFactoryMaster {
 
 	private String slot;
 
-	private List<TraitFacts> traitFacts;
+	private List<TraitFacts> facts;
 
 	private Integer order;
 
@@ -41,12 +41,12 @@ public class Trait extends JsonModelFactoryMaster {
 		this.tier = val;
 	}
 
-	public List<TraitTraitedFacts> getTraitTraitedFacts() {
-		return this.traitTraitedFacts;
+	public List<TraitTraitedFacts> getTraitedFacts() {
+		return this.traitedFacts;
 	}
 
-	public void setTraitTraitedFacts(List<TraitTraitedFacts> val) {
-		this.traitTraitedFacts = val;
+	public void setTraitedFacts(List<TraitTraitedFacts> val) {
+		this.traitedFacts = val;
 	}
 
 	public String getName() {
@@ -97,12 +97,12 @@ public class Trait extends JsonModelFactoryMaster {
 		this.slot = val;
 	}
 
-	public List<TraitFacts> getTraitFacts() {
-		return this.traitFacts;
+	public List<TraitFacts> getFacts() {
+		return this.facts;
 	}
 
-	public void setTraitFacts(List<TraitFacts> val) {
-		this.traitFacts = val;
+	public void setFacts(List<TraitFacts> val) {
+		this.facts = val;
 	}
 
 	public Integer getOrder() {
@@ -114,8 +114,8 @@ public class Trait extends JsonModelFactoryMaster {
 	}
 
 	public Trait() {
-		this.traitTraitedFacts = new ArrayList<TraitTraitedFacts>();
-		this.traitFacts = new ArrayList<TraitFacts>();
+		this.traitedFacts = new ArrayList<TraitTraitedFacts>();
+		this.facts = new ArrayList<TraitFacts>();
 	}
 
 }

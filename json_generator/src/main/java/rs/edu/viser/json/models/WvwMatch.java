@@ -11,32 +11,32 @@ import rs.edu.viser.json.JsonModelFactoryMaster;
  */
 public class WvwMatch extends JsonModelFactoryMaster {
 
-	private WvwMatchKills wvwMatchKills;
+	private WvwMatchKills kills;
 
 	private String startTime;
 
-	private WvwMatchWorlds wvwMatchWorlds;
+	private WvwMatchWorlds worlds;
 
-	private List<WvwMatchMaps> wvwMatchMaps;
+	private List<WvwMatchMaps> maps;
 
-	private WvwMatchScores wvwMatchScores;
+	private WvwMatchScores scores;
 
 	private String endTime;
 
 	private String id;
 
-	private WvwMatchAllWorlds wvwMatchAllWorlds;
+	private WvwMatchAllWorlds allWorlds;
 
-	private WvwMatchDeaths wvwMatchDeaths;
+	private WvwMatchDeaths deaths;
 
 	//Getters and setters
 
-	public WvwMatchKills getWvwMatchKills() {
-		return this.wvwMatchKills;
+	public WvwMatchKills getKills() {
+		return this.kills;
 	}
 
-	public void setWvwMatchKills(WvwMatchKills val) {
-		this.wvwMatchKills = val;
+	public void setKills(WvwMatchKills val) {
+		this.kills = val;
 	}
 
 	public String getStartTime() {
@@ -47,28 +47,28 @@ public class WvwMatch extends JsonModelFactoryMaster {
 		this.startTime = val;
 	}
 
-	public WvwMatchWorlds getWvwMatchWorlds() {
-		return this.wvwMatchWorlds;
+	public WvwMatchWorlds getWorlds() {
+		return this.worlds;
 	}
 
-	public void setWvwMatchWorlds(WvwMatchWorlds val) {
-		this.wvwMatchWorlds = val;
+	public void setWorlds(WvwMatchWorlds val) {
+		this.worlds = val;
 	}
 
-	public List<WvwMatchMaps> getWvwMatchMaps() {
-		return this.wvwMatchMaps;
+	public List<WvwMatchMaps> getMaps() {
+		return this.maps;
 	}
 
-	public void setWvwMatchMaps(List<WvwMatchMaps> val) {
-		this.wvwMatchMaps = val;
+	public void setMaps(List<WvwMatchMaps> val) {
+		this.maps = val;
 	}
 
-	public WvwMatchScores getWvwMatchScores() {
-		return this.wvwMatchScores;
+	public WvwMatchScores getScores() {
+		return this.scores;
 	}
 
-	public void setWvwMatchScores(WvwMatchScores val) {
-		this.wvwMatchScores = val;
+	public void setScores(WvwMatchScores val) {
+		this.scores = val;
 	}
 
 	public String getEndTime() {
@@ -87,24 +87,24 @@ public class WvwMatch extends JsonModelFactoryMaster {
 		this.id = val;
 	}
 
-	public WvwMatchAllWorlds getWvwMatchAllWorlds() {
-		return this.wvwMatchAllWorlds;
+	public WvwMatchAllWorlds getAllWorlds() {
+		return this.allWorlds;
 	}
 
-	public void setWvwMatchAllWorlds(WvwMatchAllWorlds val) {
-		this.wvwMatchAllWorlds = val;
+	public void setAllWorlds(WvwMatchAllWorlds val) {
+		this.allWorlds = val;
 	}
 
-	public WvwMatchDeaths getWvwMatchDeaths() {
-		return this.wvwMatchDeaths;
+	public WvwMatchDeaths getDeaths() {
+		return this.deaths;
 	}
 
-	public void setWvwMatchDeaths(WvwMatchDeaths val) {
-		this.wvwMatchDeaths = val;
+	public void setDeaths(WvwMatchDeaths val) {
+		this.deaths = val;
 	}
 
 	public WvwMatch() {
-		this.wvwMatchMaps = new ArrayList<WvwMatchMaps>();
+		this.maps = new ArrayList<WvwMatchMaps>();
 	}
 
 }

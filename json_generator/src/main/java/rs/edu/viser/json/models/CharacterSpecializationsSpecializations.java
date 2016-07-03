@@ -11,42 +11,42 @@ import rs.edu.viser.json.JsonModelFactoryMaster;
  */
 public class CharacterSpecializationsSpecializations extends JsonModelFactoryMaster {
 
-	private List<CharacterSpecializationsSpecializationsWvw> characterSpecializationsSpecializationsWvw;
+	private List<CharacterSpecializationsSpecializationsWvw> wvw;
 
-	private List<CharacterSpecializationsSpecializationsPvp> characterSpecializationsSpecializationsPvp;
+	private List<CharacterSpecializationsSpecializationsPvp> pvp;
 
-	private List<CharacterSpecializationsSpecializationsPve> characterSpecializationsSpecializationsPve;
+	private List<CharacterSpecializationsSpecializationsPve> pve;
 
 	//Getters and setters
 
-	public List<CharacterSpecializationsSpecializationsWvw> getCharacterSpecializationsSpecializationsWvw() {
-		return this.characterSpecializationsSpecializationsWvw;
+	public List<CharacterSpecializationsSpecializationsWvw> getWvw() {
+		return this.wvw;
 	}
 
-	public void setCharacterSpecializationsSpecializationsWvw(List<CharacterSpecializationsSpecializationsWvw> val) {
-		this.characterSpecializationsSpecializationsWvw = val;
+	public void setWvw(List<CharacterSpecializationsSpecializationsWvw> val) {
+		this.wvw = val;
 	}
 
-	public List<CharacterSpecializationsSpecializationsPvp> getCharacterSpecializationsSpecializationsPvp() {
-		return this.characterSpecializationsSpecializationsPvp;
+	public List<CharacterSpecializationsSpecializationsPvp> getPvp() {
+		return this.pvp;
 	}
 
-	public void setCharacterSpecializationsSpecializationsPvp(List<CharacterSpecializationsSpecializationsPvp> val) {
-		this.characterSpecializationsSpecializationsPvp = val;
+	public void setPvp(List<CharacterSpecializationsSpecializationsPvp> val) {
+		this.pvp = val;
 	}
 
-	public List<CharacterSpecializationsSpecializationsPve> getCharacterSpecializationsSpecializationsPve() {
-		return this.characterSpecializationsSpecializationsPve;
+	public List<CharacterSpecializationsSpecializationsPve> getPve() {
+		return this.pve;
 	}
 
-	public void setCharacterSpecializationsSpecializationsPve(List<CharacterSpecializationsSpecializationsPve> val) {
-		this.characterSpecializationsSpecializationsPve = val;
+	public void setPve(List<CharacterSpecializationsSpecializationsPve> val) {
+		this.pve = val;
 	}
 
 	public CharacterSpecializationsSpecializations() {
-		this.characterSpecializationsSpecializationsWvw = new ArrayList<CharacterSpecializationsSpecializationsWvw>();
-		this.characterSpecializationsSpecializationsPvp = new ArrayList<CharacterSpecializationsSpecializationsPvp>();
-		this.characterSpecializationsSpecializationsPve = new ArrayList<CharacterSpecializationsSpecializationsPve>();
+		this.wvw = new ArrayList<CharacterSpecializationsSpecializationsWvw>();
+		this.pvp = new ArrayList<CharacterSpecializationsSpecializationsPvp>();
+		this.pve = new ArrayList<CharacterSpecializationsSpecializationsPve>();
 	}
 
 }

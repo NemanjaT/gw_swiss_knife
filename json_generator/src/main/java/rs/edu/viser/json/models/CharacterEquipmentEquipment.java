@@ -13,7 +13,7 @@ public class CharacterEquipmentEquipment extends JsonModelFactoryMaster {
 
 	private List<Integer> infusions;
 
-	private CharacterEquipmentEquipmentStats characterEquipmentEquipmentStats;
+	private CharacterEquipmentEquipmentStats stats;
 
 	private Integer skin;
 
@@ -33,12 +33,12 @@ public class CharacterEquipmentEquipment extends JsonModelFactoryMaster {
 		this.infusions = val;
 	}
 
-	public CharacterEquipmentEquipmentStats getCharacterEquipmentEquipmentStats() {
-		return this.characterEquipmentEquipmentStats;
+	public CharacterEquipmentEquipmentStats getStats() {
+		return this.stats;
 	}
 
-	public void setCharacterEquipmentEquipmentStats(CharacterEquipmentEquipmentStats val) {
-		this.characterEquipmentEquipmentStats = val;
+	public void setStats(CharacterEquipmentEquipmentStats val) {
+		this.stats = val;
 	}
 
 	public Integer getSkin() {

@@ -11,44 +11,44 @@ import rs.edu.viser.json.JsonModelFactoryMaster;
  */
 public class WvwMatchMaps extends JsonModelFactoryMaster {
 
-	private WvwMatchMapsKills wvwMatchMapsKills;
+	private WvwMatchMapsKills kills;
 
-	private WvwMatchMapsScores wvwMatchMapsScores;
+	private WvwMatchMapsScores scores;
 
-	private List<WvwMatchMapsObjectives> wvwMatchMapsObjectives;
+	private List<WvwMatchMapsObjectives> objectives;
 
 	private Integer id;
 
 	private String type;
 
-	private List<WvwMatchMapsBonuses> wvwMatchMapsBonuses;
+	private List<WvwMatchMapsBonuses> bonuses;
 
-	private WvwMatchMapsDeaths wvwMatchMapsDeaths;
+	private WvwMatchMapsDeaths deaths;
 
 	//Getters and setters
 
-	public WvwMatchMapsKills getWvwMatchMapsKills() {
-		return this.wvwMatchMapsKills;
+	public WvwMatchMapsKills getKills() {
+		return this.kills;
 	}
 
-	public void setWvwMatchMapsKills(WvwMatchMapsKills val) {
-		this.wvwMatchMapsKills = val;
+	public void setKills(WvwMatchMapsKills val) {
+		this.kills = val;
 	}
 
-	public WvwMatchMapsScores getWvwMatchMapsScores() {
-		return this.wvwMatchMapsScores;
+	public WvwMatchMapsScores getScores() {
+		return this.scores;
 	}
 
-	public void setWvwMatchMapsScores(WvwMatchMapsScores val) {
-		this.wvwMatchMapsScores = val;
+	public void setScores(WvwMatchMapsScores val) {
+		this.scores = val;
 	}
 
-	public List<WvwMatchMapsObjectives> getWvwMatchMapsObjectives() {
-		return this.wvwMatchMapsObjectives;
+	public List<WvwMatchMapsObjectives> getObjectives() {
+		return this.objectives;
 	}
 
-	public void setWvwMatchMapsObjectives(List<WvwMatchMapsObjectives> val) {
-		this.wvwMatchMapsObjectives = val;
+	public void setObjectives(List<WvwMatchMapsObjectives> val) {
+		this.objectives = val;
 	}
 
 	public Integer getId() {
@@ -67,25 +67,25 @@ public class WvwMatchMaps extends JsonModelFactoryMaster {
 		this.type = val;
 	}
 
-	public List<WvwMatchMapsBonuses> getWvwMatchMapsBonuses() {
-		return this.wvwMatchMapsBonuses;
+	public List<WvwMatchMapsBonuses> getBonuses() {
+		return this.bonuses;
 	}
 
-	public void setWvwMatchMapsBonuses(List<WvwMatchMapsBonuses> val) {
-		this.wvwMatchMapsBonuses = val;
+	public void setBonuses(List<WvwMatchMapsBonuses> val) {
+		this.bonuses = val;
 	}
 
-	public WvwMatchMapsDeaths getWvwMatchMapsDeaths() {
-		return this.wvwMatchMapsDeaths;
+	public WvwMatchMapsDeaths getDeaths() {
+		return this.deaths;
 	}
 
-	public void setWvwMatchMapsDeaths(WvwMatchMapsDeaths val) {
-		this.wvwMatchMapsDeaths = val;
+	public void setDeaths(WvwMatchMapsDeaths val) {
+		this.deaths = val;
 	}
 
 	public WvwMatchMaps() {
-		this.wvwMatchMapsObjectives = new ArrayList<WvwMatchMapsObjectives>();
-		this.wvwMatchMapsBonuses = new ArrayList<WvwMatchMapsBonuses>();
+		this.objectives = new ArrayList<WvwMatchMapsObjectives>();
+		this.bonuses = new ArrayList<WvwMatchMapsBonuses>();
 	}
 
 }

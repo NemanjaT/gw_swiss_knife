@@ -17,15 +17,15 @@ public class Color extends JsonModelFactoryMaster {
 
 	private String name;
 
-	private ColorMetal colorMetal;
+	private ColorMetal metal;
 
 	private Integer id;
 
 	private List<String> categories;
 
-	private ColorLeather colorLeather;
+	private ColorLeather leather;
 
-	private ColorCloth colorCloth;
+	private ColorCloth cloth;
 
 	//Getters and setters
 
@@ -53,12 +53,12 @@ public class Color extends JsonModelFactoryMaster {
 		this.name = val;
 	}
 
-	public ColorMetal getColorMetal() {
-		return this.colorMetal;
+	public ColorMetal getMetal() {
+		return this.metal;
 	}
 
-	public void setColorMetal(ColorMetal val) {
-		this.colorMetal = val;
+	public void setMetal(ColorMetal val) {
+		this.metal = val;
 	}
 
 	public Integer getId() {
@@ -77,20 +77,20 @@ public class Color extends JsonModelFactoryMaster {
 		this.categories = val;
 	}
 
-	public ColorLeather getColorLeather() {
-		return this.colorLeather;
+	public ColorLeather getLeather() {
+		return this.leather;
 	}
 
-	public void setColorLeather(ColorLeather val) {
-		this.colorLeather = val;
+	public void setLeather(ColorLeather val) {
+		this.leather = val;
 	}
 
-	public ColorCloth getColorCloth() {
-		return this.colorCloth;
+	public ColorCloth getCloth() {
+		return this.cloth;
 	}
 
-	public void setColorCloth(ColorCloth val) {
-		this.colorCloth = val;
+	public void setCloth(ColorCloth val) {
+		this.cloth = val;
 	}
 
 	public Color() {

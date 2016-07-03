@@ -11,20 +11,20 @@ import rs.edu.viser.json.JsonModelFactoryMaster;
  */
 public class ProfessionWeaponsScepter extends JsonModelFactoryMaster {
 
-	private List<ProfessionWeaponsScepterSkills> professionWeaponsScepterSkills;
+	private List<ProfessionWeaponsScepterSkills> skills;
 
 	//Getters and setters
 
-	public List<ProfessionWeaponsScepterSkills> getProfessionWeaponsScepterSkills() {
-		return this.professionWeaponsScepterSkills;
+	public List<ProfessionWeaponsScepterSkills> getSkills() {
+		return this.skills;
 	}
 
-	public void setProfessionWeaponsScepterSkills(List<ProfessionWeaponsScepterSkills> val) {
-		this.professionWeaponsScepterSkills = val;
+	public void setSkills(List<ProfessionWeaponsScepterSkills> val) {
+		this.skills = val;
 	}
 
 	public ProfessionWeaponsScepter() {
-		this.professionWeaponsScepterSkills = new ArrayList<ProfessionWeaponsScepterSkills>();
+		this.skills = new ArrayList<ProfessionWeaponsScepterSkills>();
 	}
 
 }

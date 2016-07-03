@@ -13,11 +13,11 @@ public class TomorrowDailyAchievements extends JsonModelFactoryMaster {
 
 	private List<Object> special; //TODO: GW-0001 
 
-	private List<TomorrowDailyAchievementsWvw> tomorrowDailyAchievementsWvw;
+	private List<TomorrowDailyAchievementsWvw> wvw;
 
-	private List<TomorrowDailyAchievementsPvp> tomorrowDailyAchievementsPvp;
+	private List<TomorrowDailyAchievementsPvp> pvp;
 
-	private List<TomorrowDailyAchievementsPve> tomorrowDailyAchievementsPve;
+	private List<TomorrowDailyAchievementsPve> pve;
 
 	//Getters and setters
 
@@ -29,35 +29,35 @@ public class TomorrowDailyAchievements extends JsonModelFactoryMaster {
 		this.special = val;
 	}
 
-	public List<TomorrowDailyAchievementsWvw> getTomorrowDailyAchievementsWvw() {
-		return this.tomorrowDailyAchievementsWvw;
+	public List<TomorrowDailyAchievementsWvw> getWvw() {
+		return this.wvw;
 	}
 
-	public void setTomorrowDailyAchievementsWvw(List<TomorrowDailyAchievementsWvw> val) {
-		this.tomorrowDailyAchievementsWvw = val;
+	public void setWvw(List<TomorrowDailyAchievementsWvw> val) {
+		this.wvw = val;
 	}
 
-	public List<TomorrowDailyAchievementsPvp> getTomorrowDailyAchievementsPvp() {
-		return this.tomorrowDailyAchievementsPvp;
+	public List<TomorrowDailyAchievementsPvp> getPvp() {
+		return this.pvp;
 	}
 
-	public void setTomorrowDailyAchievementsPvp(List<TomorrowDailyAchievementsPvp> val) {
-		this.tomorrowDailyAchievementsPvp = val;
+	public void setPvp(List<TomorrowDailyAchievementsPvp> val) {
+		this.pvp = val;
 	}
 
-	public List<TomorrowDailyAchievementsPve> getTomorrowDailyAchievementsPve() {
-		return this.tomorrowDailyAchievementsPve;
+	public List<TomorrowDailyAchievementsPve> getPve() {
+		return this.pve;
 	}
 
-	public void setTomorrowDailyAchievementsPve(List<TomorrowDailyAchievementsPve> val) {
-		this.tomorrowDailyAchievementsPve = val;
+	public void setPve(List<TomorrowDailyAchievementsPve> val) {
+		this.pve = val;
 	}
 
 	public TomorrowDailyAchievements() {
 		this.special = new ArrayList<Object>();
-		this.tomorrowDailyAchievementsWvw = new ArrayList<TomorrowDailyAchievementsWvw>();
-		this.tomorrowDailyAchievementsPvp = new ArrayList<TomorrowDailyAchievementsPvp>();
-		this.tomorrowDailyAchievementsPve = new ArrayList<TomorrowDailyAchievementsPve>();
+		this.wvw = new ArrayList<TomorrowDailyAchievementsWvw>();
+		this.pvp = new ArrayList<TomorrowDailyAchievementsPvp>();
+		this.pve = new ArrayList<TomorrowDailyAchievementsPve>();
 	}
 
 }

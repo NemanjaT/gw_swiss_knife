@@ -11,96 +11,96 @@ import rs.edu.viser.json.JsonModelFactoryMaster;
  */
 public class PvpStatsProfessions extends JsonModelFactoryMaster {
 
-	private PvpStatsProfessionsRevenant pvpStatsProfessionsRevenant;
+	private PvpStatsProfessionsRevenant revenant;
 
-	private PvpStatsProfessionsThief pvpStatsProfessionsThief;
+	private PvpStatsProfessionsThief thief;
 
-	private PvpStatsProfessionsWarrior pvpStatsProfessionsWarrior;
+	private PvpStatsProfessionsWarrior warrior;
 
-	private PvpStatsProfessionsNecromancer pvpStatsProfessionsNecromancer;
+	private PvpStatsProfessionsNecromancer necromancer;
 
-	private PvpStatsProfessionsRanger pvpStatsProfessionsRanger;
+	private PvpStatsProfessionsRanger ranger;
 
-	private PvpStatsProfessionsMesmer pvpStatsProfessionsMesmer;
+	private PvpStatsProfessionsMesmer mesmer;
 
-	private PvpStatsProfessionsGuardian pvpStatsProfessionsGuardian;
+	private PvpStatsProfessionsGuardian guardian;
 
-	private PvpStatsProfessionsElementalist pvpStatsProfessionsElementalist;
+	private PvpStatsProfessionsElementalist elementalist;
 
-	private PvpStatsProfessionsEngineer pvpStatsProfessionsEngineer;
+	private PvpStatsProfessionsEngineer engineer;
 
 	//Getters and setters
 
-	public PvpStatsProfessionsRevenant getPvpStatsProfessionsRevenant() {
-		return this.pvpStatsProfessionsRevenant;
+	public PvpStatsProfessionsRevenant getRevenant() {
+		return this.revenant;
 	}
 
-	public void setPvpStatsProfessionsRevenant(PvpStatsProfessionsRevenant val) {
-		this.pvpStatsProfessionsRevenant = val;
+	public void setRevenant(PvpStatsProfessionsRevenant val) {
+		this.revenant = val;
 	}
 
-	public PvpStatsProfessionsThief getPvpStatsProfessionsThief() {
-		return this.pvpStatsProfessionsThief;
+	public PvpStatsProfessionsThief getThief() {
+		return this.thief;
 	}
 
-	public void setPvpStatsProfessionsThief(PvpStatsProfessionsThief val) {
-		this.pvpStatsProfessionsThief = val;
+	public void setThief(PvpStatsProfessionsThief val) {
+		this.thief = val;
 	}
 
-	public PvpStatsProfessionsWarrior getPvpStatsProfessionsWarrior() {
-		return this.pvpStatsProfessionsWarrior;
+	public PvpStatsProfessionsWarrior getWarrior() {
+		return this.warrior;
 	}
 
-	public void setPvpStatsProfessionsWarrior(PvpStatsProfessionsWarrior val) {
-		this.pvpStatsProfessionsWarrior = val;
+	public void setWarrior(PvpStatsProfessionsWarrior val) {
+		this.warrior = val;
 	}
 
-	public PvpStatsProfessionsNecromancer getPvpStatsProfessionsNecromancer() {
-		return this.pvpStatsProfessionsNecromancer;
+	public PvpStatsProfessionsNecromancer getNecromancer() {
+		return this.necromancer;
 	}
 
-	public void setPvpStatsProfessionsNecromancer(PvpStatsProfessionsNecromancer val) {
-		this.pvpStatsProfessionsNecromancer = val;
+	public void setNecromancer(PvpStatsProfessionsNecromancer val) {
+		this.necromancer = val;
 	}
 
-	public PvpStatsProfessionsRanger getPvpStatsProfessionsRanger() {
-		return this.pvpStatsProfessionsRanger;
+	public PvpStatsProfessionsRanger getRanger() {
+		return this.ranger;
 	}
 
-	public void setPvpStatsProfessionsRanger(PvpStatsProfessionsRanger val) {
-		this.pvpStatsProfessionsRanger = val;
+	public void setRanger(PvpStatsProfessionsRanger val) {
+		this.ranger = val;
 	}
 
-	public PvpStatsProfessionsMesmer getPvpStatsProfessionsMesmer() {
-		return this.pvpStatsProfessionsMesmer;
+	public PvpStatsProfessionsMesmer getMesmer() {
+		return this.mesmer;
 	}
 
-	public void setPvpStatsProfessionsMesmer(PvpStatsProfessionsMesmer val) {
-		this.pvpStatsProfessionsMesmer = val;
+	public void setMesmer(PvpStatsProfessionsMesmer val) {
+		this.mesmer = val;
 	}
 
-	public PvpStatsProfessionsGuardian getPvpStatsProfessionsGuardian() {
-		return this.pvpStatsProfessionsGuardian;
+	public PvpStatsProfessionsGuardian getGuardian() {
+		return this.guardian;
 	}
 
-	public void setPvpStatsProfessionsGuardian(PvpStatsProfessionsGuardian val) {
-		this.pvpStatsProfessionsGuardian = val;
+	public void setGuardian(PvpStatsProfessionsGuardian val) {
+		this.guardian = val;
 	}
 
-	public PvpStatsProfessionsElementalist getPvpStatsProfessionsElementalist() {
-		return this.pvpStatsProfessionsElementalist;
+	public PvpStatsProfessionsElementalist getElementalist() {
+		return this.elementalist;
 	}
 
-	public void setPvpStatsProfessionsElementalist(PvpStatsProfessionsElementalist val) {
-		this.pvpStatsProfessionsElementalist = val;
+	public void setElementalist(PvpStatsProfessionsElementalist val) {
+		this.elementalist = val;
 	}
 
-	public PvpStatsProfessionsEngineer getPvpStatsProfessionsEngineer() {
-		return this.pvpStatsProfessionsEngineer;
+	public PvpStatsProfessionsEngineer getEngineer() {
+		return this.engineer;
 	}
 
-	public void setPvpStatsProfessionsEngineer(PvpStatsProfessionsEngineer val) {
-		this.pvpStatsProfessionsEngineer = val;
+	public void setEngineer(PvpStatsProfessionsEngineer val) {
+		this.engineer = val;
 	}
 
 	public PvpStatsProfessions() {

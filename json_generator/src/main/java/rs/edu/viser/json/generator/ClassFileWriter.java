@@ -161,27 +161,12 @@ public class ClassFileWriter {
 	    	String type = "List<";
 	    	
 	    	for (String attValue : attributeValues) {
-	    		if (! attValue.matches(regexInt)) {
-	    			isInt = false;
-	    		}
-	    		if (! attValue.matches(regexDouble)) {
-	    			isDouble = false;
-	    		}
-	    		if (! attValue.equals("false") && ! attValue.equals("true")) {
-	    			isBool = false;
-	    		}
+	    		if (! attValue.matches(regexInt)) isInt = false;
+	    		if (! attValue.matches(regexDouble)) isDouble = false;
+	    		if (! attValue.equals("false") && ! attValue.equals("true")) isBool = false;
 	    	}
 	    	
-	    	if (isInt) {
-	    		type += "Integer>";
-	    	} else if (isDouble) {
-	    		type += "Double>";
-	    	} else if (isBool) {
-	    		type += "Boolean>";
-	    	} else {
-	    		type += "String>";
-	    	}
-	    	//TODO: if if if if if if if if if if . . . there has to be a better way . . .
+	    	type += (isInt ? "Integer" : isDouble ? "Double" : isBool ? "Boolean" : "String") + ">";
 	    	
 	    	fileWriter.write("\tprivate " + type + " " + attributeName + ";\n\n");
 	    	log.info("Created list " + type + " to class " + className + " successfully!");

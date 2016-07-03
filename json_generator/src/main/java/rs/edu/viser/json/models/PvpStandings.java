@@ -11,28 +11,28 @@ import rs.edu.viser.json.JsonModelFactoryMaster;
  */
 public class PvpStandings extends JsonModelFactoryMaster {
 
-	private PvpStandingsCurrent pvpStandingsCurrent;
+	private PvpStandingsCurrent current;
 
-	private PvpStandingsBest pvpStandingsBest;
+	private PvpStandingsBest best;
 
 	private String seasonId;
 
 	//Getters and setters
 
-	public PvpStandingsCurrent getPvpStandingsCurrent() {
-		return this.pvpStandingsCurrent;
+	public PvpStandingsCurrent getCurrent() {
+		return this.current;
 	}
 
-	public void setPvpStandingsCurrent(PvpStandingsCurrent val) {
-		this.pvpStandingsCurrent = val;
+	public void setCurrent(PvpStandingsCurrent val) {
+		this.current = val;
 	}
 
-	public PvpStandingsBest getPvpStandingsBest() {
-		return this.pvpStandingsBest;
+	public PvpStandingsBest getBest() {
+		return this.best;
 	}
 
-	public void setPvpStandingsBest(PvpStandingsBest val) {
-		this.pvpStandingsBest = val;
+	public void setBest(PvpStandingsBest val) {
+		this.best = val;
 	}
 
 	public String getSeasonId() {

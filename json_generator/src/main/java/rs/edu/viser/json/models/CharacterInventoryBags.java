@@ -15,7 +15,7 @@ public class CharacterInventoryBags extends JsonModelFactoryMaster {
 
 	private Integer id;
 
-	private List<CharacterInventoryBagsInventory> characterInventoryBagsInventory;
+	private List<CharacterInventoryBagsInventory> inventory;
 
 	//Getters and setters
 
@@ -35,16 +35,16 @@ public class CharacterInventoryBags extends JsonModelFactoryMaster {
 		this.id = val;
 	}
 
-	public List<CharacterInventoryBagsInventory> getCharacterInventoryBagsInventory() {
-		return this.characterInventoryBagsInventory;
+	public List<CharacterInventoryBagsInventory> getInventory() {
+		return this.inventory;
 	}
 
-	public void setCharacterInventoryBagsInventory(List<CharacterInventoryBagsInventory> val) {
-		this.characterInventoryBagsInventory = val;
+	public void setInventory(List<CharacterInventoryBagsInventory> val) {
+		this.inventory = val;
 	}
 
 	public CharacterInventoryBags() {
-		this.characterInventoryBagsInventory = new ArrayList<CharacterInventoryBagsInventory>();
+		this.inventory = new ArrayList<CharacterInventoryBagsInventory>();
 	}
 
 }

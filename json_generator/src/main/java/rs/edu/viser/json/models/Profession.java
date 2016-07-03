@@ -19,11 +19,11 @@ public class Profession extends JsonModelFactoryMaster {
 
 	private String icon;
 
-	private List<ProfessionTraining> professionTraining;
+	private List<ProfessionTraining> training;
 
 	private String id;
 
-	private ProfessionWeapons professionWeapons;
+	private ProfessionWeapons weapons;
 
 	//Getters and setters
 
@@ -59,12 +59,12 @@ public class Profession extends JsonModelFactoryMaster {
 		this.icon = val;
 	}
 
-	public List<ProfessionTraining> getProfessionTraining() {
-		return this.professionTraining;
+	public List<ProfessionTraining> getTraining() {
+		return this.training;
 	}
 
-	public void setProfessionTraining(List<ProfessionTraining> val) {
-		this.professionTraining = val;
+	public void setTraining(List<ProfessionTraining> val) {
+		this.training = val;
 	}
 
 	public String getId() {
@@ -75,17 +75,17 @@ public class Profession extends JsonModelFactoryMaster {
 		this.id = val;
 	}
 
-	public ProfessionWeapons getProfessionWeapons() {
-		return this.professionWeapons;
+	public ProfessionWeapons getWeapons() {
+		return this.weapons;
 	}
 
-	public void setProfessionWeapons(ProfessionWeapons val) {
-		this.professionWeapons = val;
+	public void setWeapons(ProfessionWeapons val) {
+		this.weapons = val;
 	}
 
 	public Profession() {
 		this.specializations = new ArrayList<Integer>();
-		this.professionTraining = new ArrayList<ProfessionTraining>();
+		this.training = new ArrayList<ProfessionTraining>();
 	}
 
 }

@@ -19,7 +19,7 @@ public class Skin extends JsonModelFactoryMaster {
 
 	private List<Object> restrictions; //TODO: GW-0001 
 
-	private SkinDetails skinDetails;
+	private SkinDetails details;
 
 	private Integer id;
 
@@ -61,12 +61,12 @@ public class Skin extends JsonModelFactoryMaster {
 		this.restrictions = val;
 	}
 
-	public SkinDetails getSkinDetails() {
-		return this.skinDetails;
+	public SkinDetails getDetails() {
+		return this.details;
 	}
 
-	public void setSkinDetails(SkinDetails val) {
-		this.skinDetails = val;
+	public void setDetails(SkinDetails val) {
+		this.details = val;
 	}
 
 	public Integer getId() {

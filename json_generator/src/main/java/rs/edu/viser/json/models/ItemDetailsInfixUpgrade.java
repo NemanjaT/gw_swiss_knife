@@ -11,18 +11,18 @@ import rs.edu.viser.json.JsonModelFactoryMaster;
  */
 public class ItemDetailsInfixUpgrade extends JsonModelFactoryMaster {
 
-	private List<ItemDetailsInfixUpgradeAttributes> itemDetailsInfixUpgradeAttributes;
+	private List<ItemDetailsInfixUpgradeAttributes> attributes;
 
 	private Integer id;
 
 	//Getters and setters
 
-	public List<ItemDetailsInfixUpgradeAttributes> getItemDetailsInfixUpgradeAttributes() {
-		return this.itemDetailsInfixUpgradeAttributes;
+	public List<ItemDetailsInfixUpgradeAttributes> getAttributes() {
+		return this.attributes;
 	}
 
-	public void setItemDetailsInfixUpgradeAttributes(List<ItemDetailsInfixUpgradeAttributes> val) {
-		this.itemDetailsInfixUpgradeAttributes = val;
+	public void setAttributes(List<ItemDetailsInfixUpgradeAttributes> val) {
+		this.attributes = val;
 	}
 
 	public Integer getId() {
@@ -34,7 +34,7 @@ public class ItemDetailsInfixUpgrade extends JsonModelFactoryMaster {
 	}
 
 	public ItemDetailsInfixUpgrade() {
-		this.itemDetailsInfixUpgradeAttributes = new ArrayList<ItemDetailsInfixUpgradeAttributes>();
+		this.attributes = new ArrayList<ItemDetailsInfixUpgradeAttributes>();
 	}
 
 }

@@ -17,7 +17,7 @@ public class PvpGame extends JsonModelFactoryMaster {
 
 	private Integer mapId;
 
-	private PvpGameScores pvpGameScores;
+	private PvpGameScores scores;
 
 	private String ratingType;
 
@@ -57,12 +57,12 @@ public class PvpGame extends JsonModelFactoryMaster {
 		this.mapId = val;
 	}
 
-	public PvpGameScores getPvpGameScores() {
-		return this.pvpGameScores;
+	public PvpGameScores getScores() {
+		return this.scores;
 	}
 
-	public void setPvpGameScores(PvpGameScores val) {
-		this.pvpGameScores = val;
+	public void setScores(PvpGameScores val) {
+		this.scores = val;
 	}
 
 	public String getRatingType() {

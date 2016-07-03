@@ -23,7 +23,7 @@ public class Recipe extends JsonModelFactoryMaster {
 
 	private Integer outputItemCount;
 
-	private List<RecipeIngredients> recipeIngredients;
+	private List<RecipeIngredients> ingredients;
 
 	private Integer id;
 
@@ -81,12 +81,12 @@ public class Recipe extends JsonModelFactoryMaster {
 		this.outputItemCount = val;
 	}
 
-	public List<RecipeIngredients> getRecipeIngredients() {
-		return this.recipeIngredients;
+	public List<RecipeIngredients> getIngredients() {
+		return this.ingredients;
 	}
 
-	public void setRecipeIngredients(List<RecipeIngredients> val) {
-		this.recipeIngredients = val;
+	public void setIngredients(List<RecipeIngredients> val) {
+		this.ingredients = val;
 	}
 
 	public Integer getId() {
@@ -116,7 +116,7 @@ public class Recipe extends JsonModelFactoryMaster {
 	public Recipe() {
 		this.disciplines = new ArrayList<String>();
 		this.flags = new ArrayList<Object>();
-		this.recipeIngredients = new ArrayList<RecipeIngredients>();
+		this.ingredients = new ArrayList<RecipeIngredients>();
 	}
 
 }

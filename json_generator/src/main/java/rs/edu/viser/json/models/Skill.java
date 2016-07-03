@@ -33,7 +33,7 @@ public class Skill extends JsonModelFactoryMaster {
 
 	private String chatLink;
 
-	private List<SkillFacts> skillFacts;
+	private List<SkillFacts> facts;
 
 	//Getters and setters
 
@@ -125,18 +125,18 @@ public class Skill extends JsonModelFactoryMaster {
 		this.chatLink = val;
 	}
 
-	public List<SkillFacts> getSkillFacts() {
-		return this.skillFacts;
+	public List<SkillFacts> getFacts() {
+		return this.facts;
 	}
 
-	public void setSkillFacts(List<SkillFacts> val) {
-		this.skillFacts = val;
+	public void setFacts(List<SkillFacts> val) {
+		this.facts = val;
 	}
 
 	public Skill() {
 		this.professions = new ArrayList<String>();
 		this.flags = new ArrayList<Object>();
-		this.skillFacts = new ArrayList<SkillFacts>();
+		this.facts = new ArrayList<SkillFacts>();
 	}
 
 }

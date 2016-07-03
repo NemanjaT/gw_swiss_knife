@@ -11,7 +11,7 @@ import rs.edu.viser.json.JsonModelFactoryMaster;
  */
 public class DailyAchievementsPvp extends JsonModelFactoryMaster {
 
-	private DailyAchievementsPvpLevel dailyAchievementsPvpLevel;
+	private DailyAchievementsPvpLevel level;
 
 	private Integer id;
 
@@ -19,12 +19,12 @@ public class DailyAchievementsPvp extends JsonModelFactoryMaster {
 
 	//Getters and setters
 
-	public DailyAchievementsPvpLevel getDailyAchievementsPvpLevel() {
-		return this.dailyAchievementsPvpLevel;
+	public DailyAchievementsPvpLevel getLevel() {
+		return this.level;
 	}
 
-	public void setDailyAchievementsPvpLevel(DailyAchievementsPvpLevel val) {
-		this.dailyAchievementsPvpLevel = val;
+	public void setLevel(DailyAchievementsPvpLevel val) {
+		this.level = val;
 	}
 
 	public Integer getId() {

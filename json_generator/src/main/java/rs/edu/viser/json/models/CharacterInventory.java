@@ -11,20 +11,20 @@ import rs.edu.viser.json.JsonModelFactoryMaster;
  */
 public class CharacterInventory extends JsonModelFactoryMaster {
 
-	private List<CharacterInventoryBags> characterInventoryBags;
+	private List<CharacterInventoryBags> bags;
 
 	//Getters and setters
 
-	public List<CharacterInventoryBags> getCharacterInventoryBags() {
-		return this.characterInventoryBags;
+	public List<CharacterInventoryBags> getBags() {
+		return this.bags;
 	}
 
-	public void setCharacterInventoryBags(List<CharacterInventoryBags> val) {
-		this.characterInventoryBags = val;
+	public void setBags(List<CharacterInventoryBags> val) {
+		this.bags = val;
 	}
 
 	public CharacterInventory() {
-		this.characterInventoryBags = new ArrayList<CharacterInventoryBags>();
+		this.bags = new ArrayList<CharacterInventoryBags>();
 	}
 
 }

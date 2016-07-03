@@ -15,13 +15,13 @@ public class PvpStats extends JsonModelFactoryMaster {
 
 	private Integer pvpRankPoints;
 
-	private PvpStatsLadders pvpStatsLadders;
+	private PvpStatsLadders ladders;
 
-	private PvpStatsProfessions pvpStatsProfessions;
+	private PvpStatsProfessions professions;
 
 	private Integer pvpRankRollovers;
 
-	private PvpStatsAggregate pvpStatsAggregate;
+	private PvpStatsAggregate aggregate;
 
 	//Getters and setters
 
@@ -41,20 +41,20 @@ public class PvpStats extends JsonModelFactoryMaster {
 		this.pvpRankPoints = val;
 	}
 
-	public PvpStatsLadders getPvpStatsLadders() {
-		return this.pvpStatsLadders;
+	public PvpStatsLadders getLadders() {
+		return this.ladders;
 	}
 
-	public void setPvpStatsLadders(PvpStatsLadders val) {
-		this.pvpStatsLadders = val;
+	public void setLadders(PvpStatsLadders val) {
+		this.ladders = val;
 	}
 
-	public PvpStatsProfessions getPvpStatsProfessions() {
-		return this.pvpStatsProfessions;
+	public PvpStatsProfessions getProfessions() {
+		return this.professions;
 	}
 
-	public void setPvpStatsProfessions(PvpStatsProfessions val) {
-		this.pvpStatsProfessions = val;
+	public void setProfessions(PvpStatsProfessions val) {
+		this.professions = val;
 	}
 
 	public Integer getPvpRankRollovers() {
@@ -65,12 +65,12 @@ public class PvpStats extends JsonModelFactoryMaster {
 		this.pvpRankRollovers = val;
 	}
 
-	public PvpStatsAggregate getPvpStatsAggregate() {
-		return this.pvpStatsAggregate;
+	public PvpStatsAggregate getAggregate() {
+		return this.aggregate;
 	}
 
-	public void setPvpStatsAggregate(PvpStatsAggregate val) {
-		this.pvpStatsAggregate = val;
+	public void setAggregate(PvpStatsAggregate val) {
+		this.aggregate = val;
 	}
 
 	public PvpStats() {

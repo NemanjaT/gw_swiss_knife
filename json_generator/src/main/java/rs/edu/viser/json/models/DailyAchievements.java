@@ -13,11 +13,11 @@ public class DailyAchievements extends JsonModelFactoryMaster {
 
 	private List<Object> special; //TODO: GW-0001 
 
-	private List<DailyAchievementsWvw> dailyAchievementsWvw;
+	private List<DailyAchievementsWvw> wvw;
 
-	private List<DailyAchievementsPvp> dailyAchievementsPvp;
+	private List<DailyAchievementsPvp> pvp;
 
-	private List<DailyAchievementsPve> dailyAchievementsPve;
+	private List<DailyAchievementsPve> pve;
 
 	//Getters and setters
 
@@ -29,35 +29,35 @@ public class DailyAchievements extends JsonModelFactoryMaster {
 		this.special = val;
 	}
 
-	public List<DailyAchievementsWvw> getDailyAchievementsWvw() {
-		return this.dailyAchievementsWvw;
+	public List<DailyAchievementsWvw> getWvw() {
+		return this.wvw;
 	}
 
-	public void setDailyAchievementsWvw(List<DailyAchievementsWvw> val) {
-		this.dailyAchievementsWvw = val;
+	public void setWvw(List<DailyAchievementsWvw> val) {
+		this.wvw = val;
 	}
 
-	public List<DailyAchievementsPvp> getDailyAchievementsPvp() {
-		return this.dailyAchievementsPvp;
+	public List<DailyAchievementsPvp> getPvp() {
+		return this.pvp;
 	}
 
-	public void setDailyAchievementsPvp(List<DailyAchievementsPvp> val) {
-		this.dailyAchievementsPvp = val;
+	public void setPvp(List<DailyAchievementsPvp> val) {
+		this.pvp = val;
 	}
 
-	public List<DailyAchievementsPve> getDailyAchievementsPve() {
-		return this.dailyAchievementsPve;
+	public List<DailyAchievementsPve> getPve() {
+		return this.pve;
 	}
 
-	public void setDailyAchievementsPve(List<DailyAchievementsPve> val) {
-		this.dailyAchievementsPve = val;
+	public void setPve(List<DailyAchievementsPve> val) {
+		this.pve = val;
 	}
 
 	public DailyAchievements() {
 		this.special = new ArrayList<Object>();
-		this.dailyAchievementsWvw = new ArrayList<DailyAchievementsWvw>();
-		this.dailyAchievementsPvp = new ArrayList<DailyAchievementsPvp>();
-		this.dailyAchievementsPve = new ArrayList<DailyAchievementsPve>();
+		this.wvw = new ArrayList<DailyAchievementsWvw>();
+		this.pvp = new ArrayList<DailyAchievementsPvp>();
+		this.pve = new ArrayList<DailyAchievementsPve>();
 	}
 
 }

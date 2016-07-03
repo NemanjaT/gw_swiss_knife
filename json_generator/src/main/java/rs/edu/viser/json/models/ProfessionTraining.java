@@ -17,7 +17,7 @@ public class ProfessionTraining extends JsonModelFactoryMaster {
 
 	private String category;
 
-	private List<ProfessionTrainingTrack> professionTrainingTrack;
+	private List<ProfessionTrainingTrack> track;
 
 	//Getters and setters
 
@@ -45,16 +45,16 @@ public class ProfessionTraining extends JsonModelFactoryMaster {
 		this.category = val;
 	}
 
-	public List<ProfessionTrainingTrack> getProfessionTrainingTrack() {
-		return this.professionTrainingTrack;
+	public List<ProfessionTrainingTrack> getTrack() {
+		return this.track;
 	}
 
-	public void setProfessionTrainingTrack(List<ProfessionTrainingTrack> val) {
-		this.professionTrainingTrack = val;
+	public void setTrack(List<ProfessionTrainingTrack> val) {
+		this.track = val;
 	}
 
 	public ProfessionTraining() {
-		this.professionTrainingTrack = new ArrayList<ProfessionTrainingTrack>();
+		this.track = new ArrayList<ProfessionTrainingTrack>();
 	}
 
 }

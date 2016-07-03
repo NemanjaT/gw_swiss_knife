@@ -13,7 +13,7 @@ public class ItemStats extends JsonModelFactoryMaster {
 
 	private String name;
 
-	private ItemStatsAttributes itemStatsAttributes;
+	private ItemStatsAttributes attributes;
 
 	private Integer id;
 
@@ -27,12 +27,12 @@ public class ItemStats extends JsonModelFactoryMaster {
 		this.name = val;
 	}
 
-	public ItemStatsAttributes getItemStatsAttributes() {
-		return this.itemStatsAttributes;
+	public ItemStatsAttributes getAttributes() {
+		return this.attributes;
 	}
 
-	public void setItemStatsAttributes(ItemStatsAttributes val) {
-		this.itemStatsAttributes = val;
+	public void setAttributes(ItemStatsAttributes val) {
+		this.attributes = val;
 	}
 
 	public Integer getId() {

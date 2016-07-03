@@ -15,7 +15,7 @@ public class Achievement extends JsonModelFactoryMaster {
 
 	private String lockedText;
 
-	private List<AchievementTiers> achievementTiers;
+	private List<AchievementTiers> tiers;
 
 	private String name;
 
@@ -29,7 +29,7 @@ public class Achievement extends JsonModelFactoryMaster {
 
 	private String type;
 
-	private List<AchievementRewards> achievementRewards;
+	private List<AchievementRewards> rewards;
 
 	//Getters and setters
 
@@ -49,12 +49,12 @@ public class Achievement extends JsonModelFactoryMaster {
 		this.lockedText = val;
 	}
 
-	public List<AchievementTiers> getAchievementTiers() {
-		return this.achievementTiers;
+	public List<AchievementTiers> getTiers() {
+		return this.tiers;
 	}
 
-	public void setAchievementTiers(List<AchievementTiers> val) {
-		this.achievementTiers = val;
+	public void setTiers(List<AchievementTiers> val) {
+		this.tiers = val;
 	}
 
 	public String getName() {
@@ -105,19 +105,19 @@ public class Achievement extends JsonModelFactoryMaster {
 		this.type = val;
 	}
 
-	public List<AchievementRewards> getAchievementRewards() {
-		return this.achievementRewards;
+	public List<AchievementRewards> getRewards() {
+		return this.rewards;
 	}
 
-	public void setAchievementRewards(List<AchievementRewards> val) {
-		this.achievementRewards = val;
+	public void setRewards(List<AchievementRewards> val) {
+		this.rewards = val;
 	}
 
 	public Achievement() {
 		this.prerequisites = new ArrayList<Integer>();
-		this.achievementTiers = new ArrayList<AchievementTiers>();
+		this.tiers = new ArrayList<AchievementTiers>();
 		this.flags = new ArrayList<String>();
-		this.achievementRewards = new ArrayList<AchievementRewards>();
+		this.rewards = new ArrayList<AchievementRewards>();
 	}
 
 }

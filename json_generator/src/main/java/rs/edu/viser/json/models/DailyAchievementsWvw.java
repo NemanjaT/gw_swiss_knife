@@ -11,7 +11,7 @@ import rs.edu.viser.json.JsonModelFactoryMaster;
  */
 public class DailyAchievementsWvw extends JsonModelFactoryMaster {
 
-	private DailyAchievementsWvwLevel dailyAchievementsWvwLevel;
+	private DailyAchievementsWvwLevel level;
 
 	private Integer id;
 
@@ -19,12 +19,12 @@ public class DailyAchievementsWvw extends JsonModelFactoryMaster {
 
 	//Getters and setters
 
-	public DailyAchievementsWvwLevel getDailyAchievementsWvwLevel() {
-		return this.dailyAchievementsWvwLevel;
+	public DailyAchievementsWvwLevel getLevel() {
+		return this.level;
 	}
 
-	public void setDailyAchievementsWvwLevel(DailyAchievementsWvwLevel val) {
-		this.dailyAchievementsWvwLevel = val;
+	public void setLevel(DailyAchievementsWvwLevel val) {
+		this.level = val;
 	}
 
 	public Integer getId() {

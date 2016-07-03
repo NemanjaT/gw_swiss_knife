@@ -1,0 +1,21 @@
+{
+"id": 69,
+"name": "A Season of Growth",
+"description": "Some victories are bittersweet, but they're victories nonetheless.",
+"requirement": "Complete the sylvari personal story step \"A Vision of Darkness,\" \"Eye of the Sun,\" \"Shattered Light,\" or \"Snuffing Out Embers.\"",
+"locked_text": "",
+"type": "Default",
+"flags": [ ],
+"tiers": [
+{
+"count": 1,
+"points": 10
+}
+],
+"rewards": [
+{
+"type": "Mastery",
+"region": "Tyria"
+}
+]
+}

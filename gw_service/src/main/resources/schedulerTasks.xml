@@ -90,7 +90,7 @@
 		                    </bean>
                             <bean class="rs.edu.viser.services.filler.config.FillerArrayPatternConfig">
                                 <property name="urlPattern" value="/categories" />
-                                <property name="propertyName" value="categories" />
+                                <property name="propertyName" value="achievementCategories" />
                                 <property name="schedulerType" value="DAILY" />
                             </bean>
                             <bean class="rs.edu.viser.services.filler.config.FillerObjectPatternConfig">
@@ -116,7 +116,7 @@
                             </bean>
                             <bean class="rs.edu.viser.services.filler.config.FillerArrayPatternConfig">
                                 <property name="urlPattern" value="/groups" />
-                                <property name="propertyName" value="groups" />
+                                <property name="propertyName" value="achievementGroups" />
                                 <property name="schedulerType" value="DAILY" />
                             </bean>
                             <bean class="rs.edu.viser.services.filler.config.FillerObjectPatternConfig">
