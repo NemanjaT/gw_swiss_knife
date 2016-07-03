@@ -10,11 +10,11 @@ drop user if exists 'system'@'%';
 drop user if exists 'service_user'@'%';
 
 -- [re]creating users
-create user 'dba'@'%' identified by '-X#,g?;hC-cDs;*N2JGm';
-create user 'load_data'@'%' identified by 'Src+J$xNP4#(S5Bm_K#`';
-create user 'user_access'@'%' identified by '4L^-rr7)X369Vj]L9D<7';
-create user 'system'@'%' identified by 'C(+2xc(KYPm7+C.qSF#y';
-create user 'service_user'@'%' identified by '$Me_!ZK<ky>"7/Su/fS-';
+create user 'dba'@'%' identified by '-X#,g?;hC-cDs;*N2JGm'; -- example password (TODO: change in production)
+create user 'load_data'@'%' identified by 'Src+J$xNP4#(S5Bm_K#`'; -- example password (TODO: change in production)
+create user 'user_access'@'%' identified by '4L^-rr7)X369Vj]L9D<7'; -- example password (TODO: change in production)
+create user 'system'@'%' identified by 'C(+2xc(KYPm7+C.qSF#y'; -- example password (TODO: change in production)
+create user 'service_user'@'%' identified by '$Me_!ZK<ky>"7/Su/fS-'; -- example password (TODO: change in production)
 
 -- granting priveleges to users
 grant all privileges on gwdb.* to 'system'@'%';
