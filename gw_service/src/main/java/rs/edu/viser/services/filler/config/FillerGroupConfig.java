@@ -6,7 +6,6 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextAware;
 
 import rs.edu.viser.services.filler.groups.FillerGroup.FillerGroupTypes;
-import rs.edu.viser.services.filler.groups.FillerGroup.SchedulerTypes;
 
 public class FillerGroupConfig implements ApplicationContextAware, BeanNameAware {
 	
