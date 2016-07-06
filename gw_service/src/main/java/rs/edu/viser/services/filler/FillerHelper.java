@@ -9,7 +9,6 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import rs.edu.viser.services.filler.config.FillerArrayPatternConfig;
 import rs.edu.viser.services.filler.config.FillerObjectPatternConfig;
 import rs.edu.viser.services.filler.config.FillerPatternConfig;
 
@@ -200,7 +199,6 @@ public class FillerHelper {
 		
 		list = list.stream()
 			.sorted((n, m) -> {
-				System.out.println("Sorting " + n + " and " + m);
 				return n instanceof FillerObjectPatternConfig ? 1 : -1;
 			}).collect(Collectors.toList());
 		

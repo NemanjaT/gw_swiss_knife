@@ -51,16 +51,26 @@ public abstract class FillerGroup {
 		 */
 		Arrays.asList(patternGroup)
 				.stream()
-				.map(pattern -> 
-						((schedulerType == pattern.getSchedulerType() 
-						|| schedulerType == SchedulerTypes.ALL)
-						&& pattern instanceof FillerObjectPatternConfig)
-						? filterObjects((FillerObjectPatternConfig) pattern)
-							: ((schedulerType == pattern.getSchedulerType()
-								|| schedulerType == SchedulerTypes.ALL)
-								&& pattern instanceof FillerObjectPatternConfig)
-								? filterArrays((FillerArrayPatternConfig) pattern)
-								: null);
+				.forEach(pattern -> {
+					if (pattern.getSchedulerType() == schedulerType 
+							|| schedulerType == SchedulerTypes.ALL) {
+						if (pattern instanceof FillerObjectPatternConfig) {
+							filterObjects((FillerObjectPatternConfig) pattern);
+						} else if (pattern instanceof FillerArrayPatternConfig) {
+							filterArrays((FillerArrayPatternConfig) pattern);
+						}
+					}
+				});
+//				.map(pattern -> 
+//						((schedulerType == pattern.getSchedulerType() 
+//						|| schedulerType == SchedulerTypes.ALL)
+//						&& pattern instanceof FillerObjectPatternConfig)
+//						? filterObjects((FillerObjectPatternConfig) pattern)
+//							: ((schedulerType == pattern.getSchedulerType()
+//								|| schedulerType == SchedulerTypes.ALL)
+//								&& pattern instanceof FillerObjectPatternConfig)
+//								? filterArrays((FillerArrayPatternConfig) pattern)
+//								: null);
 	}
 	
 	/**
