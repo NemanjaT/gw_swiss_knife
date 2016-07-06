@@ -3,6 +3,7 @@ package rs.edu.viser.json;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
+
 import rs.edu.viser.logger.LOG;
 
 import java.io.BufferedReader;
@@ -116,6 +117,9 @@ public class JsonRetriever {
      */
     public JSONObject getParametarizedJsonObject(String url, String... params) throws JSONException, IOException {
     	int index, counter = 0;
+    	for (int i = 0; i < params.length; i++) {
+    		params[i] = params[i].replace(" ", "%20");
+    	}
     	while ((index = url.indexOf("*")) > -1) {
     		url = url.substring(0, index) + params[counter++] + url.substring(index + 1, url.length());
     	}
@@ -132,6 +136,9 @@ public class JsonRetriever {
      */
     public JSONArray getParametarizedJsonArray(String url, String... params) throws IOException, JSONException {
     	int index, counter = 0;
+    	for (int i = 0; i < params.length; i++) {
+    		params[i] = params[i].replace(" ", "%20");
+    	}
     	while((index = url.indexOf("*")) > -1) {
     		try {
     			url = url.substring(0, index) + params[counter++] + url.substring(index + 1, url.length());

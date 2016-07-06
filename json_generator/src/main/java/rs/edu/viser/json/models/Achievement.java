@@ -30,6 +30,8 @@ public class Achievement extends JsonModelFactoryMaster {
 	private String type;
 
 	private List<AchievementRewards> rewards;
+	
+	private String bits; //TODO: GW-0001
 
 	//Getters and setters
 
@@ -111,6 +113,14 @@ public class Achievement extends JsonModelFactoryMaster {
 
 	public void setRewards(List<AchievementRewards> val) {
 		this.rewards = val;
+	}
+	
+	public String getBits() {
+		return bits;
+	}
+	
+	public void setBits(String val) {
+		this.bits = val;
 	}
 
 	public Achievement() {
