@@ -1,11 +1,6 @@
 package rs.edu.viser.services.filler.groups;
 
-import java.io.IOException;
-import java.net.URL;
-import java.util.Arrays;
 import java.util.List;
-
-import com.sun.xml.internal.bind.v2.runtime.unmarshaller.XsiNilLoader.Array;
 
 import rs.edu.viser.json.models.Account;
 import rs.edu.viser.json.models.AccountAchievements;
@@ -44,40 +39,44 @@ public class AccountFillerGroup extends FillerGroup {
 		//getting the filler patterns. . .
 		FillerPatternConfig[] patternGroup = reader
 				.getFillerGroups(FillerGroupTypes.ACCOUNT)[0].getFillerPatterns();
+		//sorting patterns so all arrays are called in first. . .
 		patternGroup = helper.orderFillerPatternConfigs(patternGroup);
 		
-		for (FillerPatternConfig pattern : patternGroup) {
-			String url = reader.getFillerGroups(FillerGroupTypes.ACCOUNT)[0].getUrlSufix() 
-					+ pattern.getUrlPattern();
+		this.readThroughPatterns(patternGroup, schedulerType);
+	}
+
+	@Override
+	protected Object filterArrays(FillerArrayPatternConfig pattern) {
+		if (pattern.getPropertyName().equals("accountBank")) {
 			
-			if (schedulerType == pattern.getSchedulerType() || schedulerType == SchedulerTypes.ALL) {
-				if (pattern instanceof FillerObjectPatternConfig 
-						&& ((FillerObjectPatternConfig) pattern).getObject() instanceof Account) {
-					
-				} else if (pattern instanceof FillerArrayPatternConfig) {
-					FillerArrayPatternConfig arr = (FillerArrayPatternConfig) pattern;
-					if (arr.getPropertyName().equals("accountBank")) {
-						
-					} else if (arr.getPropertyName().equals("accountWallet")) {
-						
-					} else if (arr.getPropertyName().equals("accountMaterials")) {
-						
-					} else if (arr.getPropertyName().equals("accountInventory")) {
-						
-					} else if (arr.getPropertyName().equals("accountTitles")) {
-						
-					} else if (arr.getPropertyName().equals("accountSkins")) {
-						
-					} else if (arr.getPropertyName().equals("accountMinis")) {
-						
-					} else if (arr.getPropertyName().equals("accountDyes")) {
-						
-					} else if (arr.getPropertyName().equals("accountAchievements")) {
-						
-					}
-				}
-			}
+		} else if (pattern.getPropertyName().equals("accountWallet")) {
+			
+		} else if (pattern.getPropertyName().equals("accountMaterials")) {
+			
+		} else if (pattern.getPropertyName().equals("accountInventory")) {
+			
+		} else if (pattern.getPropertyName().equals("accountTitles")) {
+			
+		} else if (pattern.getPropertyName().equals("accountSkins")) {
+			
+		} else if (pattern.getPropertyName().equals("accountMinis")) {
+			
+		} else if (pattern.getPropertyName().equals("accountDyes")) {
+			
+		} else if (pattern.getPropertyName().equals("accountAchievements")) {
+			
 		}
+		
+		return this;
+	}
+
+	@Override
+	protected Object filterObjects(FillerObjectPatternConfig pattern) {
+		if (pattern.getObject() instanceof Account) {
+			
+		}
+		
+		return this;
 	}
 
 	public Account getAccount() {

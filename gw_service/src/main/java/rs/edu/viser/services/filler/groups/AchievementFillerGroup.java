@@ -27,51 +27,19 @@ public class AchievementFillerGroup extends FillerGroup {
 	
 	@Override
 	public void getModels(SchedulerTypes type) {
-		this.retriever = new JsonRetriever();
-		this.helper = new FillerHelper();
 		
-		this.arrays = new GeneratedJsonArrays();
-		this.achievement = new Achievement();
-		this.achievementCategory = new AchievementCategory();
-		this.dailyAchievements = new DailyAchievements();
-		this.tomorrowDailyAchievements = new TomorrowDailyAchievements();
-		this.achievementGroup = new AchievementGroup();
+	}
+	
+	@Override
+	protected Object filterObjects(FillerObjectPatternConfig pattern) {
+
+		return null;
+	}
+
+	@Override
+	protected Object filterArrays(FillerArrayPatternConfig pattern) {
 		
-		FillerConfigReader reader = FillerConfigReader.getFillerConfigReader();
-		FillerGroupConfig[] groups = reader.getFillerGroups(FillerGroupTypes.ACHIEVEMENT);
-		LOG log = new LOG(this.getClass());
-		
-		log.info("Initializing Achievement Filler Group filler class");
-		
-		for (FillerPatternConfig fpc : groups[0].getFillerPatterns()) {
-			if (fpc.getSchedulerType() == type || type == SchedulerTypes.ALL) {
-				if (fpc instanceof FillerObjectPatternConfig) {
-					//all objects
-					FillerObjectPatternConfig object = (FillerObjectPatternConfig) fpc;
-					if (object.getObject() instanceof Achievement) {
-						processAchievement(object, groups[0].getUrlSufix());
-					} else if (object.getObject() instanceof AchievementCategory) {
-						processAchievementCategory(object, groups[0].getUrlSufix());
-					} else if (object.getObject() instanceof DailyAchievements) {
-						processDailyAchievements(object, groups[0].getUrlSufix());
-					} else if (object.getObject() instanceof TomorrowDailyAchievements) {
-						processTomorrowDailyAchievements(object, groups[0].getUrlSufix());
-					} else if (object.getObject() instanceof AchievementGroup) {
-						processAchievementGroup(object, groups[0].getUrlSufix());
-					}
-				} else if (fpc instanceof FillerArrayPatternConfig) {
-					//all arrays
-					FillerArrayPatternConfig array = (FillerArrayPatternConfig) fpc;
-					if (array.getPropertyName().equals("achievements")) {
-						processAchievements(array, groups[0].getUrlSufix());
-					} else if (array.getPropertyName().equals("achievementCategories")) {
-						processAchievementCategories(array, groups[0].getUrlSufix());
-					} else if (array.getPropertyName().equals("achievementGroups")) {
-						processAchievementGroups(array, groups[0].getUrlSufix());
-					}
-				}
-			}
-		}
+		return null;
 	}
 
 	private void processAchievement(FillerObjectPatternConfig object, String urlSufix) {
