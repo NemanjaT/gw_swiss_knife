@@ -1,7 +1,9 @@
 package rs.edu.viser.services.filler;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Collectors;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -194,23 +196,14 @@ public class FillerHelper {
 	 * @return an ordered array of fillers.
 	 */
 	public FillerPatternConfig[] orderFillerPatternConfigs(FillerPatternConfig[] fillers) {
-		List<FillerObjectPatternConfig> objectList = new ArrayList<>();
-		List<FillerArrayPatternConfig> arrayList = new ArrayList<>();
-		for (int i = 0; i < fillers.length; i++) {
-			if (fillers[i] instanceof FillerObjectPatternConfig) {
-				objectList.add((FillerObjectPatternConfig) fillers[i]);
-			} else if (fillers[i] instanceof FillerArrayPatternConfig) {
-				arrayList.add((FillerArrayPatternConfig) fillers[i]);
-			}
-		}
-		FillerPatternConfig[] sortedArray = new FillerPatternConfig[objectList.size() + arrayList.size()];
-		int indexCounter = 0;
-		for (FillerArrayPatternConfig arr : arrayList) {
-			sortedArray[indexCounter++] = arr;
-		}
-		for (FillerObjectPatternConfig obj : objectList) {
-			sortedArray[indexCounter++] = obj;
-		}
-		return sortedArray;
+		List<FillerPatternConfig> list = Arrays.asList(fillers);
+		
+		list = list.stream()
+			.sorted((n, m) -> {
+				System.out.println("Sorting " + n + " and " + m);
+				return n instanceof FillerObjectPatternConfig ? 1 : -1;
+			}).collect(Collectors.toList());
+		
+		return list.toArray(new FillerPatternConfig[list.size()]);
 	}
 }
