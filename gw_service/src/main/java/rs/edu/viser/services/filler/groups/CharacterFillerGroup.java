@@ -41,7 +41,7 @@ public class CharacterFillerGroup extends FillerGroup {
 
 	@Override
 	public void getModels(SchedulerTypes type) {
-		this.readThroughPatterns(patternGroup, type);
+		this.readThroughPatterns(type);
 		
 		log.info("Character Filler Group initialization finished!");
 	}
@@ -86,6 +86,7 @@ public class CharacterFillerGroup extends FillerGroup {
 			log.error(e.getMessage());
 			e.printStackTrace();
 		}
+		log.info("Finished Character Filler Group :: Characters processor");
 	}
 	
 	private void processCharacterCore(FillerObjectPatternConfig pattern) {
@@ -100,6 +101,7 @@ public class CharacterFillerGroup extends FillerGroup {
 		} catch (IOException | JSONException e) {
 			log.error(e.getMessage());
 		}
+		log.info("Finished Character Filler Group :: Character Core processor");
 	}
 
 	private void processCharacterCrafting(FillerObjectPatternConfig pattern) {
@@ -114,6 +116,7 @@ public class CharacterFillerGroup extends FillerGroup {
 		} catch (IOException | JSONException e) {
 			log.error(e.getMessage());
 		}
+		log.info("Finished Character Filler Group :: Character Crafting processor");
 	}
 
 	private void processCharacterEquipment(FillerObjectPatternConfig pattern) {
@@ -128,6 +131,7 @@ public class CharacterFillerGroup extends FillerGroup {
 		} catch (IOException | JSONException e) {
 			log.error(e.getMessage());
 		}
+		log.info("Finished Character Filler Group :: Character Equipment processor");
 	}
 
 	private void processCharacterInventory(FillerObjectPatternConfig pattern) {
@@ -142,6 +146,7 @@ public class CharacterFillerGroup extends FillerGroup {
 		} catch (IOException | JSONException e) {
 			log.error(e.getMessage());
 		}
+		log.info("Finished Character Filler Group :: Character Inventory processor");
 	}
 
 	private void processCharacterRecipes(FillerObjectPatternConfig pattern) {
@@ -156,6 +161,7 @@ public class CharacterFillerGroup extends FillerGroup {
 		} catch (IOException | JSONException e) {
 			log.error(e.getMessage());
 		}
+		log.info("Finished Character Filler Group :: Character Recipes processor");
 	}
 
 	private void processCharacterSpecializations(FillerObjectPatternConfig pattern) {
@@ -170,6 +176,7 @@ public class CharacterFillerGroup extends FillerGroup {
 		} catch (IOException | JSONException e) {
 			log.error(e.getMessage());
 		}
+		log.info("Finished Character Filler Group :: Character Specializations processor");
 	}
 	
 	public List<String> getCharacters() {

@@ -19,52 +19,52 @@
                                 <property name="object">
                                     <bean class="rs.edu.viser.json.models.Account" />
                                 </property>
-                                <property name="schedulerType" value="DAILY" />
+                                <property name="schedulerType" value="REQUESTED" />
                             </bean>
                             <bean class="rs.edu.viser.services.filler.config.FillerArrayPatternConfig">
                                 <property name="urlPattern" value="/achievements?access_token=*" />
                                 <property name="propertyName" value="accountAchievements" />
-                                <property name="schedulerType" value="DAILY" />
+                                <property name="schedulerType" value="REQUESTED" />
                             </bean>
                             <bean class="rs.edu.viser.services.filler.config.FillerArrayPatternConfig">
                                 <property name="urlPattern" value="/dyes?access_token=*" />
                                 <property name="propertyName" value="accountDyes" />
-                                <property name="schedulerType" value="DAILY" />
+                                <property name="schedulerType" value="REQUESTED" />
                             </bean>
                             <bean class="rs.edu.viser.services.filler.config.FillerArrayPatternConfig">
                                 <property name="urlPattern" value="/minis?access_token=*" />
                                 <property name="propertyName" value="accountMinis" />
-                                <property name="schedulerType" value="DAILY" />
+                                <property name="schedulerType" value="REQUESTED" />
                             </bean>
                             <bean class="rs.edu.viser.services.filler.config.FillerArrayPatternConfig">
                                 <property name="urlPattern" value="/skins?access_token=*" />
                                 <property name="propertyName" value="accountSkins" />
-                                <property name="schedulerType" value="DAILY" />
+                                <property name="schedulerType" value="REQUESTED" />
                             </bean>
                             <bean class="rs.edu.viser.services.filler.config.FillerArrayPatternConfig">
                                 <property name="urlPattern" value="/titles?access_token=*" />
                                 <property name="propertyName" value="accountTitles" />
-                                <property name="schedulerType" value="DAILY" />
+                                <property name="schedulerType" value="REQUESTED" />
                             </bean>
                             <bean class="rs.edu.viser.services.filler.config.FillerArrayPatternConfig">
                                 <property name="urlPattern" value="/bank?access_token=*" />
                                 <property name="propertyName" value="accountBank" />
-                                <property name="schedulerType" value="DAILY" />
+                                <property name="schedulerType" value="REQUESTED" />
                             </bean>
                             <bean class="rs.edu.viser.services.filler.config.FillerArrayPatternConfig">
                                 <property name="urlPattern" value="/inventory?access_token=*" />
                                 <property name="propertyName" value="accountInventory" />
-                                <property name="schedulerType" value="DAILY" />
+                                <property name="schedulerType" value="REQUESTED" />
                             </bean>
                             <bean class="rs.edu.viser.services.filler.config.FillerArrayPatternConfig">
                                 <property name="urlPattern" value="/materials?access_token=*" />
                                 <property name="propertyName" value="accountMaterials" />
-                                <property name="schedulerType" value="DAILY" />
+                                <property name="schedulerType" value="REQUESTED" />
                             </bean>
                             <bean class="rs.edu.viser.services.filler.config.FillerArrayPatternConfig">
                                 <property name="urlPattern" value="/wallet?access_token=*" />
                                 <property name="propertyName" value="accountWallet" />
-                                <property name="schedulerType" value="DAILY" />
+                                <property name="schedulerType" value="REQUESTED" />
                             </bean>
                         </list>
                     </property>
@@ -168,49 +168,49 @@
                             <bean class="rs.edu.viser.services.filler.config.FillerArrayPatternConfig">
                                 <property name="urlPattern" value="?access_token=*" />
                                 <property name="propertyName" value="characters" />
-                                <property name="schedulerType" value="DAILY" />
+                                <property name="schedulerType" value="REQUESTED" />
                             </bean>
                             <bean class="rs.edu.viser.services.filler.config.FillerObjectPatternConfig">
                                 <property name="urlPattern" value="/*/core?access_token=*" />
                                 <property name="object">
                                     <bean class="rs.edu.viser.json.models.CharacterCore" />
                                 </property>
-                                <property name="schedulerType" value="DAILY" />
+                                <property name="schedulerType" value="REQUESTED" />
                             </bean>
                             <bean class="rs.edu.viser.services.filler.config.FillerObjectPatternConfig">
                                 <property name="urlPattern" value="/*/crafting?access_token=*" />
                                 <property name="object">
                                     <bean class="rs.edu.viser.json.models.CharacterCrafting" />
                                 </property>
-                                <property name="schedulerType" value="DAILY" />
+                                <property name="schedulerType" value="REQUESTED" />
                             </bean>
                             <bean class="rs.edu.viser.services.filler.config.FillerObjectPatternConfig">
                                 <property name="urlPattern" value="/*/equipment?access_token=*" />
                                 <property name="object">
                                     <bean class="rs.edu.viser.json.models.CharacterEquipment" />
                                 </property>
-                                <property name="schedulerType" value="DAILY" />
+                                <property name="schedulerType" value="REQUESTED" />
                             </bean>
                             <bean class="rs.edu.viser.services.filler.config.FillerObjectPatternConfig">
                                 <property name="urlPattern" value="/*/inventory?access_token=*" />
                                 <property name="object">
                                     <bean class="rs.edu.viser.json.models.CharacterInventory" />
                                 </property>
-                                <property name="schedulerType" value="DAILY" />
+                                <property name="schedulerType" value="REQUESTED" />
                             </bean>
                             <bean class="rs.edu.viser.services.filler.config.FillerObjectPatternConfig">
                                 <property name="urlPattern" value="/*/recipes?access_token=*" />
                                 <property name="object">
                                     <bean class="rs.edu.viser.json.models.CharacterRecipes" />
                                 </property>
-                                <property name="schedulerType" value="DAILY" />
+                                <property name="schedulerType" value="REQUESTED" />
                             </bean>
                             <bean class="rs.edu.viser.services.filler.config.FillerObjectPatternConfig">
                                 <property name="urlPattern" value="/*/specializations?access_token=*" />
                                 <property name="object">
                                     <bean class="rs.edu.viser.json.models.CharacterSpecializations" />
                                 </property>
-                                <property name="schedulerType" value="DAILY" />
+                                <property name="schedulerType" value="REQUESTED" />
                             </bean>
                         </list>
                     </property>
@@ -263,22 +263,22 @@
                             <bean class="rs.edu.viser.services.filler.config.FillerArrayPatternConfig">
                                 <property name="urlPattern" value="/transactions/current/buys?access_token=*" />
                                 <property name="propertyName" value="commerceCurrentBuyTransactions" />
-                                <property name="schedulerType" value="DAILY" />
+                                <property name="schedulerType" value="REQUESTED" />
                             </bean>
                             <bean class="rs.edu.viser.services.filler.config.FillerArrayPatternConfig">
                                 <property name="urlPattern" value="/transactions/current/sells?access_token=*" />
                                 <property name="propertyName" value="commerceCurrentSellTransactions" />
-                                <property name="schedulerType" value="DAILY" />
+                                <property name="schedulerType" value="REQUESTED" />
                             </bean>
                             <bean class="rs.edu.viser.services.filler.config.FillerArrayPatternConfig">
                                 <property name="urlPattern" value="/transactions/history/buys?access_token=*" />
                                 <property name="propertyName" value="commercePastBuyTransactions" />
-                                <property name="schedulerType" value="DAILY" />
+                                <property name="schedulerType" value="REQUESTED" />
                             </bean>
                             <bean class="rs.edu.viser.services.filler.config.FillerArrayPatternConfig">
                                 <property name="urlPattern" value="/transactions/history/sells?access_token=*" />
                                 <property name="propertyName" value="commercePastSellTransactions" />
-                                <property name="schedulerType" value="DAILY" />
+                                <property name="schedulerType" value="REQUESTED" />
                             </bean>
                         </list>
                     </property>
@@ -295,19 +295,19 @@
                                 <property name="object">
                                     <bean class="rs.edu.viser.json.models.PvpStats" />
                                 </property>
-                                <property name="schedulerType" value="DAILY" />
+                                <property name="schedulerType" value="REQUESTED" />
                             </bean>
                             <bean class="rs.edu.viser.services.filler.config.FillerArrayPatternConfig">
                                 <property name="urlPattern" value="/games?access_token=*" />
                                 <property name="propertyName" value="pvpGames" />
-                                <property name="schedulerType" value="DAILY" />
+                                <property name="schedulerType" value="REQUESTED" />
                             </bean>
                             <bean class="rs.edu.viser.services.filler.config.FillerObjectPatternConfig">
                                 <property name="urlPattern" value="/games/*?access_token=*" />
                                 <property name="object">
                                     <bean class="rs.edu.viser.json.models.PvpGame" />
                                 </property>
-                                <property name="schedulerType" value="DAILY" />
+                                <property name="schedulerType" value="REQUESTED" />
                             </bean>
                             <bean class="rs.edu.viser.services.filler.config.FillerArrayPatternConfig">
                                 <property name="urlPattern" value="/amulets" />
@@ -336,7 +336,7 @@
                             <bean class="rs.edu.viser.services.filler.config.FillerArrayPatternConfig">
                                 <property name="urlPattern" value="/standings?access_token=*" />
                                 <property name="propertyName" value="pvpStandings" />
-                                <property name="schedulerType" value="DAILY" />
+                                <property name="schedulerType" value="REQUESTED" />
                             </bean>
                         </list>
                     </property>
@@ -543,7 +543,7 @@
                                 <property name="object">
                                     <bean class="rs.edu.viser.json.models.TokenInfo" />
                                 </property>
-                                <property name="schedulerType" value="DAILY" />
+                                <property name="schedulerType" value="REQUESTED" />
                             </bean>
                             <bean class="rs.edu.viser.services.filler.config.FillerArrayPatternConfig">
                                 <property name="urlPattern" value="traits" />

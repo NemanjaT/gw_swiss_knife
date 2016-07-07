@@ -34,7 +34,7 @@ public class AccountFillerGroup extends FillerGroup {
 
 	@Override
 	public void getModels(SchedulerTypes schedulerType) {
-		this.readThroughPatterns(patternGroup, schedulerType);
+		this.readThroughPatterns(schedulerType);
 		
 		log.info("Account Filler Group initialization finished!");
 	}
@@ -85,6 +85,7 @@ public class AccountFillerGroup extends FillerGroup {
 			log.error(e.getMessage());
 			e.printStackTrace();
 		}
+		log.info("Finished Account Filler Group :: Account Bank processor");
 	}
 
 	private void processAccountWallet(FillerArrayPatternConfig pattern) {
@@ -98,6 +99,7 @@ public class AccountFillerGroup extends FillerGroup {
 		} catch (IOException | JSONException e) {
 			log.error(e.getMessage());
 		}
+		log.info("Finished Account Filler Group :: Account Wallet processor");
 	}
 
 	private void processAccountMaterials(FillerArrayPatternConfig pattern) {
@@ -111,6 +113,7 @@ public class AccountFillerGroup extends FillerGroup {
 		} catch (IOException | JSONException e) {
 			log.error(e.getMessage());
 		}
+		log.info("Finished Account Filler Group :: Account Materials processor");
 	}
 
 	private void processAccountInventory(FillerArrayPatternConfig pattern) {
@@ -124,6 +127,7 @@ public class AccountFillerGroup extends FillerGroup {
 		} catch (IOException | JSONException e) {
 			log.error(e.getMessage());
 		}
+		log.info("Finished Account Filler Group :: Account Inventory processor");
 	}
 
 	private void processAccountTitles(FillerArrayPatternConfig pattern) {
@@ -137,6 +141,7 @@ public class AccountFillerGroup extends FillerGroup {
 		} catch (IOException | JSONException e) {
 			log.error(e.getMessage());
 		}
+		log.info("Finished Account Filler Group :: Account Titles processor");
 	}
 
 	private void processAccountSkins(FillerArrayPatternConfig pattern) {
@@ -150,6 +155,7 @@ public class AccountFillerGroup extends FillerGroup {
 		} catch (IOException | JSONException e) {
 			log.error(e.getMessage());
 		}
+		log.info("Finished Account Filler Group :: Account Skins processor");
 	}
 
 	private void processAccountMinis(FillerArrayPatternConfig pattern) {
@@ -163,6 +169,7 @@ public class AccountFillerGroup extends FillerGroup {
 		} catch (IOException | JSONException e) {
 			log.error(e.getMessage());
 		}
+		log.info("Finished Account Filler Group :: Account Minis processor");
 	}
 
 	private void processAccountDyes(FillerArrayPatternConfig pattern) {
@@ -176,6 +183,7 @@ public class AccountFillerGroup extends FillerGroup {
 		} catch (IOException | JSONException e) {
 			log.error(e.getMessage());
 		}
+		log.info("Finished Account Filler Group :: Account Dyes processor");
 	}
 
 	private void processAccountAchievements(FillerArrayPatternConfig pattern) {
@@ -189,6 +197,7 @@ public class AccountFillerGroup extends FillerGroup {
 		} catch (IOException | JSONException e) {
 			log.error(e.getMessage());
 		}
+		log.info("Finished Account Filler Group :: Account Achievements processor");
 	}
 
 	private void processAccount(FillerObjectPatternConfig pattern) {
@@ -201,6 +210,7 @@ public class AccountFillerGroup extends FillerGroup {
 		} catch (IOException | JSONException e) {
 			log.error(e.getMessage());
 		}
+		log.info("Finished Account Filler Group :: Account processor");
 	}
 
 	public Account getAccount() {

@@ -72,18 +72,16 @@ public abstract class FillerGroup {
 	 * @param patternGroup
 	 * @param schedulerType
 	 */
-	protected void readThroughPatterns(FillerPatternConfig[] patternGroup, SchedulerTypes schedulerType) {
+	protected void readThroughPatterns(SchedulerTypes schedulerType) {
 		/*
 		 * 1. takes the array, transforming it into a stream and maps it.
 		 * 2. Looks up if the scheduler type parameter is equal to the object scheduler type,
 		 *    or if the parameter is ALL and if the object is either Object or Array.
 		 * 3. Depending on the type invokes the corresponding method.
 		 */
-		Arrays.asList(patternGroup)
-				.stream()
+		Arrays  .stream(patternGroup)
 				.forEach(pattern -> {
-					if (pattern.getSchedulerType() == schedulerType 
-							|| schedulerType == SchedulerTypes.ALL) {
+					if (pattern.getSchedulerType() == schedulerType || schedulerType == SchedulerTypes.ALL) {
 						if (pattern instanceof FillerObjectPatternConfig) {
 							filterObjects((FillerObjectPatternConfig) pattern);
 						} else if (pattern instanceof FillerArrayPatternConfig) {

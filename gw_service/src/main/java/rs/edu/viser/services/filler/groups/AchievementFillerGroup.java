@@ -38,7 +38,7 @@ public class AchievementFillerGroup extends FillerGroup {
 	
 	@Override
 	public void getModels(SchedulerTypes type) {
-		this.readThroughPatterns(patternGroup, type);
+		this.readThroughPatterns(type);
 		
 		log.info("Achievement Filler Group initialization finished!");
 	}
@@ -86,6 +86,7 @@ public class AchievementFillerGroup extends FillerGroup {
 			log.error(e.getMessage());
 			e.printStackTrace();
 		}
+		log.info("Finished Achievement Filler Group :: Achievement processor");
 	}
 
 	private void processAchievementCategory(FillerObjectPatternConfig object) {
@@ -101,6 +102,7 @@ public class AchievementFillerGroup extends FillerGroup {
 			log.error(e.getMessage());
 			e.printStackTrace();
 		}
+		log.info("Finished Achievement Filler Group :: Achievement Category processor");
 	}
 
 	private void processDailyAchievements(FillerObjectPatternConfig object) {
@@ -114,6 +116,7 @@ public class AchievementFillerGroup extends FillerGroup {
 			log.error(e.getMessage());
 			e.printStackTrace();
 		}
+		log.info("Finished Achievement Filler Group :: Daily Achievement processor");
 	}
 
 	private void processTomorrowDailyAchievements(FillerObjectPatternConfig object) {
@@ -127,6 +130,7 @@ public class AchievementFillerGroup extends FillerGroup {
 			log.error(e.getMessage());
 			e.printStackTrace();
 		}
+		log.info("Finished Achievement Filler Group :: Tomorrow Daily Achievement processor");
 	}
 
 	private void processAchievementGroup(FillerObjectPatternConfig object) {
@@ -142,6 +146,7 @@ public class AchievementFillerGroup extends FillerGroup {
 			log.error(e.getMessage());
 			e.printStackTrace();
 		}
+		log.info("Finished Achievement Filler Group :: Achievement Group processor");
 	}
 
 	private void processAchievements(FillerArrayPatternConfig array) {
@@ -156,6 +161,7 @@ public class AchievementFillerGroup extends FillerGroup {
 			log.error(e.getMessage());
 			e.printStackTrace();
 		}
+		log.info("Finished Account Filler Group :: Achievements processor");
 	}
 
 	private void processAchievementCategories(FillerArrayPatternConfig array) {
@@ -170,6 +176,7 @@ public class AchievementFillerGroup extends FillerGroup {
 			log.error(e.getMessage());
 			e.printStackTrace();
 		}
+		log.info("Finished Account Filler Group :: Achievement Categories processor");
 	}
 
 	private void processAchievementGroups(FillerArrayPatternConfig array) {
@@ -184,6 +191,7 @@ public class AchievementFillerGroup extends FillerGroup {
 			log.error(e.getMessage());
 			e.printStackTrace();
 		}
+		log.info("Finished Account Filler Group :: Achievement Groups processor");
 	}
 	
 	public List<String> getAchievementGroups() {
