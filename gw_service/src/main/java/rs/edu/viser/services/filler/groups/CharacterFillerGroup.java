@@ -8,7 +8,6 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import rs.edu.viser.json.JsonRetriever;
 import rs.edu.viser.json.models.CharacterCore;
 import rs.edu.viser.json.models.CharacterCrafting;
 import rs.edu.viser.json.models.CharacterEquipment;
@@ -16,14 +15,8 @@ import rs.edu.viser.json.models.CharacterInventory;
 import rs.edu.viser.json.models.CharacterRecipes;
 import rs.edu.viser.json.models.CharacterSpecializations;
 import rs.edu.viser.json.models.GeneratedJsonArrays;
-import rs.edu.viser.logger.LOG;
-import rs.edu.viser.services.filler.FillerHelper;
 import rs.edu.viser.services.filler.config.FillerArrayPatternConfig;
-import rs.edu.viser.services.filler.config.FillerConfigReader;
-import rs.edu.viser.services.filler.config.FillerGroupConfig;
 import rs.edu.viser.services.filler.config.FillerObjectPatternConfig;
-import rs.edu.viser.services.filler.config.FillerPatternConfig;
-import rs.edu.viser.services.filler.config.JacksonModeler;
 
 public class CharacterFillerGroup extends FillerGroup {
 	private GeneratedJsonArrays arrays;
@@ -34,13 +27,9 @@ public class CharacterFillerGroup extends FillerGroup {
 	private HashMap<String, CharacterRecipes> characterRecipesMap;
 	private HashMap<String, CharacterSpecializations> characterSpecializationsMap;
 	
-	private FillerConfigReader reader;
-	private JacksonModeler jack;
-	
-	private String url;
-	private LOG log;
-	
 	public CharacterFillerGroup() {
+		super(FillerGroupTypes.CHARACTER);
+		
 		this.arrays = new GeneratedJsonArrays();
 		this.characterCoreMap = new HashMap<>();
 		this.characterCraftingMap = new HashMap<>();
@@ -48,27 +37,10 @@ public class CharacterFillerGroup extends FillerGroup {
 		this.characterInventoryMap = new HashMap<>();
 		this.characterRecipesMap = new HashMap<>();
 		this.characterSpecializationsMap = new HashMap<>();
-		
-		this.reader = FillerConfigReader.getFillerConfigReader();
-		this.helper = new FillerHelper();
-		this.retriever = new JsonRetriever();
-		this.jack = new JacksonModeler();
-		
-		this.log = new LOG(this.getClass());
 	}
 
 	@Override
 	public void getModels(SchedulerTypes type) {
-		FillerGroupConfig fillerGroup = reader.getFillerGroups(FillerGroupTypes.CHARACTER)[0];
-		log.info("Initializing Character Filler Group");
-		
-		//getting the filler patterns. . .
-		FillerPatternConfig[] patternGroup = fillerGroup.getFillerPatterns();
-		this.url = fillerGroup.getUrlSufix();
-		
-		//sorting patterns so all arrays are called in first. . .
-		patternGroup = helper.orderFillerPatternConfigs(patternGroup);
-		
 		this.readThroughPatterns(patternGroup, type);
 		
 		log.info("Character Filler Group initialization finished!");

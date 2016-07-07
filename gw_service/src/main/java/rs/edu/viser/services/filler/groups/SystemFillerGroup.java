@@ -5,6 +5,11 @@ import rs.edu.viser.services.filler.config.FillerObjectPatternConfig;
 
 public class SystemFillerGroup extends FillerGroup {
 
+	public SystemFillerGroup() {
+		super(FillerGroupTypes.SYSTEM);
+		// TODO Auto-generated constructor stub
+	}
+
 	@Override
 	public void getModels(SchedulerTypes type) {
 		// TODO Auto-generated method stub

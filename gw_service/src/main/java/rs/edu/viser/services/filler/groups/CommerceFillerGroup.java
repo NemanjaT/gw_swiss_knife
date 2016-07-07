@@ -5,6 +5,11 @@ import rs.edu.viser.services.filler.config.FillerObjectPatternConfig;
 
 public class CommerceFillerGroup extends FillerGroup {
 
+	public CommerceFillerGroup() {
+		super(FillerGroupTypes.COMMERCE);
+		// TODO Auto-generated constructor stub
+	}
+
 	@Override
 	public void getModels(SchedulerTypes type) {
 		// TODO Auto-generated method stub

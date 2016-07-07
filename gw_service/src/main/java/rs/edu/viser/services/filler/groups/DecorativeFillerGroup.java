@@ -5,6 +5,11 @@ import rs.edu.viser.services.filler.config.FillerObjectPatternConfig;
 
 public class DecorativeFillerGroup extends FillerGroup {
 
+	public DecorativeFillerGroup() {
+		super(FillerGroupTypes.DECORATIVE);
+		// TODO Auto-generated constructor stub
+	}
+
 	@Override
 	public void getModels(SchedulerTypes type) {
 		// TODO Auto-generated method stub

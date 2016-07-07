@@ -5,6 +5,11 @@ import rs.edu.viser.services.filler.config.FillerObjectPatternConfig;
 
 public class PvpFillerGroup extends FillerGroup {
 
+	public PvpFillerGroup() {
+		super(FillerGroupTypes.PVP);
+		// TODO Auto-generated constructor stub
+	}
+
 	@Override
 	public void getModels(SchedulerTypes type) {
 		// TODO Auto-generated method stub

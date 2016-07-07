@@ -8,21 +8,14 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import rs.edu.viser.json.JsonRetriever;
 import rs.edu.viser.json.models.Achievement;
 import rs.edu.viser.json.models.AchievementCategory;
 import rs.edu.viser.json.models.AchievementGroup;
 import rs.edu.viser.json.models.DailyAchievements;
 import rs.edu.viser.json.models.GeneratedJsonArrays;
 import rs.edu.viser.json.models.TomorrowDailyAchievements;
-import rs.edu.viser.logger.LOG;
-import rs.edu.viser.services.filler.FillerHelper;
 import rs.edu.viser.services.filler.config.FillerArrayPatternConfig;
-import rs.edu.viser.services.filler.config.FillerConfigReader;
-import rs.edu.viser.services.filler.config.FillerGroupConfig;
 import rs.edu.viser.services.filler.config.FillerObjectPatternConfig;
-import rs.edu.viser.services.filler.config.FillerPatternConfig;
-import rs.edu.viser.services.filler.config.JacksonModeler;
 
 public class AchievementFillerGroup extends FillerGroup {
 	private GeneratedJsonArrays arrays;
@@ -32,40 +25,19 @@ public class AchievementFillerGroup extends FillerGroup {
 	private TomorrowDailyAchievements tomorrowDailyAchievements;
 	private List<AchievementGroup> achievementGroupList;
 	
-	private FillerConfigReader reader;
-	private JacksonModeler jack;
-	
-	private String url;
-	private LOG log;
-	
 	public AchievementFillerGroup() {
+		super(FillerGroupTypes.ACHIEVEMENT);
+		
 		this.arrays = new GeneratedJsonArrays();
 		this.achievementList = new ArrayList<>();
 		this.achievementCategoryList = new ArrayList<>();
 		this.dailyAchievements = new DailyAchievements();
 		this.tomorrowDailyAchievements = new TomorrowDailyAchievements();
 		this.achievementGroupList = new ArrayList<>();
-		
-		this.reader = FillerConfigReader.getFillerConfigReader();
-		this.helper = new FillerHelper();
-		this.retriever = new JsonRetriever();
-		this.jack = new JacksonModeler();
-		
-		this.log = new LOG(this.getClass());
 	}
 	
 	@Override
 	public void getModels(SchedulerTypes type) {
-		FillerGroupConfig fillerGroup = reader.getFillerGroups(FillerGroupTypes.ACHIEVEMENT)[0];
-		log.info("Initializing Achievement Filler Group");
-		
-		//getting the filler patterns. . .
-		FillerPatternConfig[] patternGroup = fillerGroup.getFillerPatterns();
-		this.url = fillerGroup.getUrlSufix();
-		
-		//sorting patterns so all arrays are called in first. . .
-		patternGroup = helper.orderFillerPatternConfigs(patternGroup);
-		
 		this.readThroughPatterns(patternGroup, type);
 		
 		log.info("Achievement Filler Group initialization finished!");

@@ -5,6 +5,11 @@ import rs.edu.viser.services.filler.config.FillerObjectPatternConfig;
 
 public class WvwFillerGroup extends FillerGroup {
 
+	public WvwFillerGroup() {
+		super(FillerGroupTypes.WVW);
+		// TODO Auto-generated constructor stub
+	}
+
 	@Override
 	public void getModels(SchedulerTypes type) {
 		// TODO Auto-generated method stub

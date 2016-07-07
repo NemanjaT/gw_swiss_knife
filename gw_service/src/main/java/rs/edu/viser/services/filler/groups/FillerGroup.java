@@ -3,10 +3,14 @@ package rs.edu.viser.services.filler.groups;
 import java.util.Arrays;
 
 import rs.edu.viser.json.JsonRetriever;
+import rs.edu.viser.logger.LOG;
 import rs.edu.viser.services.filler.FillerHelper;
 import rs.edu.viser.services.filler.config.FillerArrayPatternConfig;
+import rs.edu.viser.services.filler.config.FillerConfigReader;
+import rs.edu.viser.services.filler.config.FillerGroupConfig;
 import rs.edu.viser.services.filler.config.FillerObjectPatternConfig;
 import rs.edu.viser.services.filler.config.FillerPatternConfig;
+import rs.edu.viser.services.filler.config.JacksonModeler;
 
 public abstract class FillerGroup {
 	
@@ -21,6 +25,32 @@ public abstract class FillerGroup {
 	protected String accessToken;
 	protected FillerHelper helper;
 	protected JsonRetriever retriever;
+	
+	protected FillerConfigReader reader;
+	protected JacksonModeler jack;
+	protected FillerPatternConfig[] patternGroup;
+	
+	protected LOG log;
+	protected String url;
+	
+	protected FillerGroup(FillerGroupTypes fillerGroup) {
+		this.reader = FillerConfigReader.getFillerConfigReader();
+		this.helper = new FillerHelper();
+		this.retriever = new JsonRetriever();
+		this.jack = new JacksonModeler();
+		
+		this.log = new LOG(this.getClass());
+		
+		FillerGroupConfig fillerGroupConfig = reader.getFillerGroups(fillerGroup)[0];
+		log.info("Initializing " + fillerGroup.toString() + " Filler Group");
+		
+		//getting the filler patterns. . .
+		this.patternGroup = fillerGroupConfig.getFillerPatterns();
+		this.url = fillerGroupConfig.getUrlSufix();
+		
+		//sorting patterns so all arrays are called in first. . .
+		patternGroup = helper.orderFillerPatternConfigs(patternGroup);
+	}
 	
 	/**
 	 * Fetches the models from the URL provided... Uses the access token 
@@ -61,16 +91,6 @@ public abstract class FillerGroup {
 						}
 					}
 				});
-//				.map(pattern -> 
-//						((schedulerType == pattern.getSchedulerType() 
-//						|| schedulerType == SchedulerTypes.ALL)
-//						&& pattern instanceof FillerObjectPatternConfig)
-//						? filterObjects((FillerObjectPatternConfig) pattern)
-//							: ((schedulerType == pattern.getSchedulerType()
-//								|| schedulerType == SchedulerTypes.ALL)
-//								&& pattern instanceof FillerObjectPatternConfig)
-//								? filterArrays((FillerArrayPatternConfig) pattern)
-//								: null);
 	}
 	
 	/**

@@ -5,6 +5,11 @@ import rs.edu.viser.services.filler.config.FillerObjectPatternConfig;
 
 public class WorldFillerGroup extends FillerGroup {
 
+	public WorldFillerGroup() {
+		super(FillerGroupTypes.WORLD);
+		// TODO Auto-generated constructor stub
+	}
+
 	@Override
 	public void getModels(SchedulerTypes type) {
 		// TODO Auto-generated method stub

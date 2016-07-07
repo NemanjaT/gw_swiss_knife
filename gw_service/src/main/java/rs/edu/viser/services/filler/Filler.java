@@ -22,7 +22,7 @@ public class Filler {
 //		System.out.println(duration / 1000000000.);
 		
 		FillerFactory ff = new FillerFactory();
-		for (FillerGroup fgc : ff.fillerGroups(FillerGroupTypes.CHARACTER).getFillerGroup()) {
+		for (FillerGroup fgc : ff.fillerGroups(FillerGroupTypes.ACCOUNT).getFillerGroup()) {
 			fgc.setAccessToken("79D451B9-26E6-6943-BDA6-AC9D05EE563DA640C336-0F50-4875-8350-23E6C642A0F1");
 			fgc.getModels(SchedulerTypes.ALL);
 		}

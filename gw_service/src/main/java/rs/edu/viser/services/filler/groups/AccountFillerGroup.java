@@ -7,21 +7,14 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import rs.edu.viser.json.JsonRetriever;
 import rs.edu.viser.json.models.Account;
 import rs.edu.viser.json.models.AccountAchievements;
 import rs.edu.viser.json.models.AccountInventory;
 import rs.edu.viser.json.models.AccountMaterials;
 import rs.edu.viser.json.models.AccountWallet;
 import rs.edu.viser.json.models.GeneratedJsonArrays;
-import rs.edu.viser.logger.LOG;
-import rs.edu.viser.services.filler.FillerHelper;
 import rs.edu.viser.services.filler.config.FillerArrayPatternConfig;
-import rs.edu.viser.services.filler.config.FillerConfigReader;
-import rs.edu.viser.services.filler.config.FillerGroupConfig;
 import rs.edu.viser.services.filler.config.FillerObjectPatternConfig;
-import rs.edu.viser.services.filler.config.FillerPatternConfig;
-import rs.edu.viser.services.filler.config.JacksonModeler;
 
 /**
  * Account filler group
@@ -32,36 +25,15 @@ public class AccountFillerGroup extends FillerGroup {
 	private Account account;
 	private GeneratedJsonArrays arrays;
 	
-	private FillerConfigReader reader;
-	private JacksonModeler jack;
-	
-	private String url;
-	private LOG log;
-	
 	public AccountFillerGroup() {
+		super(FillerGroupTypes.ACCOUNT);
+		
 		this.account = new Account();
 		this.arrays = new GeneratedJsonArrays();
-		
-		this.reader = FillerConfigReader.getFillerConfigReader();
-		this.helper = new FillerHelper();
-		this.retriever = new JsonRetriever();
-		this.jack = new JacksonModeler();
-		
-		this.log = new LOG(this.getClass());
 	} 
 
 	@Override
 	public void getModels(SchedulerTypes schedulerType) {
-		FillerGroupConfig fillerGroup = reader.getFillerGroups(FillerGroupTypes.ACCOUNT)[0];
-		log.info("Initializing Account Filler Group");
-		
-		//getting the filler patterns. . .
-		FillerPatternConfig[] patternGroup = fillerGroup.getFillerPatterns();
-		this.url = fillerGroup.getUrlSufix();
-		
-		//sorting patterns so all arrays are called in first. . .
-		patternGroup = helper.orderFillerPatternConfigs(patternGroup);
-		
 		this.readThroughPatterns(patternGroup, schedulerType);
 		
 		log.info("Account Filler Group initialization finished!");
