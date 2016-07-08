@@ -20,7 +20,7 @@ public class JacksonModeler extends ObjectMapper {
 		super();
 		
 		this.setPropertyNamingStrategy(PropertyNamingStrategy.SNAKE_CASE);
-		this.configure(MapperFeature.ACCEPT_CASE_INSENSITIVE_PROPERTIES,true);
+		this.configure(MapperFeature.ACCEPT_CASE_INSENSITIVE_PROPERTIES, true);
 	}
 	
 }
