@@ -9,6 +9,7 @@ import org.json.JSONObject;
 
 import rs.edu.viser.json.models.Account;
 import rs.edu.viser.json.models.AccountAchievements;
+import rs.edu.viser.json.models.AccountBank;
 import rs.edu.viser.json.models.AccountInventory;
 import rs.edu.viser.json.models.AccountMaterials;
 import rs.edu.viser.json.models.AccountWallet;
@@ -80,7 +81,7 @@ public class AccountFillerGroup extends FillerGroup {
 					this.retriever.getParametarizedJsonArray(url + pattern.getUrlPattern(), accessToken);
 			
 			this.arrays.setAccountBank(jack.readValue(json.toString(),
-					jack.getTypeFactory().constructCollectionType(List.class, String.class)));
+					jack.getTypeFactory().constructCollectionType(List.class, AccountBank.class)));
 		} catch (IOException | JSONException e) {
 			log.error(e.getMessage());
 			e.printStackTrace();
@@ -217,7 +218,7 @@ public class AccountFillerGroup extends FillerGroup {
 		return account;
 	}
 	
-	public List<String> getAccountBank() {
+	public List<AccountBank> getAccountBank() {
 		return arrays.getAccountBank();
 	}
 	

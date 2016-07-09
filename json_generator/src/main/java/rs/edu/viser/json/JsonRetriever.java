@@ -161,6 +161,9 @@ public class JsonRetriever {
 		//Iterate through all of the objects. . .
 		for (int i = 0; i < array.length(); i++) {
 			try {
+				if (array.getString(i).equals("null")) {
+					continue;
+				}
 				JSONObject inner = array.getJSONObject(i);
 				
 				/*

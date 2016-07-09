@@ -13,7 +13,7 @@ public class GeneratedJsonArrays extends JsonModelFactoryMaster {
 
 	private List<AccountAchievements> accountAchievements;
 
-	private List<String> accountBank;
+	private List<AccountBank> accountBank;
 
 	private List<Integer> accountDyes;
 
@@ -115,11 +115,11 @@ public class GeneratedJsonArrays extends JsonModelFactoryMaster {
 		this.accountAchievements = val;
 	}
 
-	public List<String> getAccountBank() {
+	public List<AccountBank> getAccountBank() {
 		return this.accountBank;
 	}
 
-	public void setAccountBank(List<String> val) {
+	public void setAccountBank(List<AccountBank> val) {
 		this.accountBank = val;
 	}
 
@@ -485,7 +485,7 @@ public class GeneratedJsonArrays extends JsonModelFactoryMaster {
 
 	public GeneratedJsonArrays() {
 		this.accountAchievements = new ArrayList<AccountAchievements>();
-		this.accountBank = new ArrayList<String>();
+		this.accountBank = new ArrayList<AccountBank>();
 		this.accountDyes = new ArrayList<Integer>();
 		this.accountInventory = new ArrayList<AccountInventory>();
 		this.accountMaterials = new ArrayList<AccountMaterials>();
