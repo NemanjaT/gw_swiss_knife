@@ -1,4 +1,5 @@
-use sys;
+delimiter $$
 
-source main_installation.sql;
-source procedures/install.sql;
+. main_installation.sql;
+
+delimiter ;
