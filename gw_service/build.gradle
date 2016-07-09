@@ -11,5 +11,5 @@ repositories {
 dependencies {
     compile project(':common')
     compile project(':json_generator')
-    compile group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.0.1'
+    compile group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.7.5'
 }
