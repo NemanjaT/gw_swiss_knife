@@ -19,17 +19,22 @@ BEGIN
     END IF;
     SET @l_create_sql := concat(@l_create_sql, ', STATUS int default 1)');
 
-    SET @l_drop_sql := concat('drop table if exists ', upper(p_table_name));
+    IF (SELECT count(*) FROM M_TABLES WHERE TABLE_NAME = p_table_name) > 0 THEN
+        DELETE FROM M_TABLES WHERE TABLE_NAME = p_table_name;
+        
+        SET @l_drop_sql := concat('drop table if exists ', upper(p_table_name));
 
-    PREPARE stmt1 FROM @l_drop_sql;
-    EXECUTE stmt1;
-    DEALLOCATE PREPARE stmt1;
+	    PREPARE stmt1 FROM @l_drop_sql;
+	    EXECUTE stmt1;
+	    DEALLOCATE PREPARE stmt1;
+    END IF;
 
     PREPARE stmt2 FROM @l_create_sql;
     EXECUTE stmt2;
     DEALLOCATE PREPARE stmt2;
 
-    -- SELECT @l_create_sql;
+    INSERT INTO M_TABLES (TABLE_NAME, ACRONYM, DATE_CREATED)
+    VALUES (upper(p_table_name), upper(p_acronym), sysdate());
 END$$
 
 DELIMITER ;

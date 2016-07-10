@@ -48,6 +48,8 @@ create table M_TABLES (
     ACRONYM varchar(8) not null,
     DATE_CREATED datetime default current_timestamp
 );
+alter table M_TABLES add unique (TABLE_NAME);
+alter table M_TABLES add unique (ACRONYM);
 
 drop table if exists M_COLUMNS;
 create table M_COLUMNS (

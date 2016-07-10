@@ -26,6 +26,14 @@ public class Filler {
 			fgc.setAccessToken("79D451B9-26E6-6943-BDA6-AC9D05EE563DA640C336-0F50-4875-8350-23E6C642A0F1");
 			fgc.getModels(SchedulerTypes.ALL);
 		}
+		
+//		BigInteger numm = new BigInteger("4");
+//		System.out.println(numm.pow(28).toString());
+//				
+//		BigInteger num = new BigInteger("1");
+//		for (int i = 1; i <= 52; i++)
+//			num = num.multiply(BigInteger.valueOf(i));
+//		System.out.println(num.toString());
 	}
 
 }
