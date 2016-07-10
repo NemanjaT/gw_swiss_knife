@@ -324,7 +324,7 @@ call create_or_replace_table (
         create_numeric_column('stats_attributes_critdamage', 4, 0, 0, null), ',',
         create_numeric_column('stats_attributes_toughness', 4, 0, 0, null), ',',
         create_numeric_column('stats_attributes_vitality', 4, 0, 0, null), ',',
-        create_numeric_column('stats_attributes_conditiondmg', 4, 0, 0, null), ',',
+        create_numeric_column('stats_attributes_conditiondmg', 4, 0, 0, null)
     )
 );
 
@@ -639,12 +639,12 @@ call create_or_replace_table (
     concat(
         create_int_column('gw_id', 0, null), ',',
         create_varchar_column('name', 80, 0, null), ',',
-        create_numeric_column('attr_toughness', 8, 2, null), ',',
-        create_numeric_column('attr_vitality', 8, 2, null), ',',
-        create_numeric_column('attr_power', 8, 2, null), ',',
-        create_numeric_column('attr_critdamage', 8, 2, null), ',',
-        create_numeric_column('attr_precision', 8, 2, null), ',',
-        create_numeric_column('attr_conditiondmg', 8, 2, null)
+        create_numeric_column('attr_toughness', 8, 2, 0, null), ',',
+        create_numeric_column('attr_vitality', 8, 2, 0, null), ',',
+        create_numeric_column('attr_power', 8, 2, 0, null), ',',
+        create_numeric_column('attr_critdamage', 8, 2, 0, null), ',',
+        create_numeric_column('attr_precision', 8, 2, 0, null), ',',
+        create_numeric_column('attr_conditiondmg', 8, 2, 0, null)
     )
 );
 
