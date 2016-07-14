@@ -683,3 +683,45 @@ call create_or_replace_table (
         create_varchar_column('continent_name', 80, 0, null)
     )
 );
+
+call create_or_replace_table (
+    'ti_materials',
+    'ti_mate',
+    0,
+    concat(
+        create_int_column('gw_id', 0, null), ',',
+        create_varchar_column('name', 100, 0, null), ',',
+        create_int_column('item', 0, null)
+    )
+);
+
+call create_or_replace_table (
+    'ti_minis',
+    'ti_mini',
+    0,
+    concat(
+        create_int_column('gw_id', 0, null), ',',
+        create_varchar_column('name', 100, 0, null), ',',
+        create_varchar_column('unlock', 1000, 0, null), ',',
+        create_varchar_column('icon', 1000, 0, null), ',',
+        create_numeric_column('order', 4, 0, 0, null), ',',
+        create_int_column('item_id', 0, null)
+    )
+);
+
+call create_or_replace_table (
+    'ti_pets',
+    'ti_pets',
+    0,
+    concat(
+        create_int_column('gw_id', 0, null), ',',
+        create_varchar_column('name', 100, 0, null), ',',
+        create_varchar_column('description', 1000, 0, null), ',',
+        create_varchar_column('icon', 1000, 0, null)
+    )
+);
+
+call create_or_replace_table (
+    'ti_professions',
+    'ti'
+);
