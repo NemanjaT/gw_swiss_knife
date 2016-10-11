@@ -15,7 +15,11 @@ public class CharacterEquipmentEquipment extends JsonModelFactoryMaster {
 
 	private CharacterEquipmentEquipmentStats stats;
 
+	private String boundTo;
+
 	private Integer skin;
+
+	private String binding;
 
 	private Integer id;
 
@@ -41,12 +45,28 @@ public class CharacterEquipmentEquipment extends JsonModelFactoryMaster {
 		this.stats = val;
 	}
 
+	public String getBoundTo() {
+		return this.boundTo;
+	}
+
+	public void setBoundTo(String val) {
+		this.boundTo = val;
+	}
+
 	public Integer getSkin() {
 		return this.skin;
 	}
 
 	public void setSkin(Integer val) {
 		this.skin = val;
+	}
+
+	public String getBinding() {
+		return this.binding;
+	}
+
+	public void setBinding(String val) {
+		this.binding = val;
 	}
 
 	public Integer getId() {

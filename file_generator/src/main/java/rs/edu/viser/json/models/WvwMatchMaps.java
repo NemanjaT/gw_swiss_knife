@@ -21,7 +21,7 @@ public class WvwMatchMaps extends JsonModelFactoryMaster {
 
 	private String type;
 
-	private List<WvwMatchMapsBonuses> bonuses;
+	private List<Object> bonuses; //TODO: GW-0001 
 
 	private WvwMatchMapsDeaths deaths;
 
@@ -67,11 +67,11 @@ public class WvwMatchMaps extends JsonModelFactoryMaster {
 		this.type = val;
 	}
 
-	public List<WvwMatchMapsBonuses> getBonuses() {
+	public List<Object> getBonuses() {
 		return this.bonuses;
 	}
 
-	public void setBonuses(List<WvwMatchMapsBonuses> val) {
+	public void setBonuses(List<Object> val) {
 		this.bonuses = val;
 	}
 
@@ -85,7 +85,7 @@ public class WvwMatchMaps extends JsonModelFactoryMaster {
 
 	public WvwMatchMaps() {
 		this.objectives = new ArrayList<WvwMatchMapsObjectives>();
-		this.bonuses = new ArrayList<WvwMatchMapsBonuses>();
+		this.bonuses = new ArrayList<Object>();
 	}
 
 }

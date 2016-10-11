@@ -17,7 +17,7 @@ public class GeneratedJsonArrays extends JsonModelFactoryMaster {
 
 	private List<Integer> accountDyes;
 
-	private List<AccountInventory> accountInventory;
+	private List<String> accountInventory;
 
 	private List<AccountMaterials> accountMaterials;
 
@@ -45,9 +45,9 @@ public class GeneratedJsonArrays extends JsonModelFactoryMaster {
 
 	private List<CommerceCurrentSellTransactions> commerceCurrentSellTransactions;
 
-	private List<CommercePastBuyTransactions> commercePastBuyTransactions;
+	private List<Object> commercePastBuyTransactions; //TODO: GW-0003 
 
-	private List<CommercePastSellTransactions> commercePastSellTransactions;
+	private List<Object> commercePastSellTransactions; //TODO: GW-0003 
 
 	private List<String> pvpGames;
 
@@ -131,11 +131,11 @@ public class GeneratedJsonArrays extends JsonModelFactoryMaster {
 		this.accountDyes = val;
 	}
 
-	public List<AccountInventory> getAccountInventory() {
+	public List<String> getAccountInventory() {
 		return this.accountInventory;
 	}
 
-	public void setAccountInventory(List<AccountInventory> val) {
+	public void setAccountInventory(List<String> val) {
 		this.accountInventory = val;
 	}
 
@@ -243,19 +243,19 @@ public class GeneratedJsonArrays extends JsonModelFactoryMaster {
 		this.commerceCurrentSellTransactions = val;
 	}
 
-	public List<CommercePastBuyTransactions> getCommercePastBuyTransactions() {
+	public List<Object> getCommercePastBuyTransactions() {
 		return this.commercePastBuyTransactions;
 	}
 
-	public void setCommercePastBuyTransactions(List<CommercePastBuyTransactions> val) {
+	public void setCommercePastBuyTransactions(List<Object> val) {
 		this.commercePastBuyTransactions = val;
 	}
 
-	public List<CommercePastSellTransactions> getCommercePastSellTransactions() {
+	public List<Object> getCommercePastSellTransactions() {
 		return this.commercePastSellTransactions;
 	}
 
-	public void setCommercePastSellTransactions(List<CommercePastSellTransactions> val) {
+	public void setCommercePastSellTransactions(List<Object> val) {
 		this.commercePastSellTransactions = val;
 	}
 
@@ -487,7 +487,7 @@ public class GeneratedJsonArrays extends JsonModelFactoryMaster {
 		this.accountAchievements = new ArrayList<AccountAchievements>();
 		this.accountBank = new ArrayList<AccountBank>();
 		this.accountDyes = new ArrayList<Integer>();
-		this.accountInventory = new ArrayList<AccountInventory>();
+		this.accountInventory = new ArrayList<String>();
 		this.accountMaterials = new ArrayList<AccountMaterials>();
 		this.accountMinis = new ArrayList<Integer>();
 		this.accountSkins = new ArrayList<Integer>();
@@ -501,8 +501,8 @@ public class GeneratedJsonArrays extends JsonModelFactoryMaster {
 		this.commercePrices = new ArrayList<Integer>();
 		this.commerceCurrentBuyTransactions = new ArrayList<Object>();
 		this.commerceCurrentSellTransactions = new ArrayList<CommerceCurrentSellTransactions>();
-		this.commercePastBuyTransactions = new ArrayList<CommercePastBuyTransactions>();
-		this.commercePastSellTransactions = new ArrayList<CommercePastSellTransactions>();
+		this.commercePastBuyTransactions = new ArrayList<Object>();
+		this.commercePastSellTransactions = new ArrayList<Object>();
 		this.pvpGames = new ArrayList<String>();
 		this.pvpAmulets = new ArrayList<Integer>();
 		this.pvpSeasons = new ArrayList<String>();

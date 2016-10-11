@@ -13,6 +13,8 @@ public class AccountMaterials extends JsonModelFactoryMaster {
 
 	private Integer count;
 
+	private String binding;
+
 	private Integer id;
 
 	private Integer category;
@@ -25,6 +27,14 @@ public class AccountMaterials extends JsonModelFactoryMaster {
 
 	public void setCount(Integer val) {
 		this.count = val;
+	}
+
+	public String getBinding() {
+		return this.binding;
+	}
+
+	public void setBinding(String val) {
+		this.binding = val;
 	}
 
 	public Integer getId() {

@@ -13,6 +13,12 @@ public class Map extends JsonModelFactoryMaster {
 
 	private String continentName;
 
+	private Integer regionId;
+
+	private String type;
+
+	//TODO: GW-0002
+
 	private Integer defaultFloor;
 
 	private List<Integer> floors;
@@ -25,13 +31,9 @@ public class Map extends JsonModelFactoryMaster {
 
 	private String name;
 
-	private Integer regionId;
-
 	private String regionName;
 
 	private Integer id;
-
-	//TODO: GW-0002
 
 	private Integer minLevel;
 
@@ -43,6 +45,22 @@ public class Map extends JsonModelFactoryMaster {
 
 	public void setContinentName(String val) {
 		this.continentName = val;
+	}
+
+	public Integer getRegionId() {
+		return this.regionId;
+	}
+
+	public void setRegionId(Integer val) {
+		this.regionId = val;
+	}
+
+	public String getType() {
+		return this.type;
+	}
+
+	public void setType(String val) {
+		this.type = val;
 	}
 
 	public Integer getDefaultFloor() {
@@ -83,14 +101,6 @@ public class Map extends JsonModelFactoryMaster {
 
 	public void setName(String val) {
 		this.name = val;
-	}
-
-	public Integer getRegionId() {
-		return this.regionId;
-	}
-
-	public void setRegionId(Integer val) {
-		this.regionId = val;
 	}
 
 	public String getRegionName() {
