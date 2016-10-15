@@ -36,6 +36,9 @@ public class RelationalGenerator {
 	public void generate() {
 		logger.info("Starting the relational generator.");
 		
+		/*
+		 * Calling the reader and getting the list of patterns and website
+		 */
 		FileGeneratorConfigReader reader = FileGeneratorConfigReader.getReader();
 		this.sqlFileGenerator = new SqlFileGenerator();
 		this.website = reader.getWebsite();
@@ -46,8 +49,13 @@ public class RelationalGenerator {
 			for (FileGeneratorPattern p : reader.getPatterns()) {
 				patterns.add(new FileGeneratorPatternConcrete(this.website, p));
 			}
-				
-			while (patterns.size() > 0) {
+			
+			/*
+			 * TODO: solve concurrent issue
+			 * Shuffling through the patterns and initializes SQL query, for every inner object it's being inserted into a new
+			 * list and the process repeats (in a while loop).
+			 */
+//			while (patterns.size() > 0) {
 				for (FileGeneratorPatternConcrete pattern : patterns) {
 					
 					if (pattern.getFileGeneratorPattern().getType() == Type.OBJECT) {
@@ -62,22 +70,39 @@ public class RelationalGenerator {
 				}
 				
 				patterns = helperPatternList;
-			}
+//			}
 			
+			/*
+			 * Writes the data into a file
+			 */
 			sqlFileGenerator.writeToFile();
 		} catch (IOException | JSONException e) {
 			logger.error("Failed to retrieve JSON file: " + e.getMessage());
 		}
 	}
 	
+	/**
+	 * Generates an object
+	 * @param obj
+	 * @param name
+	 * @param list
+	 * @throws JSONException
+	 * @throws IOException
+	 */
 	public void generateObject(JSONObject obj, String name, ArrayList<FileGeneratorPatternConcrete> list) throws JSONException, IOException {
 		Iterator<?> keys = obj.keys();
 		List<Column> columns = new ArrayList<Column>();
 		
+		/*
+		 * Shuffle through all of the keys
+		 */
 		while (keys.hasNext()) {
 			String key = (String) keys.next();
 			Object inner = obj.get(key);
 			
+			/*
+			 * If the data is an object or an array add it to the list and insert a foreign key inside
+			 */
 			if (inner instanceof JSONObject) {
 				FileGeneratorPattern pattern = new FileGeneratorPattern();
 				pattern.setName(key);
@@ -96,6 +121,10 @@ public class RelationalGenerator {
 				list.add(concrete);
 				
 				columns.add(new IntColumn().name(key + "_id").notNull(false));
+				
+			/*
+			 * If it's not an object or array insert the appropriate data.
+			 */
 			} else {
 				String val = inner.toString();
 				if (val.matches("\\d*\\.\\d+")) {
