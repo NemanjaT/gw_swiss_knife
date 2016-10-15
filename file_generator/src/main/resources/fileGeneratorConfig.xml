@@ -14,7 +14,7 @@
 
                 <!-- ACCOUNT JSON PATHS -->
 
-                <bean class="rs.edu.viser.json.generator.config.FileGeneratorPattern">
+                <!--bean class="rs.edu.viser.json.generator.config.FileGeneratorPattern">
                     <property name="name" value="account" />
                     <property name="url" value="account?access_token=79D451B9-26E6-6943-BDA6-AC9D05EE563DA640C336-0F50-4875-8350-23E6C642A0F1" />
                     <property name="type" value="OBJECT" />
@@ -72,11 +72,11 @@
                     <property name="name" value="account_wallet" />
                     <property name="url" value="account/wallet?access_token=79D451B9-26E6-6943-BDA6-AC9D05EE563DA640C336-0F50-4875-8350-23E6C642A0F1" />
                     <property name="type" value="ARRAY" />
-                </bean>
+                </bean-->
 
                 <!-- ACHIEVEMENTS JSON PATHS -->
 
-                <bean class="rs.edu.viser.json.generator.config.FileGeneratorPattern">
+                <!-- bean class="rs.edu.viser.json.generator.config.FileGeneratorPattern">
                     <property name="name" value="achievements" />
                     <property name="url" value="achievements" />
                     <property name="type" value="ARRAY" />
@@ -122,19 +122,19 @@
                     <property name="name" value="achievement_group" />
                     <property name="url" value="achievements/groups/65B4B678-607E-4D97-B458-076C3E96A810" />
                     <property name="type" value="OBJECT" />
-                </bean>
+                </bean-->
 
                 <!-- BUILD JSON PATHS -->
 
-                <bean class="rs.edu.viser.json.generator.config.FileGeneratorPattern">
+                <!-- bean class="rs.edu.viser.json.generator.config.FileGeneratorPattern">
                     <property name="name" value="build" />
                     <property name="url" value="build" />
                     <property name="type" value="OBJECT" />
-                </bean>
+                </bean-->
 
                 <!-- CHARACTERS JSON PATHS -->
 
-                <bean class="rs.edu.viser.json.generator.config.FileGeneratorPattern">
+                <!-- bean class="rs.edu.viser.json.generator.config.FileGeneratorPattern">
                     <property name="name" value="characters" />
                     <property name="url" value="characters?access_token=79D451B9-26E6-6943-BDA6-AC9D05EE563DA640C336-0F50-4875-8350-23E6C642A0F1" />
                     <property name="type" value="ARRAY" />
@@ -174,11 +174,11 @@
                     <property name="name" value="character_specializations" />
                     <property name="url" value="characters/Aliron%20Rapidblade/specializations?access_token=79D451B9-26E6-6943-BDA6-AC9D05EE563DA640C336-0F50-4875-8350-23E6C642A0F1" />
                     <property name="type" value="OBJECT" />
-                </bean>
+                </bean-->
 
                 <!-- COMMERCE JSON PATHS -->
 
-                <bean class="rs.edu.viser.json.generator.config.FileGeneratorPattern">
+                <!-- bean class="rs.edu.viser.json.generator.config.FileGeneratorPattern">
                     <property name="name" value="commerce_exchange_coins" />
                     <property name="url" value="commerce/exchange/coins?quantity=10000" />
                     <property name="type" value="OBJECT" />
@@ -236,11 +236,11 @@
                     <property name="name" value="commerce_past_sell_transactions" />
                     <property name="url" value="commerce/transactions/history/sells?access_token=79D451B9-26E6-6943-BDA6-AC9D05EE563DA640C336-0F50-4875-8350-23E6C642A0F1" />
                     <property name="type" value="ARRAY" />
-                </bean>
+                </bean-->
 
                 <!-- PVP JSON PATHS -->
 
-                <bean class="rs.edu.viser.json.generator.config.FileGeneratorPattern">
+                <!-- bean class="rs.edu.viser.json.generator.config.FileGeneratorPattern">
                     <property name="name" value="pvp_stats" />
                     <property name="url" value="pvp/stats?access_token=79D451B9-26E6-6943-BDA6-AC9D05EE563DA640C336-0F50-4875-8350-23E6C642A0F1" />
                     <property name="type" value="OBJECT" />
@@ -286,7 +286,7 @@
                     <property name="name" value="pvp_standings" />
                     <property name="url" value="pvp/standings?access_token=79D451B9-26E6-6943-BDA6-AC9D05EE563DA640C336-0F50-4875-8350-23E6C642A0F1" />
                     <property name="type" value="ARRAY" />
-                </bean>
+                </bean-->
 
                 <!-- WVW JSON PATHS -->
 
@@ -328,7 +328,7 @@
                     <property name="type" value="OBJECT" />
                 </bean>
 
-                <bean class="rs.edu.viser.json.generator.config.FileGeneratorPattern">
+                <!-- bean class="rs.edu.viser.json.generator.config.FileGeneratorPattern">
                     <property name="name" value="continents" />
                     <property name="url" value="continents" />
                     <property name="type" value="ARRAY" />
@@ -386,7 +386,7 @@
                     <property name="name" value="file" />
                     <property name="url" value="files/wvw_battles_hollow_red" />
                     <property name="type" value="OBJECT" />
-                </bean>
+                </bean-->
 
                 <bean class="rs.edu.viser.json.generator.config.FileGeneratorPattern">
                     <property name="name" value="items" />
@@ -400,7 +400,7 @@
                     <property name="type" value="OBJECT" />
                 </bean>
 
-                <bean class="rs.edu.viser.json.generator.config.FileGeneratorPattern">
+                <!-- bean class="rs.edu.viser.json.generator.config.FileGeneratorPattern">
                     <property name="name" value="all_item_stats" />
                     <property name="url" value="itemstats" />
                     <property name="type" value="ARRAY" />
@@ -518,7 +518,7 @@
                     <property name="name" value="skill" />
                     <property name="url" value="skills/5486" />
                     <property name="type" value="OBJECT" />
-                </bean>
+                </bean-->
 
                 <bean class="rs.edu.viser.json.generator.config.FileGeneratorPattern">
                     <property name="name" value="skins" />
@@ -532,7 +532,7 @@
                     <property name="type" value="OBJECT" />
                 </bean>
 
-                <bean class="rs.edu.viser.json.generator.config.FileGeneratorPattern">
+                <!-- bean class="rs.edu.viser.json.generator.config.FileGeneratorPattern">
                     <property name="name" value="specializations" />
                     <property name="url" value="specializations" />
                     <property name="type" value="ARRAY" />
@@ -584,7 +584,7 @@
                     <property name="name" value="world" />
                     <property name="url" value="worlds/1022" />
                     <property name="type" value="OBJECT" />
-                </bean>
+                </bean-->
             </list>
         </property>
     </bean>

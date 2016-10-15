@@ -230,7 +230,7 @@ public class AccountFillerGroup extends FillerGroup {
 		return arrays.getAccountMaterials();
 	}
 	
-	public List<AccountInventory> getAccountInventory() {
+	public List<String> getAccountInventory() {
 		return arrays.getAccountInventory();
 	}
 	
