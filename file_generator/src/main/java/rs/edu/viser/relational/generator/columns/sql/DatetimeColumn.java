@@ -43,11 +43,7 @@ public class DatetimeColumn implements Column {
 	public String get() {
 		defaultVal = defaultVal ? false : defaultVal;
 		
-		return "create_datetime_column('"
-				+ name + "', "
-				+ (notNull ? "1" : "0") + ", "
-				+ (defaultVal ? "1" : "0")
-				+ ")";
+		return "`" + name.toUpperCase() + "` datetime " + (notNull ? "not null " : "") + (defaultVal ? "default current_timestamp" : "");
 	}
 
 }

@@ -43,11 +43,7 @@ public class IntColumn implements Column {
 	public String get() {
 		notNull = notNull == null ? false : notNull;
 		
-		return "create_int_column('" 
-				+ name + "', "
-				+ (notNull ? "1" : "0") + ", "
-				+ (defaultVal == null ? "null" : defaultVal)
-				+ ")";
+		return "`" + name.toUpperCase() + "` int " + (notNull ? "not null " : "") + (defaultVal == null ? "" : "default " + defaultVal);
 	}
 
 }

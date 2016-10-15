@@ -41,13 +41,10 @@ public class VarcharColumn implements Column {
 	public String get() {
 		size = size == null ? 1000 : size;
 		notNull = notNull == null ? false : notNull;
+		defaultVal = defaultVal == null ? "" : defaultVal;
 		
-		return "create_varchar_column('"
-				+ name + "', "
-				+ size + ", "
-				+ (notNull ? "1" : "0") + ","
-				+ (defaultVal == null ? "null" : ("'" + defaultVal + "'"))
-				+ ")";
+		return "`" + name.toUpperCase() + "` varchar(" + size + ") " + (notNull ? "not null " : "") 
+				+ (defaultVal == null ? "" : "default '" + defaultVal.trim() + "'");
 	}
 
 }

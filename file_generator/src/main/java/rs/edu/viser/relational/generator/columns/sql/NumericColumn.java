@@ -49,13 +49,8 @@ public class NumericColumn implements Column {
 		size = size == null ? 8 : size;
 		scale = scale == null ? 2 : scale;
 		
-		return "create_numeric_column('"
-				+ name + "', "
-				+ size + ", "
-				+ scale + ", "
-				+ (notNull ? "1" : "0")
-				+ (defaultVal == null ? "null" : defaultVal)
-				+ ")";
+		return "`" + name.toUpperCase() + "` numeric(" + size + "," + scale +") " + (notNull ? "not null " : "") 
+				+ (defaultVal == null ? "" : "default " + defaultVal);
 	}
 
 }
