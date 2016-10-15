@@ -19,6 +19,9 @@ public class FileGeneratorPattern implements ApplicationContextAware, BeanNameAw
     private String url;
     private String name;
     private Type type;
+    
+    public FileGeneratorPattern() {}
+    // NASAO SAM DEVOJKU, VERENICU, ZENU, VANJU (dok ne zaboravi)
 
     public String getUrl() {
         return url;

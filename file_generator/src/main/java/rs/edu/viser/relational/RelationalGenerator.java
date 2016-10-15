@@ -79,6 +79,7 @@ public class RelationalGenerator {
 				
 				columns.add(new IntColumn().name(key + "_id").notNull(false));
 			} else if (inner instanceof JSONArray) {
+				FileGeneratorPattern pattern = new FileGeneratorPattern();
 				
 				columns.add(new IntColumn().name(key + "_id").notNull(false));
 			} else {
