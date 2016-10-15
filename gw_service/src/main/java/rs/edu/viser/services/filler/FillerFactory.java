@@ -8,16 +8,7 @@ import java.util.List;
 import rs.edu.viser.logger.LOG;
 import rs.edu.viser.services.filler.config.FillerConfigReader;
 import rs.edu.viser.services.filler.config.FillerGroupConfig;
-import rs.edu.viser.services.filler.groups.AccountFillerGroup;
-import rs.edu.viser.services.filler.groups.AchievementFillerGroup;
-import rs.edu.viser.services.filler.groups.CharacterFillerGroup;
-import rs.edu.viser.services.filler.groups.CommerceFillerGroup;
-import rs.edu.viser.services.filler.groups.DecorativeFillerGroup;
 import rs.edu.viser.services.filler.groups.FillerGroup;
-import rs.edu.viser.services.filler.groups.ItemFillerGroup;
-import rs.edu.viser.services.filler.groups.PvpFillerGroup;
-import rs.edu.viser.services.filler.groups.SystemFillerGroup;
-import rs.edu.viser.services.filler.groups.WorldFillerGroup;
 import rs.edu.viser.services.filler.groups.WvwFillerGroup;
 import rs.edu.viser.services.filler.groups.FillerGroup.FillerGroupTypes;
 
@@ -81,34 +72,7 @@ public class FillerFactory {
 			
 			log.info("Searching for filler group for " + groupConf.getFillerGroupType());
 			
-			if (groupConf.getFillerGroupType() == FillerGroupTypes.ACCOUNT) {
-				fillerGroupList.add(new AccountFillerGroup());
-				
-			} else if (groupConf.getFillerGroupType() == FillerGroupTypes.ACHIEVEMENT) {
-				fillerGroupList.add(new AchievementFillerGroup());
-			
-			} else if (groupConf.getFillerGroupType() == FillerGroupTypes.CHARACTER) {
-				fillerGroupList.add(new CharacterFillerGroup());
-			
-			} else if (groupConf.getFillerGroupType() == FillerGroupTypes.COMMERCE) {
-				fillerGroupList.add(new CommerceFillerGroup());
-				
-			} else if (groupConf.getFillerGroupType() == FillerGroupTypes.DECORATIVE) {
-				fillerGroupList.add(new DecorativeFillerGroup());
-				
-			} else if (groupConf.getFillerGroupType() == FillerGroupTypes.ITEM) {
-				fillerGroupList.add(new ItemFillerGroup());
-				
-			} else if (groupConf.getFillerGroupType() == FillerGroupTypes.PVP) {
-				fillerGroupList.add(new PvpFillerGroup());
-				
-			} else if (groupConf.getFillerGroupType() == FillerGroupTypes.SYSTEM) { 
-				fillerGroupList.add(new SystemFillerGroup());
-				
-			} else if (groupConf.getFillerGroupType() == FillerGroupTypes.WORLD) {
-				fillerGroupList.add(new WorldFillerGroup());
-				
-			} else if (groupConf.getFillerGroupType() == FillerGroupTypes.WVW) {
+			if (groupConf.getFillerGroupType() == FillerGroupTypes.WVW) {
 				fillerGroupList.add(new WvwFillerGroup());
 				
 			} else {
