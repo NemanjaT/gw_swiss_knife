@@ -19,10 +19,12 @@ public class FileGeneratorPatternConcrete {
 		this.pattern = pattern;
 		JsonRetriever retriever = new JsonRetriever();
 		
-		if (pattern.getType() == Type.OBJECT) {
-			this.jsonObject = retriever.getJsonObject(website + pattern.getUrl());
-		} else if (pattern.getType() == Type.ARRAY) {
-			this.jsonArray = retriever.getJsonArray(website + pattern.getUrl());
+		if (pattern.getUrl() != null && !pattern.getUrl().equals("")) {
+			if (pattern.getType() == Type.OBJECT) {
+				this.jsonObject = retriever.getJsonObject(website + pattern.getUrl());
+			} else if (pattern.getType() == Type.ARRAY) {
+				this.jsonArray = retriever.getJsonArray(website + pattern.getUrl());
+			}
 		}
 	}
 	
@@ -36,6 +38,14 @@ public class FileGeneratorPatternConcrete {
 	
 	public JSONArray getJSONArray() {
 		return jsonArray;
+	}
+	
+	public void setJSONObject(JSONObject object) {
+		this.jsonObject = object;
+	}
+	
+	public void setJSONArray(JSONArray array) {
+		this.jsonArray = array;
 	}
 
 }

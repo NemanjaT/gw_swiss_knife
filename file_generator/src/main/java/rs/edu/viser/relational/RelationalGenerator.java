@@ -21,9 +21,10 @@ import rs.edu.viser.relational.generator.columns.sql.NumericColumn;
 import rs.edu.viser.relational.generator.columns.sql.VarcharColumn;
 
 public class RelationalGenerator {
-	private static LOG logger;
+	private static LOG logger = new LOG(RelationalGenerator.class);
 	
 	private SqlFileGenerator sqlFileGenerator;
+	private String website;
 	
 	public static void main(String[] args) {
 		new RelationalGenerator().generate();
@@ -37,13 +38,15 @@ public class RelationalGenerator {
 		
 		FileGeneratorConfigReader reader = FileGeneratorConfigReader.getReader();
 		this.sqlFileGenerator = new SqlFileGenerator();
+		this.website = reader.getWebsite();
 		
 		try {
 			ArrayList<FileGeneratorPatternConcrete> patterns = new ArrayList<>();
 			ArrayList<FileGeneratorPatternConcrete> helperPatternList = new ArrayList<>();
-			for (FileGeneratorPattern p : reader.getPatterns()) 
-				patterns.add(new FileGeneratorPatternConcrete(reader.getWebsite(), p));
-			
+			for (FileGeneratorPattern p : reader.getPatterns()) {
+				patterns.add(new FileGeneratorPatternConcrete(this.website, p));
+			}
+				
 			while (patterns.size() > 0) {
 				for (FileGeneratorPatternConcrete pattern : patterns) {
 					
@@ -67,7 +70,7 @@ public class RelationalGenerator {
 		}
 	}
 	
-	public void generateObject(JSONObject obj, String name, ArrayList<FileGeneratorPatternConcrete> list) throws JSONException {
+	public void generateObject(JSONObject obj, String name, ArrayList<FileGeneratorPatternConcrete> list) throws JSONException, IOException {
 		Iterator<?> keys = obj.keys();
 		List<Column> columns = new ArrayList<Column>();
 		
@@ -76,10 +79,21 @@ public class RelationalGenerator {
 			Object inner = obj.get(key);
 			
 			if (inner instanceof JSONObject) {
+				FileGeneratorPattern pattern = new FileGeneratorPattern();
+				pattern.setName(key);
+				pattern.setType("OBJECT");
+				FileGeneratorPatternConcrete concrete = new FileGeneratorPatternConcrete(this.website, pattern);
+				concrete.setJSONObject((JSONObject) inner);
+				list.add(concrete);
 				
 				columns.add(new IntColumn().name(key + "_id").notNull(false));
 			} else if (inner instanceof JSONArray) {
 				FileGeneratorPattern pattern = new FileGeneratorPattern();
+				pattern.setName(key);
+				pattern.setType("ARRAY");
+				FileGeneratorPatternConcrete concrete = new FileGeneratorPatternConcrete(this.website, pattern);
+				concrete.setJSONArray((JSONArray) inner);
+				list.add(concrete);
 				
 				columns.add(new IntColumn().name(key + "_id").notNull(false));
 			} else {
@@ -97,7 +111,7 @@ public class RelationalGenerator {
 		this.sqlFileGenerator.createTable(name, true, columns.toArray(new Column[columns.size()]));
 	}
 	
-	public void generateArray(JSONArray array, String name, ArrayList<FileGeneratorPatternConcrete> list) throws JSONException {
+	public void generateArray(JSONArray array, String name, ArrayList<FileGeneratorPatternConcrete> list) throws JSONException, IOException {
 		List<Column> columns = new ArrayList<Column>();
 		
 		
