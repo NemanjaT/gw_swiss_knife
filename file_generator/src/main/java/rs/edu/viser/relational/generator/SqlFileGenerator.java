@@ -10,7 +10,6 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-import rs.edu.viser.json.generator.config.FileGeneratorConfigReader;
 import rs.edu.viser.logger.LOG;
 import rs.edu.viser.relational.generator.columns.Column;
 import rs.edu.viser.relational.generator.columns.sql.DatetimeColumn;
@@ -56,8 +55,7 @@ public class SqlFileGenerator implements FileGenerator {
 	}
 	
 	public void writeToFile() {
-		String location = "src/main/java" + FileGeneratorConfigReader.getReader().getPackageFile().replace('.', '/') 
-				+ "/ti_tables.sql";
+		String location = "src/main/resources/ti_tables.sql";
 
 		try {
 			Path file = Paths.get(location);
