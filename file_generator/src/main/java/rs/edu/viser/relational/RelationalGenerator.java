@@ -9,6 +9,7 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import rs.edu.viser.json.JsonRetriever;
 import rs.edu.viser.json.generator.config.FileGeneratorConfigReader;
 import rs.edu.viser.json.generator.config.FileGeneratorPattern;
 import rs.edu.viser.json.generator.config.FileGeneratorPatternConcrete;
@@ -55,8 +56,12 @@ public class RelationalGenerator {
 			 * Shuffling through the patterns and initializes SQL query, for every inner object it's being inserted into a new
 			 * list and the process repeats (in a while loop).
 			 */
-//			while (patterns.size() > 0) {
-				for (FileGeneratorPatternConcrete pattern : patterns) {
+			boolean isPatternSizeGreat = patterns.size() > 0;
+			while (isPatternSizeGreat) {
+				helperPatternList = new ArrayList<>();
+				
+				for (int i = 0; i < patterns.size(); i++) {
+					FileGeneratorPatternConcrete pattern = patterns.get(i);
 					
 					if (pattern.getFileGeneratorPattern().getType() == Type.OBJECT) {
 						JSONObject object = pattern.getJSONObject();
@@ -70,7 +75,8 @@ public class RelationalGenerator {
 				}
 				
 				patterns = helperPatternList;
-//			}
+				isPatternSizeGreat = patterns.size() > 0;
+			}
 			
 			/*
 			 * Writes the data into a file
@@ -79,6 +85,8 @@ public class RelationalGenerator {
 		} catch (IOException | JSONException e) {
 			logger.error("Failed to retrieve JSON file: " + e.getMessage());
 		}
+		
+		logger.info("Relational generator finished.");
 	}
 	
 	/**
@@ -143,7 +151,35 @@ public class RelationalGenerator {
 	public void generateArray(JSONArray array, String name, ArrayList<FileGeneratorPatternConcrete> list) throws JSONException, IOException {
 		List<Column> columns = new ArrayList<Column>();
 		
-		
+		if (array.length() > 0) {
+			if (array.get(0) instanceof JSONObject) {
+				JSONObject inner = new JsonRetriever().interpretateArray(array);
+				FileGeneratorPattern pattern = new FileGeneratorPattern();
+				pattern.setName(name + "_ref");
+				pattern.setType("OBJECT");
+				FileGeneratorPatternConcrete concrete = new FileGeneratorPatternConcrete(this.website, pattern);
+				concrete.setJSONObject(inner);
+				list.add(concrete);
+				
+				columns.add(new IntColumn().name(name + "_ref_id").notNull(false));
+			} else {
+				String inner = array.get(0).toString();
+				final String columnName = "ARRAY_VAL";
+				if (inner.matches("\\d\\.\\d+")) {
+					columns.add(new NumericColumn().name(columnName).size(18).scale(4).notNull(false));
+				} else if (inner.matches("\\d+") || inner.matches("(true|false)")) {
+					columns.add(new IntColumn().name(columnName).notNull(false));
+				} else {
+					columns.add(new VarcharColumn().name(columnName).size(2000).notNull(false));
+				}
+			}
+			
+		} else {
+			logger.warning("Empty array, could not determine type [name: " + name + ", array: " + array.toString() + "]");
+			FileGeneratorPattern pattern = new FileGeneratorPattern();
+			final String columnName = "ARRAY_VAL";
+			columns.add(new VarcharColumn().name(columnName).size(2000).notNull(false));
+		}
 		
 		this.sqlFileGenerator.createTable(name, true, columns.toArray(new Column[columns.size()]));
 	}

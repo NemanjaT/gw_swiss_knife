@@ -29,7 +29,8 @@ public class SqlFileGenerator implements FileGenerator {
 		
 		tableName = tableName.replace(' ', '_');
 		
-		StringBuilder createTableString = new StringBuilder("create table `" + tableName.toUpperCase() + "` (\n");
+		StringBuilder createTableString = new StringBuilder("drop table if exists `TI_" + tableName.toUpperCase() + "`;\n" 
+				+ "create table if not exists `TI_" + tableName.toUpperCase() + "` (\n");
 		createTableString.append("\tID int primary key auto_increment,\n");
 		
 		if (containsMetaDates) {

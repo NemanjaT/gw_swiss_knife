@@ -10,7 +10,7 @@ public class VarcharColumn implements Column {
 
 	@Override
 	public Column name(String name) {
-		this.name = name;
+		this.name = name.toUpperCase().equals("ID") ? "SEQ_NO" : name;
 		return this;
 	}
 
