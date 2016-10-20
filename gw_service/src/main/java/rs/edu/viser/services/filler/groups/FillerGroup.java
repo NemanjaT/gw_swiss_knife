@@ -15,7 +15,7 @@ import rs.edu.viser.services.filler.config.JacksonModeler;
 public abstract class FillerGroup {
 	
 	public enum FillerGroupTypes {
-		ALL, ACCOUNT, ACHIEVEMENT, CHARACTER, COMMERCE, DECORATIVE, ITEM, PVP, SYSTEM, WORLD, WVW
+		ALL, ITEM, WVW
 	}
 	
 	public enum SchedulerTypes {
